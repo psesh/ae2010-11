@@ -1,2 +1,3 @@
-# thermofluids
-Course notes for AE2010/AE2011
+# AE2010/2011
+
+
