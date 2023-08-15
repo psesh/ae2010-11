@@ -1,0 +1,48 @@
+project:
+  type: website
+
+
+format:
+  html:
+    page-layout: article
+    toc: true
+    code-fold: true
+    theme: 
+      light: [flatly, custom.scss]
+      dark: [darkly, custom.scss]
+    code-tools: true
+      
+
+website:
+  title: "AE2010/AE2011"
+  page-navigation: true
+  navbar:
+    left:
+      - text: "Home"
+        file: index.ipynb
+      - text: "Infrastructure"
+        file: index.ipynb
+      - text: "Notebooks"
+        file: index.ipynb
+      - text: "Examples"
+        file: index.ipynb
+    right:
+      - icon: github
+        href: https://github.com/
+        aria-label: GitHub
+  sidebar:
+    title: "AE2010/11"
+    logo: /images/Goethe-Logo.jpg
+    search: true
+    style: "docked"
+    contents:
+      - index.ipynb
+      - section: "Infrastructure"
+      - section: "Notebooks"
+        file: supersonic_flow_friction.ipynb
+        contents:
+          - flow_around_bend.ipynb
+          - couette_flow.ipynb
+          - poiseuille_flow.ipynb
+          - normal_shocks.ipynb
+          - supersonic_flow_friction.ipynb
