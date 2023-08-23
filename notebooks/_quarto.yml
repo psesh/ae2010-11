@@ -8,8 +8,8 @@ format:
     toc: true
     code-fold: true
     theme: 
-      light: [flatly, custom.scss]
-      dark: [darkly, custom.scss]
+      light: flatly
+      dark: darkly
     code-tools: true
       
 
