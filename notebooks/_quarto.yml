@@ -24,11 +24,10 @@ website:
         file: index.ipynb
     right:
       - icon: github
-        href: https://github.com/
+        href: https://github.com/psesh/ae2010-11
         aria-label: GitHub
   sidebar:
     title: "AE2010/11"
-    logo: /images/Goethe-Logo.jpg
     search: true
     style: "docked"
     contents:
