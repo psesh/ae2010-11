@@ -20,11 +20,7 @@ website:
     left:
       - text: "Home"
         file: index.ipynb
-      - text: "Infrastructure"
-        file: index.ipynb
       - text: "Notebooks"
-        file: index.ipynb
-      - text: "Examples"
         file: index.ipynb
     right:
       - icon: github
@@ -37,9 +33,7 @@ website:
     style: "docked"
     contents:
       - index.ipynb
-      - section: "Infrastructure"
       - section: "Notebooks"
-        file: supersonic_flow_friction.ipynb
         contents:
           - flow_around_bend.ipynb
           - couette_flow.ipynb
