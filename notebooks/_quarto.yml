@@ -35,6 +35,7 @@ website:
       - index.ipynb
       - section: "Notebooks"
         contents:
+          - demo.ipynb
           - flow_around_bend.ipynb
           - couette_flow.ipynb
           - poiseuille_flow.ipynb
