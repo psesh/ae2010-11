@@ -40,3 +40,7 @@ website:
           - poiseuille_flow.ipynb
           - normal_shocks.ipynb
           - supersonic_flow_friction.ipynb
+      - section: "Examples"
+        contents:
+          text: "L2"
+          file: sample_problems/lecture_2.ipynb

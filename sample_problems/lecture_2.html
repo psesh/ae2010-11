@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>AE2010/AE2011 - Jupyter introduction</title>
+<title>AE2010/AE2011 - L2 examples</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,63 +20,28 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./flow_around_bend.html" rel="next">
-<link href="./index.html" rel="prev">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../supersonic_flow_friction.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -110,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">AE2010/AE2011</span>
     </a>
   </div>
@@ -121,11 +86,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+    <a class="nav-link active" href="../index.html" rel="" target="" aria-current="page">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
+    <a class="nav-link" href="../index.html" rel="" target="">
  <span class="menu-text">Notebooks</span></a>
   </li>  
 </ul>
@@ -147,7 +112,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./demo.html">Notebooks</a></li><li class="breadcrumb-item"><a href="./demo.html">Jupyter introduction</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sample_problems/lecture_2.html">Examples</a></li><li class="breadcrumb-item"><a href="../sample_problems/lecture_2.html">L2</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -169,7 +134,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
@@ -184,37 +149,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./demo.html" class="sidebar-item-text sidebar-link active">
+  <a href="../demo.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Jupyter introduction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./flow_around_bend.html" class="sidebar-item-text sidebar-link">
+  <a href="../flow_around_bend.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Flow around a bend</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./couette_flow.html" class="sidebar-item-text sidebar-link">
+  <a href="../couette_flow.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Couette flow</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./poiseuille_flow.html" class="sidebar-item-text sidebar-link">
+  <a href="../poiseuille_flow.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Poiseuille flow</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./normal_shocks.html" class="sidebar-item-text sidebar-link">
+  <a href="../normal_shocks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Normal shocks</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./supersonic_flow_friction.html" class="sidebar-item-text sidebar-link">
+  <a href="../supersonic_flow_friction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Supersonic flow with friction</span></a>
   </div>
 </li>
@@ -231,7 +196,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sample_problems/lecture_2.html" class="sidebar-item-text sidebar-link">
+  <a href="../sample_problems/lecture_2.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">L2</span></a>
   </div>
 </li>
@@ -247,8 +212,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#curve-fitting-with-least-squares" id="toc-curve-fitting-with-least-squares" class="nav-link" data-scroll-target="#curve-fitting-with-least-squares">Curve fitting with least squares</a></li>
+  <li><a href="#problem-1" id="toc-problem-1" class="nav-link active" data-scroll-target="#problem-1">Problem 1</a></li>
+  <li><a href="#problem-2" id="toc-problem-2" class="nav-link" data-scroll-target="#problem-2">Problem 2</a></li>
   </ul>
 </nav>
     </div>
@@ -257,7 +222,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Jupyter introduction</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
+<h1 class="title">L2 examples</h1>
 </div>
 
 
@@ -272,134 +237,88 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>You will undoubtedly use <code>python</code> (or Julia) and the accompanying Jupyter (or Pluto) notebooks for other coursework and in your future careers. In this course we shall use it for interpolating between rows in supersonic (with normal shocks) and isentropic flow tables, as well as for a coding assignment.</p>
-<p>This medium of coding is incredibly powerful and in my opinion makes for really efficient coding. I wish I had this when I was an undergraduate student.</p>
-<p>In the code blocks below, I will walk you through a very simple exercise of fitting a curve through a set of points. To begin, let us import a few libraries.</p>
-<div class="cell" data-execution_count="1">
+<section id="problem-1" class="level2">
+<h2 class="anchored" data-anchor-id="problem-1">Problem 1</h2>
+<p>A reservoir contains a volume of water 1 meter in height. Someone has accidentally spilled a tiny bit of oil, which floats on top of the water. The oil has a height of 0.2 meters. Please calculate the <em>gauge pressure</em> at the bottom of the reservoir. Assume the following densities for oil and water <span class="math inline">\(\require{color}{\color[rgb]{0.964810,0.470942,0.057578}\rho_{o}} = \require{color}{\color[rgb]{0.964810,0.470942,0.057578}750 kg / m^3}\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.964810,0.470942,0.057578}\rho_{w}} = \require{color}{\color[rgb]{0.964810,0.470942,0.057578}1000 kg / m^3}\)</span>.</p>
+<p><img src="images/image_L2_1.png" alt="reservoir" width="400"></p>
 <details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p>The first library imported above is <code>numpy</code>; it is a foundational package for scientific computing in <code>python</code>. The second package imported is <code>matplotlib</code>; it is useful for generating a myriad of plots that aid in visualizing data. Before we go ahead and try to fit a curve through a set of points, we need some points. Let us generate three points of the form:</p>
+<summary>
+Solution
+</summary>
+<p>It will be useful to consider a diagram of the reservoir.</p>
+<p><img src="images/image_L2_2.png" alt="reservoir" width="400"></p>
+<p>At the interface <span class="math inline">\(i\)</span>, the pressure is given by</p>
 <p><span class="math display">\[
-\large
-\mathbf{x} = \left[ 0.1, 0.2, 0.3 \right] \; \; \textrm{and} \; \; f\left( x\right) = 3x^2 - 2.5 x+ 1
-\]</span></p>
-<p>For clarity, I will denote the vector <span class="math inline">\(\mathbf{y} = f\left( \mathbf{x} \right)\)</span>.</p>
-<div class="cell" data-execution_count="2">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.array([<span class="fl">0.1</span>, <span class="fl">0.2</span>, <span class="fl">0.3</span>]).reshape(<span class="dv">3</span>,<span class="dv">1</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">3</span><span class="op">*</span>x<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> <span class="fl">2.5</span> <span class="op">*</span>x <span class="op">+</span> <span class="fl">1.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+  \large
+  \require{color}{\color[rgb]{0.315209,0.728565,0.037706}p_i }= {\color[rgb]{0.315209,0.728565,0.037706}p_a} + {\color[rgb]{0.964810,0.470942,0.057578}\rho_{o}} g h_o.
+  \]</span></p>
+<p>At the reservoir floor, the pressure is given by</p>
+<p><span class="math display">\[
+  \large
+  \require{color}{\color[rgb]{0.315209,0.728565,0.037706}p }= {\color[rgb]{0.315209,0.728565,0.037706}p_i} + {\color[rgb]{0.964810,0.470942,0.057578}\rho{w}} g h_w.
+  \]</span></p>
+<p>This results in</p>
+<p><span class="math display">\[
+  \large
+  \require{color}{\color[rgb]{0.315209,0.728565,0.037706}p }= {\color[rgb]{0.315209,0.728565,0.037706}p_a} + {\color[rgb]{0.964810,0.470942,0.057578}\rho_{o}} g h_o + {\color[rgb]{0.964810,0.470942,0.057578}\rho_{w}} g h_w.
+  \]</span></p>
+<p>Now, the definition of the <em>gauge pressure</em> is the pressure measurement relative to the atmospheric pressure. That is</p>
+<p><span class="math display">\[
+  \large
+  \require{color}{\color[rgb]{0.315209,0.728565,0.037706}p } - {\color[rgb]{0.315209,0.728565,0.037706}p_a}=   {\color[rgb]{0.964810,0.470942,0.057578}\rho_{o}} g h_o + {\color[rgb]{0.964810,0.470942,0.057578}\rho_{w}} g h_w.
+  \]</span></p>
+<p>Plugging in values for the above, we arrive at</p>
+<span class="math display">\[
+  \large
+  \require{color}{\color[rgb]{0.315209,0.728565,0.037706}p } - {\color[rgb]{0.315209,0.728565,0.037706}p_a}=   {\color[rgb]{0.964810,0.470942,0.057578} 750 \frac{kg}{m^3}} \times 9.8 \frac{m}{s^2} \times 0.2 m + {\color[rgb]{0.964810,0.470942,0.057578} 1000 \frac{kg}{m^3}} \times 9.8 \frac{m}{s^2} \times 1 m.
+  \]</span> <span class="math display">\[
+  \large
+  \require{color}{\color[rgb]{0.315209,0.728565,0.037706}p } - {\color[rgb]{0.315209,0.728565,0.037706}p_a} = 11,270 \frac{kg }{m \cdot s^2}
+  \]</span> This may also be expressed as <span class="math inline">\(11,270 \; Pa\)</span>, where <span class="math inline">\(Pa\)</span> stands for Pascals.
 </details>
-</div>
-<p>Note the <em>reshaping</em> is done such that <code>numpy</code> understands that <span class="math inline">\(x\)</span> is a 3-by-1 vector. Let us plot this data.</p>
-<div class="cell" data-execution_count="3">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">3</span>))</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y, <span class="st">'o'</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'x'</span>)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'y'</span>)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<p><img src="demo_files/figure-html/cell-4-output-1.png" class="img-fluid"></p>
-</div>
-</div>
 </section>
-<section id="curve-fitting-with-least-squares" class="level2">
-<h2 class="anchored" data-anchor-id="curve-fitting-with-least-squares">Curve fitting with least squares</h2>
-<p>To fit a curve through these points, we first need to decide what <em>basis</em> we should use. Do we want sines or cosines, fractions, exponentials, or just a quadratic polynomial? For now let us opt for a quadratic polynomial, as this results in a <em>linear</em> problem. The first thing we shall do is generate a matrix; lets call it <span class="math inline">\(\mathbf{A}\)</span>. This matrix has the following form:</p>
-<p><span class="math display">\[
-\large
-\mathbf{A}=\left[\begin{array}{ccc}
-\mathbf{1} &amp; \mathbf{x} &amp; \mathbf{x}^{2}\end{array}\right]
-\]</span></p>
-<div class="cell" data-execution_count="4">
+<section id="problem-2" class="level2">
+<h2 class="anchored" data-anchor-id="problem-2">Problem 2</h2>
+<p>An orifice plate is a thin circular plate with an orifice (hole) that is machined through its center. Below you will find a few pictures of an orifice plate and how it is used to control the flow. Essentially, one can use an orifice plate within a pipe to induce a pressure drop. This pressure drop is used to work out the velocity of the flow going through the pipe.</p>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Side view of plate in a pipe</th>
+<th style="text-align: center;">Orifice plate measurement system</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img src="images/image_L2_3.png" alt="orifice" width="400"></td>
+<td style="text-align: center;"><img src="images/image_L2_4.png" alt="orifice" width="400"></td>
+</tr>
+</tbody>
+</table>
+<p>Now consider a sloping manometer that is used to measure the pressure drop across an orifice plate, in a horizontal pipe carrying a fluid (air). The manometer is slanted, with <span class="math inline">\(\require{color}{\color[rgb]{0.127700,0.999775,0.999047}\gamma } = 30^{\circ}\)</span>. The arrangement is shown below.</p>
+<p><img src="images/image_L2_5.png" alt="orifice" width="400"></p>
+<p>If the liquid in the manometer is mercury, which has a density of $ = $, find the pressure drop.</p>
 <details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> <span class="kw">lambda</span> x : np.hstack([np.ones((x.shape[<span class="dv">0</span>],<span class="dv">1</span>)), x, x<span class="op">**</span><span class="dv">2</span> ])</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(A(x))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>[[1.   0.1  0.01]
- [1.   0.2  0.04]
- [1.   0.3  0.09]]</code></pre>
-</div>
-</div>
-<p>Now what we will do is to solve</p>
+<summary>
+Solution
+</summary>
+<p>We will ignore the contribution of the <em>weight of air</em>. This is because the density of mercury is roughly four orders of magnitude greater. Thus, the pressure drop may be expressed as</p>
 <p><span class="math display">\[
-\large
-\mathbf{Au} = \mathbf{y}
-\]</span></p>
-<p>for the unknown coefficients <span class="math inline">\(\mathbf{u}\)</span>. Another way of thinking about this equation is that we would like to minimize the <em>distance</em> between</p>
+  \large
+  \require{color}{\color[rgb]{0.315209,0.728565,0.037706}p_{A} }- {\color[rgb]{0.315209,0.728565,0.037706}p_{B} }= {\color[rgb]{0.918231,0.469102,0.038229}\rho_{m}} g  {\color[rgb]{1.000000,0.869732,0.000000}h} sin \left({\color[rgb]{0.127700,0.999775,0.999047} \gamma }\right)
+  \]</span></p>
 <p><span class="math display">\[
-\large
-\mathbf{Au} - \mathbf{y}
-\]</span></p>
-<p>Mathematically, this distance is the standard Cartesian distance, i.e., <em>square root sum of the squares</em>. This is then written as</p>
-<p><span class="math display">\[
-\large
-\underset{\mathbf{u}}{minimize} \; \; || \mathbf{Au} - \mathbf{y} ||_{2}^{2}
-\]</span></p>
-<p>While you will learn about many more such <em>distance</em> metrics in time, for the <span class="math inline">\(L_2\)</span> norm distance above, we can use the least squares approach that solves the normal equations under the hood. In <code>python</code> this is given by:</p>
-<div class="cell" data-execution_count="5">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>u <span class="op">=</span> np.linalg.lstsq(A(x), y, rcond<span class="op">=</span><span class="va">None</span>)[<span class="dv">0</span>]</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(u)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+  \large
+  \require{color}{\color[rgb]{0.315209,0.728565,0.037706}p_{A} }- {\color[rgb]{0.315209,0.728565,0.037706}p_{B} }= {\color[rgb]{0.918231,0.469102,0.038229}13.6 \times 10^{3} \frac{kg}{m^3}} \times 9.8 \frac{m}{s^2} \times {\color[rgb]{1.000000,0.869732,0.000000}0.85 m} \times sin \left({\color[rgb]{0.127700,0.999775,0.999047} 30^{\circ}}\right)
+  \]</span></p>
+<span class="math display">\[
+  \large
+  \require{color}{\color[rgb]{0.315209,0.728565,0.037706}p_{A} }- {\color[rgb]{0.315209,0.728565,0.037706}p_{B} }= 53,312 \frac{N}{m^2}
+  \]</span>
 </details>
-<div class="cell-output cell-output-stdout">
-<pre><code>[[ 1. ]
- [-2.5]
- [ 3. ]]</code></pre>
-</div>
-</div>
-<p>This tells us what <span class="math inline">\(\mathbf{u}\)</span> is. Note that the first entry corresponds to the intercept; the second corresponds to the coefficient of the linear term, and the third is the quadratic coefficient. So we have figured out what the underlying function <span class="math inline">\(f\)</span> is! Yay! To plot this curve across a finer grid of points, we first generate a finer grid of points and call it <span class="math inline">\(\hat{\mathbf{x}}\)</span></p>
-<div class="cell" data-execution_count="6">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>hat_x <span class="op">=</span> np.linspace(<span class="fl">0.1</span>, <span class="fl">0.4</span>, <span class="dv">50</span>).reshape(<span class="dv">50</span>, <span class="dv">1</span>)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">3</span>))</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> plt.gca()</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>plt.plot(hat_x, hat_x<span class="op">*</span><span class="dv">0</span>,  <span class="st">'o'</span>)</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'x'</span>)</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>ax.get_yaxis().set_visible(<span class="va">False</span>)</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<p><img src="demo_files/figure-html/cell-7-output-1.png" class="img-fluid"></p>
-</div>
-</div>
-<p>Finally, we evaluate the matrix <span class="math inline">\(\hat{\mathbf{A}}\)</span> at this finer set of points, i.e.,</p>
-<p><span class="math display">\[
-\large
-\hat{\mathbf{A}}=\left[\begin{array}{ccc}
-\mathbf{1} &amp; \hat{\mathbf{x}} &amp; \hat{\mathbf{x}}^{2}\end{array}\right]
-\]</span></p>
-<p>and multiply it by the obtained coefficients, i.e., <span class="math inline">\(\hat{\mathbf{y}} = \hat{\mathbf{A}} \mathbf{u}\)</span>.</p>
-<div class="cell" data-execution_count="7">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>hat_y <span class="op">=</span> A(hat_x) <span class="op">@</span> u <span class="co"># the @ is the dot operator, i.e., the dot product.</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">3</span>)) </span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y, <span class="st">'o'</span>)</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>plt.plot(hat_x, hat_y, <span class="st">'r--'</span>)</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'x'</span>)</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'y'</span>)</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<p><img src="demo_files/figure-html/cell-8-output-1.png" class="img-fluid"></p>
-</div>
-</div>
 
 
 </section>
@@ -806,14 +725,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Overview</span>
+      <a href="../supersonic_flow_friction.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Supersonic flow with friction</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./flow_around_bend.html" class="pagination-link">
-        <span class="nav-page-text">Flow around a bend</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
