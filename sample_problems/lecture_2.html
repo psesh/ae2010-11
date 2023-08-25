@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -214,6 +248,8 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#problem-1" id="toc-problem-1" class="nav-link active" data-scroll-target="#problem-1">Problem 1</a></li>
   <li><a href="#problem-2" id="toc-problem-2" class="nav-link" data-scroll-target="#problem-2">Problem 2</a></li>
+  <li><a href="#problem-3" id="toc-problem-3" class="nav-link" data-scroll-target="#problem-3">Problem 3</a></li>
+  <li><a href="#problem-4" id="toc-problem-4" class="nav-link" data-scroll-target="#problem-4">Problem 4</a></li>
   </ul>
 </nav>
     </div>
@@ -222,7 +258,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">L2 examples</h1>
+<div class="quarto-title-block"><div><h1 class="title">L2 examples</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
 </div>
 
 
@@ -268,10 +304,11 @@ Solution
   \require{color}{\color[rgb]{0.315209,0.728565,0.037706}p } - {\color[rgb]{0.315209,0.728565,0.037706}p_a}=   {\color[rgb]{0.964810,0.470942,0.057578}\rho_{o}} g h_o + {\color[rgb]{0.964810,0.470942,0.057578}\rho_{w}} g h_w.
   \]</span></p>
 <p>Plugging in values for the above, we arrive at</p>
-<span class="math display">\[
+<p><span class="math display">\[
   \large
   \require{color}{\color[rgb]{0.315209,0.728565,0.037706}p } - {\color[rgb]{0.315209,0.728565,0.037706}p_a}=   {\color[rgb]{0.964810,0.470942,0.057578} 750 \frac{kg}{m^3}} \times 9.8 \frac{m}{s^2} \times 0.2 m + {\color[rgb]{0.964810,0.470942,0.057578} 1000 \frac{kg}{m^3}} \times 9.8 \frac{m}{s^2} \times 1 m.
-  \]</span> <span class="math display">\[
+  \]</span></p>
+<span class="math display">\[
   \large
   \require{color}{\color[rgb]{0.315209,0.728565,0.037706}p } - {\color[rgb]{0.315209,0.728565,0.037706}p_a} = 11,270 \frac{kg }{m \cdot s^2}
   \]</span> This may also be expressed as <span class="math inline">\(11,270 \; Pa\)</span>, where <span class="math inline">\(Pa\)</span> stands for Pascals.
@@ -319,6 +356,127 @@ Solution
   \require{color}{\color[rgb]{0.315209,0.728565,0.037706}p_{A} }- {\color[rgb]{0.315209,0.728565,0.037706}p_{B} }= 53,312 \frac{N}{m^2}
   \]</span>
 </details>
+</section>
+<section id="problem-3" class="level2">
+<h2 class="anchored" data-anchor-id="problem-3">Problem 3</h2>
+<p>A mercury barometer column with a density of <span class="math inline">\(\require{color}{\color[rgb]{0.964810,0.470942,0.057578}\rho_{l}} = \require{color}{\color[rgb]{0.964810,0.470942,0.057578}13,600 kg / m^3}\)</span> has a height of <span class="math inline">\(\require{color}{\color[rgb]{0.986048,0.008333,0.501924}h} = {\color[rgb]{0.986048,0.008333,0.501924}0.75 m}\)</span>. What is the local atmospheric pressure?</p>
+<p><img src="images/image_L2_8.png" alt="orifice" width="100"></p>
+<details>
+<summary>
+Solution
+</summary>
+<p>The difference in pressures may be expressed as:</p>
+<p><span class="math display">\[
+  \large
+  \require{color}{\color[rgb]{0.315209,0.728565,0.037706}p_a} - {\color[rgb]{0.315209,0.728565,0.037706}p_{v}} = \left( {\color[rgb]{0.918231,0.469102,0.038229}\rho_{l}} - {\color[rgb]{0.918231,0.469102,0.038229}\rho_{a}} \right) g {\color[rgb]{0.985542,0.009453,0.999181}h} \approx \rho_{l} g {\color[rgb]{0.985542,0.009453,0.999181}h}
+  \]</span></p>
+<p>Additionally, since <span class="math inline">\({\color[rgb]{0.315209,0.728565,0.037706}p_{v}} \approx 0\)</span>, we have</p>
+<p><span class="math display">\[
+  \large
+  \require{color}{\color[rgb]{0.315209,0.728565,0.037706}p_a} \approx  \rho_{l} g {\color[rgb]{0.985542,0.009453,0.999181}h}
+  \]</span></p>
+Numerical solution is given below.
+</details>
+<div class="cell" data-execution_count="14">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> <span class="fl">0.75</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>rho <span class="op">=</span> <span class="dv">13600</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="fl">9.8</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>p_a <span class="op">=</span> rho <span class="op">*</span> h <span class="op">*</span> g</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">str</span>(p_a<span class="op">/</span><span class="dv">101325</span>)<span class="op">+</span><span class="st">' atm'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.9865284974093265 atm</code></pre>
+</div>
+</div>
+</section>
+<section id="problem-4" class="level2">
+<h2 class="anchored" data-anchor-id="problem-4">Problem 4</h2>
+<p>Consider a dam which has a parabolic surface as shown in the figure below.</p>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Real perspective</th>
+<th style="text-align: center;">Schematic for the problem</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img src="images/image_L2_6.png" alt="orifice" width="200"></td>
+<td style="text-align: center;"><img src="images/image_L2_7.png" alt="orifice" width="500"></td>
+</tr>
+</tbody>
+</table>
+<p>Assuming that the dam is filled with water, and has dimensions <span class="math inline">\(x_0 = 5 m\)</span> and <span class="math inline">\(z_0 = 8 m\)</span>, calculate the forces <span class="math inline">\(\require{color}{\color[rgb]{0.064095,0.501831,0.501977}F_v}\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.064095,0.501831,0.501977}F_h}\)</span>. The depth of the dam is given to be <span class="math inline">\(20 m\)</span> and the density of water in the dam is <span class="math inline">\(\require{color}{\color[rgb]{0.964810,0.470942,0.057578}\rho} = \require{color}{\color[rgb]{0.964810,0.470942,0.057578}1000 kg / m^3}\)</span>.</p>
+<details>
+<summary>
+Solution
+</summary>
+<p>As the fluid in the dam is at rest, it is worth noting that the vertical force <span class="math inline">\(\require{color}{\color[rgb]{0.064095,0.501831,0.501977}F_v}\)</span> corresponds to the weight of the water above, while the horizontal force <span class="math inline">\(\require{color}{\color[rgb]{0.064095,0.501831,0.501977}F_h}\)</span> is the pressure force across the projected area.</p>
+<p>To work out the volume of water above the dam, we integrate the parabola and multiply it by the depth (<span class="math inline">\(w=20 m\)</span>). The first part yields the area</p>
+<p><span class="math display">\[
+  \large
+  \require{color}
+  A = \int_{0}^{x_0} {\color[rgb]{0.986252,0.007236,0.027423}z}\left(x \right)dx = \int_{0}^{x_0} z_0 \left( \frac{x}{x_0} \right)^2 dx
+  \]</span></p>
+<p><span class="math display">\[
+  \large
+  \require{color}
+  A = \frac{z_0}{x^2_0} \int_{0}^{x_0} x^2 dx = \frac{z_0}{x^2_0} \left[ \frac{x^3}{3} \right]_{0}^{x_0} = \frac{1}{3} x_0 z_0
+  \]</span></p>
+<p>Note that this is the area underneath the red curve. What we want is the area corresponding to where the water is. This is given by</p>
+<p><span class="math display">\[
+  \large
+  \require{color}
+  A_{water} = x_0 z_0 -  \frac{1}{3} x_0 z_0 = \frac{2}{3} x_0 z_0.
+  \]</span></p>
+<p>The volume of water in the parabolic region is thus simply</p>
+<p><span class="math display">\[
+   \large
+   V = \frac{2}{3} x_0 z_0 w.
+   \]</span></p>
+<p>The vertical force may then be written as</p>
+<p><span class="math display">\[
+   \large
+   \require{color}{\color[rgb]{0.064095,0.501831,0.501977}F_v} = {\color[rgb]{0.964810,0.470942,0.057578}\rho}  g \frac{2}{3}x_0 z_0 w.
+   \]</span></p>
+<p>For the horizontal force,</p>
+<p><span class="math display">\[
+   \large
+   \require{color}{\color[rgb]{0.064095,0.501831,0.501977}F_h} = w \int_{0}^{z_0} {\color[rgb]{0.964810,0.470942,0.057578}\rho} g {\color[rgb]{0.986252,0.007236,0.027423}z} d{\color[rgb]{0.986252,0.007236,0.027423}z} = w  {\color[rgb]{0.964810,0.470942,0.057578}\rho} g \frac{z^2_0}{2}
+   \]</span></p>
+Numerical solutions are given below.
+</details>
+<div class="cell" data-execution_count="9">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> <span class="dv">20</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>x0 <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>z0 <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>rho <span class="op">=</span> <span class="dv">1000</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="fl">9.8</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>F_v <span class="op">=</span> rho <span class="op">*</span> g <span class="op">*</span> <span class="dv">2</span><span class="op">/</span><span class="dv">3</span> <span class="op">*</span> x0 <span class="op">*</span> z0 <span class="op">*</span> w</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">str</span>(F_v)<span class="op">+</span><span class="st">' N'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>6533333.333333332 N</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="10">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>F_h <span class="op">=</span> rho <span class="op">*</span> g <span class="op">*</span> w <span class="op">*</span> z0<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">str</span>(F_h)<span class="op">+</span><span class="st">' N'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>9800000.0 N</code></pre>
+</div>
+</div>
 
 
 </section>
