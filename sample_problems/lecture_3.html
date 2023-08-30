@@ -332,7 +332,7 @@ Solution
 \]</span></p>
 <p>We can now plug in values to work out this value, i.e.,</p>
 </details>
-<div class="cell" data-execution_count="3">
+<div class="cell" data-execution_count="1">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -406,8 +406,86 @@ Solution
 </section>
 <section id="problem-4" class="level2">
 <h2 class="anchored" data-anchor-id="problem-4">Problem 4</h2>
-<p>This last problem does not pertain to conservation of mass, but rather to the idea of a center of pressure. Consider a 2D representation of a water reservoir with a gate (hinge) at the base. Assuming the gate below is <span class="math inline">\(1.5 \; m\)</span> wide, compute: - the force on the gate due to the water pressure; - the horizontal force exerted by the wall at point <span class="math inline">\(A\)</span> - the reactions at the hinge <span class="math inline">\(B\)</span>.</p>
+<p>This last problem does not pertain to conservation of mass, but rather to the idea of a center of pressure. Consider a 2D representation of a water reservoir with a gate (hinge) at the base. Assuming the gate below is <span class="math inline">\(1.5 \; m\)</span> wide, compute:</p>
+<ol type="1">
+<li>the force on the gate due to the water pressure;</li>
+<li>the location of the center of pressure</li>
+</ol>
 <p><img src="images/image_L3_5.png" alt="tank" width="400"></p>
+<details>
+<summary>
+Solution 1
+</summary>
+<p>Following on from the free body diagram in Lecture 3, we have the diagram below.</p>
+<p><img src="images/image_L3_6.png" alt="tank" width="400"></p>
+<p>To obtain the force on the gate due to the water pressure, we have to integrate:</p>
+<p><span class="math display">\[
+\large
+\require{color}{\color[rgb]{0.986252,0.007236,0.027423}F} = \int_{A}^{B} {\color[rgb]{0.990448,0.502245,0.032881}\rho} g w \; h\left( {\color[rgb]{0.986048,0.008333,0.501924}s} \right) ds = \int_{A}^{B} {\color[rgb]{0.990448,0.502245,0.032881}\rho} g w \left(3 + {\color[rgb]{0.986048,0.008333,0.501924}s}\; sin\left( {\color[rgb]{0.127700,0.999775,0.999047}\gamma} \right) \right) {\color[rgb]{0.986048,0.008333,0.501924}ds}
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}{\color[rgb]{0.986252,0.007236,0.027423}F} =  \int_{A=0}^{B=\frac{2}{sin\left( {\color[rgb]{0.127700,0.999775,0.999047}\gamma} \right) }} {\color[rgb]{0.990448,0.502245,0.032881}\rho} g w \left(3 + {\color[rgb]{0.986048,0.008333,0.501924}s}\; sin\left( {\color[rgb]{0.127700,0.999775,0.999047}\gamma} \right) \right) {\color[rgb]{0.986048,0.008333,0.501924}ds}
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}{\color[rgb]{0.986252,0.007236,0.027423}F} = \left[  {\color[rgb]{0.990448,0.502245,0.032881}\rho }g w 3 {\color[rgb]{0.986048,0.008333,0.501924}s} + {\color[rgb]{0.990448,0.502245,0.032881}\rho }g w \frac{{\color[rgb]{0.986048,0.008333,0.501924}s}^2 sin\left( {\color[rgb]{0.127700,0.999775,0.999047}\gamma} \right) }{2} \right]_{0}^{\frac{2}{sin\left( {\color[rgb]{0.127700,0.999775,0.999047}\gamma} \right)}}
+\]</span></p>
+See the code below for the numerical solution. Note that it makes use of the <code>lambda</code> function, which makes it easy to define a function.
+</details>
+<div class="cell" data-execution_count="2">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>rho <span class="op">=</span> <span class="dv">1000</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="fl">9.81</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> <span class="fl">1.5</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>gamma <span class="op">=</span> <span class="dv">35</span> <span class="op">*</span> np.pi<span class="op">/</span><span class="fl">180.</span> <span class="co"># convert to radians</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>F_func <span class="op">=</span> <span class="kw">lambda</span> s: rho <span class="op">*</span> g <span class="op">*</span> w <span class="op">*</span> <span class="dv">3</span> <span class="op">*</span> s <span class="op">+</span> rho <span class="op">*</span> g <span class="op">*</span> w <span class="op">*</span> s<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> np.sin(gamma) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>F <span class="op">=</span> F_func(<span class="fl">2.</span><span class="op">/</span>np.sin(gamma)) <span class="op">-</span> F_func(<span class="dv">0</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">str</span>(F<span class="op">/</span><span class="dv">1000</span>)<span class="op">+</span> <span class="st">'kN'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>205.23855678051567kN</code></pre>
+</div>
+</div>
+<details>
+<summary>
+Solution 2
+</summary>
+<p>To work out the horizontal force exerted by the wall at point B, we need to find the center of pressure. As detailed in lecture, this is given by</p>
+<p><span class="math display">\[
+\large
+\require{color}{\color[rgb]{0.986252,0.007236,0.027423}F}  \times {\color[rgb]{0.986048,0.008333,0.501924}s_{cp}} = \int_{A}^{B} {\color[rgb]{0.986048,0.008333,0.501924}s} {\color[rgb]{0.986252,0.007236,0.027423}dF} = \int_{A=0}^{B=\frac{2}{sin\left( {\color[rgb]{0.127700,0.999775,0.999047}\gamma} \right) }} {\color[rgb]{0.990448,0.502245,0.032881}\rho} g w \left(3 + {\color[rgb]{0.986048,0.008333,0.501924}s}\; sin\left( {\color[rgb]{0.127700,0.999775,0.999047}\gamma} \right) \right) {\color[rgb]{0.986048,0.008333,0.501924} s ds}
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}{\color[rgb]{0.986252,0.007236,0.027423}F}  \times {\color[rgb]{0.986048,0.008333,0.501924}s_{cp}} = \left[  {\color[rgb]{0.990448,0.502245,0.032881}\rho }g w 3 \frac{{\color[rgb]{0.986048,0.008333,0.501924}s}^2}{2} + {\color[rgb]{0.990448,0.502245,0.032881}\rho }g w \frac{{\color[rgb]{0.986048,0.008333,0.501924}s}^3 sin\left( {\color[rgb]{0.127700,0.999775,0.999047}\gamma} \right) }{3} \right]_{0}^{\frac{2}{sin\left( {\color[rgb]{0.127700,0.999775,0.999047}\gamma} \right)}}
+\]</span></p>
+<p>where the subscript <span class="math inline">\(cp\)</span> stands for <em>center of pressure</em>. Once we have worked out the expression above, we can divide <span class="math inline">\(\require{color}{\color[rgb]{0.986252,0.007236,0.027423}F} \times {\color[rgb]{0.986048,0.008333,0.501924}s_{cp}}\)</span> by the force obtained in the earlier part to arrive at <span class="math inline">\(\require{color}{\color[rgb]{0.986048,0.008333,0.501924}s_{cp}}\)</span>.</p>
+Calculations may be found below.
+</details>
+<div class="cell" data-execution_count="3">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>rho <span class="op">=</span> <span class="dv">1000</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="fl">9.81</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>w <span class="op">=</span> <span class="fl">1.5</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>gamma <span class="op">=</span> <span class="dv">35</span> <span class="op">*</span> np.pi<span class="op">/</span><span class="fl">180.</span> <span class="co"># convert to radians</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>Fscp_func <span class="op">=</span> <span class="kw">lambda</span> s: rho <span class="op">*</span> g <span class="op">*</span> w <span class="op">*</span> ( (<span class="dv">3</span> <span class="op">*</span> s<span class="op">**</span><span class="dv">2</span>)<span class="op">/</span><span class="fl">2.</span> <span class="op">+</span> (s<span class="op">**</span><span class="dv">3</span> <span class="op">*</span> np.sin(gamma))<span class="op">/</span><span class="fl">3.</span> )</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>Fscp <span class="op">=</span> Fscp_func(<span class="fl">2.</span><span class="op">/</span>np.sin(gamma)) <span class="op">-</span> Fscp_func(<span class="dv">0</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">str</span>(Fscp<span class="op">/</span><span class="dv">1000</span>)<span class="op">+</span> <span class="st">' kN x m'</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Finally, computing the length assciated with the center of pressure location.</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>scp <span class="op">=</span> Fscp <span class="op">/</span> F</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">str</span>(scp)<span class="op">+</span> <span class="st">' m'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>387.641046169963 kN x m
+1.888734028589523 m</code></pre>
+</div>
+</div>
 
 
 </section>
