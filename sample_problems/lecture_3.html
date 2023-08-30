@@ -64,6 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../sample_problems/lecture_2.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -145,7 +146,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">L3 examples</li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sample_problems/lecture_2.html">Examples</a></li><li class="breadcrumb-item"><a href="../sample_problems/lecture_3.html">L3 examples</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -230,7 +231,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sample_problems/lecture_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">L2</span></a>
+ <span class="menu-text">L2 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_3.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">L3 examples</span></a>
   </div>
 </li>
       </ul>
@@ -369,8 +376,32 @@ which implies that <span class="math inline">\(\delta t = 9000 s\)</span>.
 </section>
 <section id="problem-3" class="level2">
 <h2 class="anchored" data-anchor-id="problem-3">Problem 3</h2>
-<p>Water with a density of <span class="math inline">\(1000 kg/m^3\)</span> flows through a channel of rectangular cross section of <span class="math inline">\(1 m\)</span> by <span class="math inline">\(2 m\)</span> at a volumetric flow rate of <span class="math inline">\(5400 m^3/hr\)</span>. Determine the velocity in <span class="math inline">\(m/s\)</span> &amp; the mass flow rate in <span class="math inline">\(kg/s\)</span>.</p>
+<p>Water with a density of <span class="math inline">\(\require{color}{\color[rgb]{0.990448,0.502245,0.032881}1000 \frac{kg}{m^3}}\)</span> flows through a channel of rectangular cross section of <span class="math inline">\(\require{color}{\color[rgb]{0.064095,0.501831,0.501977}1 m}\)</span> by <span class="math inline">\(\require{color}{\color[rgb]{0.064095,0.501831,0.501977}2 m}\)</span> at a volumetric flow rate of <span class="math inline">\(\require{color}{\color[rgb]{0.501961,0.250953,0.010028}5400 \; m^3/hr}\)</span>. Determine the velocity in <span class="math inline">\(m/s\)</span> &amp; the mass flow rate in <span class="math inline">\(kg/s\)</span>.</p>
 <p><img src="images/image_L3_4.png" alt="channel" width="500"></p>
+<details>
+<summary>
+Solution
+</summary>
+<p>We can convert the volumetric flow rate into standard SI units</p>
+<p><span class="math display">\[
+\large
+\require{color}{\color[rgb]{0.501961,0.250953,0.010028}Q} = {\color[rgb]{0.501961,0.250953,0.010028}5400} \; {\color[rgb]{0.501963,0.000000,0.008128}\frac{m^3}{hr}} \times \frac{1}{3600}\frac{hr}{s} ={\color[rgb]{0.501963,0.000000,0.008128} 1.5} \; {\color[rgb]{0.501963,0.000000,0.008128}\frac{m^3}{s}}.
+\]</span></p>
+<p>We can now work out the velocity, i.e.,</p>
+<p><span class="math display">\[
+\large
+\require{color}{\color[rgb]{0.501961,0.250953,0.010028}Q} = {\color[rgb]{0.064095,0.501831,0.501977}A}{\color[rgb]{0.059472,0.501943,0.998465}v}
+\]</span></p>
+<p><span class="math display">\[
+\large
+\Rightarrow\require{color}{\color[rgb]{0.059472,0.501943,0.998465}v} = \frac{{\color[rgb]{0.501961,0.250953,0.010028}1.5 \frac{m^3}{s} }}{{\color[rgb]{0.064095,0.501831,0.501977}1 m \times 2 m}} = {\color[rgb]{0.059472,0.501943,0.998465}0.75 \; \frac{m}{s}}
+\]</span></p>
+<p>From this velocity, we can now work out the massflow rate</p>
+<span class="math display">\[
+\large
+\require{color}\dot{m} = {\color[rgb]{0.501963,0.000000,0.008128}Q }{\color[rgb]{0.990448,0.502245,0.032881}\rho} = {\color[rgb]{0.501963,0.000000,0.008128}1.5 \; \frac{m^3}{s} }\times {\color[rgb]{0.990448,0.502245,0.032881}1000 \frac{kg}{m^3}} = 1500 \frac{kg}{s}
+\]</span>
+</details>
 
 
 </section>
@@ -775,6 +806,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../sample_problems/lecture_2.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">L2 examples</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
 
 
