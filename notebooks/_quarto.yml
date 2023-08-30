@@ -42,5 +42,5 @@ website:
           - supersonic_flow_friction.ipynb
       - section: "Examples"
         contents:
-          text: "L2"
-          file: sample_problems/lecture_2.ipynb
+          - sample_problems/lecture_2.ipynb
+          - sample_problems/lecture_3.ipynb
