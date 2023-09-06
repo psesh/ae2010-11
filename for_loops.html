@@ -251,6 +251,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">L4 examples</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sample_problems/lecture_5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L5 examples</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -265,6 +271,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#lists" id="toc-lists" class="nav-link" data-scroll-target="#lists">Lists</a></li>
+  <li><a href="#for-loops" id="toc-for-loops" class="nav-link" data-scroll-target="#for-loops">For loops</a></li>
   </ul>
 </nav>
     </div>
@@ -301,8 +308,163 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>todays_terms <span class="op">=</span> [<span class="st">"Bernoulli"</span>, <span class="st">"streamline"</span>, <span class="st">"streamwise"</span>, <span class="st">"blobs"</span>, np.pi, np.exp(<span class="dv">1</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>todays_terms <span class="op">=</span> [<span class="st">"Bernoulli"</span>, <span class="st">"streamline"</span>, <span class="st">"streamwise"</span>, <span class="st">"blobs"</span>, np.pi, np.exp(<span class="dv">1</span>), <span class="va">True</span>]</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(todays_terms[<span class="dv">0</span>])</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(todays_terms[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(todays_terms[<span class="dv">2</span>])</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(todays_terms[<span class="dv">5</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Bernoulli
+True
+streamwise
+2.718281828459045</code></pre>
+</div>
+</div>
+<p>As noted above, <code>python</code> starts counting at 0. A <code>list</code> has a length, corresponding to the number of items it contains. Items in a list can be removed; items can also be appended to a list.</p>
+<div class="cell" data-execution_count="4">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>todays_terms.remove(<span class="st">"Bernoulli"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(todays_terms)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>todays_terms.append(<span class="fl">0.001</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(todays_terms)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>todays_terms.insert(<span class="dv">3</span>, <span class="st">"adding"</span>) <span class="co"># "adding" inserted in position 3</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(todays_terms)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>tomorrows_terms <span class="op">=</span> todays_terms.copy()</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tomorrows_terms)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>tomorrows_terms.pop(<span class="dv">5</span>) <span class="co"># Removing the 5th entry</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tomorrows_terms)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>['streamline', 'streamwise', 'blobs', 3.141592653589793, 2.718281828459045, True]
+['streamline', 'streamwise', 'blobs', 3.141592653589793, 2.718281828459045, True, 0.001]
+['streamline', 'streamwise', 'blobs', 'adding', 3.141592653589793, 2.718281828459045, True, 0.001]
+['streamline', 'streamwise', 'blobs', 'adding', 3.141592653589793, 2.718281828459045, True, 0.001]
+['streamline', 'streamwise', 'blobs', 'adding', 3.141592653589793, True, 0.001]</code></pre>
+</div>
+</div>
+<p>Below you will find an example of a list comprising instances of a class called <code>Cards</code>.</p>
+<div class="cell" data-execution_count="5">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Cards(<span class="bu">object</span>):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name):</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>my_card_1 <span class="op">=</span> Cards(<span class="st">"hearts"</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>my_card_2 <span class="op">=</span> Cards(<span class="st">"spades"</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>my_card_3 <span class="op">=</span> Cards(<span class="st">"diamonds"</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [my_card_1, my_card_2, my_card_3]</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[&lt;__main__.Cards object at 0x107b0ce50&gt;, &lt;__main__.Cards object at 0x107b0cf90&gt;, &lt;__main__.Cards object at 0x107b0d090&gt;]</code></pre>
+</div>
+</div>
+</section>
+<section id="for-loops" class="level2">
+<h2 class="anchored" data-anchor-id="for-loops">For loops</h2>
+<p>In <code>python</code> the <code>for</code> loop is used for iterating. However, unlike many other languages, it can iterate over a list, strings, or even other sequences (such as dictionaries and tuples). First, consider the standard use where we iterate across a range of integers.</p>
+<div class="cell" data-execution_count="6">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">10</span>): <span class="co"># iterating between 0 and 9</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>0
+1
+2
+3
+4
+5
+6
+7
+8
+9</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="7">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>): <span class="co"># iterating between 0 and 9, whilst skipping every 2nd entry</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>0
+2
+4
+6
+8</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="8">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> card <span class="kw">in</span> my_list: <span class="co"># iterating our list of cards</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(card.name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>hearts
+spades
+diamonds</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="9">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> value <span class="kw">in</span> todays_terms:</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>streamline
+streamwise
+blobs
+adding
+3.141592653589793
+2.718281828459045
+True
+0.001</code></pre>
+</div>
+</div>
+<p>These loops can also start counting in reverse, i.e.,</p>
+<div class="cell" data-execution_count="10">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> value <span class="kw">in</span> <span class="bu">reversed</span>(todays_terms):</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.001
+True
+2.718281828459045
+3.141592653589793
+adding
+blobs
+streamwise
+streamline</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="11">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>): <span class="co"># Starting at 10 iterate to 1. </span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(j)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>10
+9
+8
+7
+6
+5
+4
+3
+2
+1</code></pre>
+</div>
 </div>
 
 
