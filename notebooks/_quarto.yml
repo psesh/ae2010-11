@@ -32,6 +32,9 @@ website:
     style: "docked"
     contents:
       - index.ipynb
+      - section: "Practice Problems"
+        contents: 
+          - practice_problems/incompressible_fluid_mechanics.ipynb
       - section: "Notebooks"
         contents:
           - demo.ipynb

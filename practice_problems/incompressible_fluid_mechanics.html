@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>AE2010/AE2011 - L6 examples</title>
+<title>AE2010/AE2011 - Incompressible fluid mechanics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,7 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../sample_problems/lecture_5.html" rel="prev">
+<link href="../demo.html" rel="next">
+<link href="../index.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -146,7 +147,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sample_problems/lecture_2.html">Examples</a></li><li class="breadcrumb-item"><a href="../sample_problems/lecture_6.html">L6 examples</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../practice_problems/incompressible_fluid_mechanics.html">Practice Problems</a></li><li class="breadcrumb-item"><a href="../practice_problems/incompressible_fluid_mechanics.html">Incompressible fluid mechanics</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -183,7 +184,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../practice_problems/incompressible_fluid_mechanics.html" class="sidebar-item-text sidebar-link">
+  <a href="../practice_problems/incompressible_fluid_mechanics.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Incompressible fluid mechanics</span></a>
   </div>
 </li>
@@ -277,7 +278,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sample_problems/lecture_6.html" class="sidebar-item-text sidebar-link active">
+  <a href="../sample_problems/lecture_6.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">L6 examples</span></a>
   </div>
 </li>
@@ -304,7 +305,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">L6 examples</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Incompressible fluid mechanics</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
 </div>
 
 
@@ -319,97 +320,127 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
+<p><mark>More problems will likely be added to this page; stay tuned.</mark></p>
 <section id="problem-1" class="level2">
 <h2 class="anchored" data-anchor-id="problem-1">Problem 1</h2>
-<p>A jet of air is ejected tangentially onto a curved surface as shown below. Assuming that the height of the jet does not alter as it moves around the surface, and that the jet velocity is uniform across its area, please determine the gauge pressure on the solid surface. Assume the density of air is <span class="math inline">\(\require{color}{\color[rgb]{0.918231,0.469102,0.038229}\rho } = {\color[rgb]{0.918231,0.469102,0.038229}1.25 \; kg/m^3}\)</span>.</p>
-<p><img src="images/image_L6_1.png" alt="channel" width="300"></p>
+<p>A mixing tank has two inlets and one outlet, all of the same area, <span class="math inline">\(0.01 \; m^2\)</span>. Liquids of density <span class="math inline">\(\require{color}{\color[rgb]{0.918231,0.469102,0.038229}\rho_1 } = {\color[rgb]{0.918231,0.469102,0.038229}800 \; kg/m^3}\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.918231,0.469102,0.038229}\rho_2 } = {\color[rgb]{0.918231,0.469102,0.038229}900 \; kg/m^3}\)</span> flow into the tank through separate inlets. They have uniform inlet velocities of <span class="math inline">\(\require{color}{\color[rgb]{0.059472,0.501943,0.998465}3.1 \; m/s}\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.059472,0.501943,0.998465}1.9 \; m/s}\)</span> respectively. Mixing is assumed to be complete, and the conditions at the tank outlet are uniform. Assuming steady state conditions, find</p>
+<ul>
+<li><p>the mass flows into and out of the tank</p></li>
+<li><p>the mean density and velocity of the mixture flowing out of the tank</p></li>
+</ul>
+<p>Note that the mean velocity can be calculated based on the assumption of incompressible flow.</p>
 <details>
 <summary>
 Solution
 </summary>
-<p>Annotating the figure above, we have:</p>
-<p><img src="images/image_L6_2.png" alt="channel" width="300"></p>
-<p>Along the curve, the pressure gradient in the normal direction is given by</p>
+<p>Consider the schematic shown below.</p>
+<p><img src="images/image_P1_1.png" alt="channel" width="500"></p>
 <p><span class="math display">\[
 \large
-\require{color}\frac{d{\color[rgb]{0.315209,0.728565,0.037706}p}}{d{\color[rgb]{0.986252,0.007236,0.027423}n}} = {\color[rgb]{0.990448,0.502245,0.032881}\rho} \frac{{\color[rgb]{0.059472,0.501943,0.998465}V}^2}{R}
+\require{color}\dot{m}_{1} = {\color[rgb]{0.918231,0.469102,0.038229}\rho_1 } A {\color[rgb]{0.059472,0.501943,0.998465}v_1}, \; \; \; \require{color}\dot{m}_{2} = {\color[rgb]{0.918231,0.469102,0.038229}\rho_2 } A {\color[rgb]{0.059472,0.501943,0.998465}v_2}
 \]</span></p>
-<p>where the radius is given by</p>
+<p>As conservation of mass must hold within the control volume, we have</p>
 <p><span class="math display">\[
 \large
-\require{color}R = R_o + {\color[rgb]{0.986252,0.007236,0.027423}n}.
+\require{color}\dot{m}_{1} + \dot{m}_{2} = \dot{m}_{3}
 \]</span></p>
-<p>This yields</p>
+<p>Note that since both liquids flowing into the tank are incompressible, we can use volumetric flow rates, i.e.,</p>
 <p><span class="math display">\[
 \large
-\require{color}\frac{d{\color[rgb]{0.315209,0.728565,0.037706}p}}{d{\color[rgb]{0.986252,0.007236,0.027423}n}} ={\color[rgb]{0.990448,0.502245,0.032881} \rho}{\color[rgb]{0.059472,0.501943,0.998465} V}^2 \frac{1}{R_o + {\color[rgb]{0.986252,0.007236,0.027423}n}}
+\require{color}A {\color[rgb]{0.059472,0.501943,0.998465}v_1} + A {\color[rgb]{0.059472,0.501943,0.998465}v_2} = A {\color[rgb]{0.059472,0.501943,0.998465}v_3}
 \]</span></p>
+<p>Noting that the areas are the same,</p>
 <p><span class="math display">\[
 \large
-\require{color}\Rightarrow d{\color[rgb]{0.315209,0.728565,0.037706}p} ={\color[rgb]{0.990448,0.502245,0.032881} \rho}{\color[rgb]{0.059472,0.501943,0.998465} V}^2 \frac{d{\color[rgb]{0.986252,0.007236,0.027423}n}}{R_o + {\color[rgb]{0.986252,0.007236,0.027423}n}}.
+\require{color}{\color[rgb]{0.059472,0.501943,0.998465}v_1} + {\color[rgb]{0.059472,0.501943,0.998465}v_2} = {\color[rgb]{0.059472,0.501943,0.998465}v_3}
 \]</span></p>
-<p>Integrating both sides, yields</p>
-<p><span class="math display">\[
-\large
-\require{color}\Rightarrow \int_{{\color[rgb]{0.315209,0.728565,0.037706}p_{surface}}}^{{\color[rgb]{0.315209,0.728565,0.037706}p_{atm}}}d{\color[rgb]{0.315209,0.728565,0.037706}p} = \int_{0}^{h} {\color[rgb]{0.990448,0.502245,0.032881} \rho}{\color[rgb]{0.059472,0.501943,0.998465} V}^2 \frac{d{\color[rgb]{0.986252,0.007236,0.027423}n}}{R_o + {\color[rgb]{0.986252,0.007236,0.027423}n}}
-\]</span></p>
-<p><span class="math display">\[
-\large
-\require{color}\Rightarrow {\color[rgb]{0.315209,0.728565,0.037706}p_{atm}} - {\color[rgb]{0.315209,0.728565,0.037706}p_{surface}} = {\color[rgb]{0.918231,0.469102,0.038229}\rho} {\color[rgb]{0.059472,0.501943,0.998465}V}^2 ln \left( \frac{R_o + h}{R_o} \right)
-\]</span></p>
-Recognizing that the left hand side is the gauge pressure, we can now go ahead and plug in the numerical values.
+Assigning values to the equations above, yields:
 </details>
-<div class="cell" data-execution_count="2">
+<div class="cell" data-execution_count="1">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>rho <span class="op">=</span> <span class="fl">1.25</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> <span class="fl">0.01</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>R_o <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>V <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>p_gauge <span class="op">=</span> rho <span class="op">*</span> V<span class="op">**</span><span class="dv">2</span> <span class="op">*</span> np.log((R_o <span class="op">+</span> h)<span class="op">/</span>R_o)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">str</span>(p_gauge),<span class="st">' Pa'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>v_1 <span class="op">=</span> <span class="fl">3.1</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>v_2 <span class="op">=</span> <span class="fl">1.9</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>rho_1 <span class="op">=</span> <span class="dv">800</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>rho_2 <span class="op">=</span> <span class="dv">900</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> <span class="fl">0.01</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># From the equations above, we have the massflows in and out of the tank to be:</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>m_1 <span class="op">=</span> rho_1 <span class="op">*</span> v_1 <span class="op">*</span> A</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>m_2 <span class="op">=</span> rho_2 <span class="op">*</span> v_2 <span class="op">*</span> A</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>m_3 <span class="op">=</span> m_1 <span class="op">+</span> m_2</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The massflows are: m_1 '</span><span class="op">+</span><span class="bu">str</span>(m_1)<span class="op">+</span><span class="st">' kg/s, m_2 '</span><span class="op">+</span><span class="bu">str</span>(m_2)<span class="op">+</span><span class="st">' kg/s, and m_3 '</span><span class="op">+</span><span class="bu">str</span>(m_3)<span class="op">+</span><span class="st">' kg/s'</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>v_3 <span class="op">=</span> v_1 <span class="op">+</span> v_2</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>rho_3 <span class="op">=</span> m_3 <span class="op">/</span> (v_3 <span class="op">*</span> A)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The mass density of the outflow is '</span><span class="op">+</span><span class="bu">str</span>(rho_3)<span class="op">+</span><span class="st">' kg/m^3, with a velocity of '</span><span class="op">+</span><span class="bu">str</span>(v_3)<span class="op">+</span><span class="st">' m/s'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>1.2437913566460115  Pa</code></pre>
+<pre><code>The massflows are: m_1 24.8 kg/s, m_2 17.1 kg/s, and m_3 41.900000000000006 kg/s
+The mass density of the outflow is 838.0000000000001 kg/m^3, with a velocity of 5.0 m/s</code></pre>
 </div>
 </div>
 </section>
 <section id="problem-2" class="level2">
 <h2 class="anchored" data-anchor-id="problem-2">Problem 2</h2>
-<p>Consider the following qualitative queries:</p>
+<p>A cylindrical tank with base area <span class="math inline">\(A\)</span> and maximum height <span class="math inline">\(H\)</span> receives a steady flow rate <span class="math inline">\(\dot{m}_1\)</span> from a tank, and drains a mass flow rate <span class="math inline">\(\dot{m}_2\)</span>. The inlet pipe has a radius <span class="math inline">\(R\)</span> and uniform velocity <span class="math inline">\(\require{color}{\color[rgb]{0.059472,0.501943,0.998465}V_0 \; m/s}\)</span>. The outlet pipe also has the same radius <span class="math inline">\(R\)</span> and a velocity profile</p>
+<p><span class="math display">\[
+\large
+\require{color}{\color[rgb]{0.059472,0.501943,0.998465}v}(r)={\color[rgb]{0.059472,0.501943,0.998465}V_0 } \left( 1- \left( \frac{r}{R} \right)^2 \right)
+\]</span></p>
+<p>At time <span class="math inline">\(t = 0\)</span>, the volume of liquid in the tank is at level <span class="math inline">\(h_o\)</span> from the base. The density of the fluid is constant and equal to <span class="math inline">\(\require{color}{\color[rgb]{0.918231,0.469102,0.038229}\rho}\)</span>. In each case, determine the expression as a function of <span class="math inline">\(R, {\color[rgb]{0.059472,0.501943,0.998465}V_0 }, A, H, ho,\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.918231,0.469102,0.038229}\rho}\)</span>.</p>
 <ul>
-<li>Why does the pressure decrease towards the center of a cyclone?</li>
-<li>An often used demonstration for the Bernoulli equation is to hold a sheet of paper between both hands in front of (and slightly below) your mouth so that it drops away from you face. As you blow over the upper surface of the paper it should rise. Why is this not a demonstration of Bernoulli’s equation?</li>
-<li>Why does the paper rise? What is the name of this effect?</li>
-<li>Give some examples of the Magnus effect and explain how it works.</li>
+<li><p>Determine the mass flow rates through the inlet and outlet.</p></li>
+<li><p>Determine the rate of mass accumulation in the tank.</p></li>
 </ul>
 <details>
 <summary>
 Solution
 </summary>
-<ul>
-<li><p>Curved streamlines are indicative of a pressure gradient, i.e., with higher pressure lying away from the center of curvature. This is why the pressure towards the center of a cyclone is lower than the pressure that lies outward.</p></li>
-<li><p>It is incorrect to assume that the air in the jet has the same Bernoulli constant as the surrounding ambient air. In fact, assuming the <em>static pressure</em> of the jet leaving the mouth is the same as the ambient pressure, then there is a difference of <span class="math inline">\(\require{color}\{\color[rgb]{0.918231,0.469102,0.038229}rho} {\color[rgb]{0.059472,0.501943,0.998465}v}^2 / 2\)</span> between the two.</p></li>
-<li><p>The paper lifts owing to the <em>Coanda effect</em>.</p></li>
-<li><p>The Magnus effect is observed on rotating cylinders or spheres. A pressure difference across a rotating body is formed which leads to a normal force, generating lift (depending on the direction of rotation). Some examples include spinning golf and baseballs.</p></li>
-</ul>
+<p><img src="images/image_P2_1.png" alt="channel" width="500"></p>
+<p>To begin, consider the schematic above. Recognize that the massflow rate going into the tank is given by</p>
+<p><span class="math display">\[
+\large
+\require{color}\dot{m}_1 = {\color[rgb]{0.918231,0.469102,0.038229}\rho}A_1 {\color[rgb]{0.059472,0.501943,0.998465}v_1} = {\color[rgb]{0.918231,0.469102,0.038229}\rho} \pi R^2 {\color[rgb]{0.059472,0.501943,0.998465}V_0 }.
+\]</span></p>
+<p>The massflow rate leaving the tank is given by:</p>
+<p><span class="math display">\[
+\large
+\require{color}\dot{m}_2 = \int {\color[rgb]{0.918231,0.469102,0.038229}\rho} {\color[rgb]{0.059472,0.501943,0.998465}v} dA = \int_{0}^{R} {\color[rgb]{0.918231,0.469102,0.038229}\rho} {\color[rgb]{0.059472,0.501943,0.998465}v}(r) 2 \pi r dr
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}\dot{m}_2 = \int_{0}^{R} {\color[rgb]{0.918231,0.469102,0.038229}\rho} {\color[rgb]{0.059472,0.501943,0.998465}V_0 } \left( 1- \left( \frac{r}{R} \right)^2 \right) 2 \pi r dr
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}\dot{m}_2 =  {\color[rgb]{0.918231,0.469102,0.038229}\rho} {\color[rgb]{0.059472,0.501943,0.998465}V_0 } 2 \pi \left[ \frac{r^2}{2} - \frac{r^4}{4R^2} \right]^{R}_{0} = {\color[rgb]{0.918231,0.469102,0.038229}\rho} {\color[rgb]{0.059472,0.501943,0.998465}V_0 } \pi \frac{R^2}{2}
+\]</span></p>
+<p>The mass accumulation in the tank is given by</p>
+<p><span class="math display">\[
+\large
+\require{color}\frac{dm}{dt} = \dot{m}_1 - \dot{m}_2  = {\color[rgb]{0.918231,0.469102,0.038229}\rho} \pi R^2 {\color[rgb]{0.059472,0.501943,0.998465}V_0 } - {\color[rgb]{0.918231,0.469102,0.038229}\rho} {\color[rgb]{0.059472,0.501943,0.998465}V_0 } \pi \frac{R^2}{2} = {\color[rgb]{0.918231,0.469102,0.038229}\rho} {\color[rgb]{0.059472,0.501943,0.998465}V_0 } \pi \frac{R^2}{2}
+\]</span></p>
 </details>
 </section>
 <section id="problem-3" class="level2">
 <h2 class="anchored" data-anchor-id="problem-3">Problem 3</h2>
-<p>Water flow in open channels can be controlled and measured with the sluice gate shown below. The flow is uniform at a moderate distance upstream and downstream of the gate, i.e.&nbsp;at sections <strong>1</strong> and <strong>2</strong>. Consider the following two questions:</p>
+<p>A submerged submarine is towed horizontally at a steady speed <span class="math inline">\(\require{color}{\color[rgb]{0.059472,0.501943,0.998465}U}\)</span> in deep, still water. Far behind at a fixed distance from the submarine an axially-symmetrical wake is formed in which the water velocity may be assumed to vary from <span class="math inline">\(\require{color}{\color[rgb]{0.059472,0.501943,0.998465}U}\)</span> on the axis to zero at radius R (see schematic) as follows:</p>
+<p><span class="math display">\[
+\large
+\require{color}{\color[rgb]{0.059472,0.501943,0.998465}u}(r)={\color[rgb]{0.059472,0.501943,0.998465}U } \left( 1- \left( \frac{r}{R} \right)^2 \right)
+\]</span></p>
+<p>The variation of the water pressure with depth may be assumed to be unaffected by the presence of the submarine. The density of the water is <span class="math inline">\(\require{color}{\color[rgb]{0.918231,0.469102,0.038229}\rho}\)</span>.</p>
 <ul>
-<li><ol type="a">
-<li>Explain why the pressure variation at <strong>1</strong> and <strong>2</strong> is hydrostatic.</li>
-</ol></li>
-<li><ol start="2" type="a">
-<li>Show that the force per unit width, F, required to hold the gate in place is:</li>
-</ol></li>
+<li><p>To use the continuity and steady flow momentum equations we employ a moving control volume, in which the submarine appears stationary. Why do we need to do this? What is the velocity distribution in the wake relative to the moving control volume?</p></li>
+<li><p>Show that the drag on the submarine is given by:</p></li>
 </ul>
 <p><span class="math display">\[
 \large
-\require{color}{\color[rgb]{0.986252,0.007236,0.027423}F} = {\color[rgb]{0.918231,0.469102,0.038229}\rho }{\color[rgb]{0.059472,0.501943,0.998465}V_1}^2 h_1 - {\color[rgb]{0.918231,0.469102,0.038229}\rho}{\color[rgb]{0.059472,0.501943,0.998465}V_2}^2 h_2 + \frac{{\color[rgb]{0.918231,0.469102,0.038229}\rho} g h_1^2}{2} - \frac{{\color[rgb]{0.918231,0.469102,0.038229}\rho} g h_2^2}{2}.
+\require{color}{\color[rgb]{0.986252,0.007236,0.027423}F_{d}} = \frac{1}{6} \pi {\color[rgb]{0.918231,0.469102,0.038229}\rho }{\color[rgb]{0.059472,0.501943,0.998465}U}^2 R^2
 \]</span></p>
+<p><em>Hint: Before applying momentum equation, make sure all mass flows are accounted for in the control volume used. There are two obvious control volumes to take, which should give the same answer.</em></p>
 <table class="table">
 <colgroup>
 <col style="width: 50%">
@@ -417,14 +448,14 @@ Solution
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Sluice gate</th>
-<th style="text-align: center;">Schematic</th>
+<th style="text-align: center;">Submarine</th>
+<th style="text-align: center;">Schematc</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><img src="images/image_L6_4.png" alt="channel" width="300"></td>
-<td style="text-align: center;"><img src="images/image_L6_3.png" alt="pitot" width="400"></td>
+<td style="text-align: center;"><img src="images/image_P3_1.png" alt="channel" width="100"></td>
+<td style="text-align: center;"><img src="images/image_P3_2.png" alt="pitot" width="400"></td>
 </tr>
 </tbody>
 </table>
@@ -432,43 +463,52 @@ Solution
 <summary>
 Solution
 </summary>
-<p>It will be useful to consider a control volume around stations 1 and 2. From the steady flow momentum equation along the horizontal direction we have</p>
+<p>A moving control volume is required to make this a steady flow problem. Consider a control volume moving with speed <span class="math inline">\(\require{color}{\color[rgb]{0.059472,0.501943,0.998465}u}(r)={\color[rgb]{0.059472,0.501943,0.998465}U}\)</span>.</p>
+<p><img src="images/image_P3_3.png" alt="sub" width="100"></p>
+<p>Here the velocity is given by</p>
 <p><span class="math display">\[
 \large
-\require{color}\sum F + \sum {\color[rgb]{0.315209,0.728565,0.037706}p}A = \sum \dot{m}_{out} {\color[rgb]{0.059472,0.501943,0.998465}v_{out}} -  \sum \dot{m}_{in}{\color[rgb]{0.059472,0.501943,0.998465} v_{in}}
+\require{color}{\color[rgb]{0.059472,0.501943,0.998465}u}(r)={\color[rgb]{0.059472,0.501943,0.998465}U } \left( \frac{r}{R} \right)^2
 \]</span></p>
-<p>Thus we have</p>
+<p>where <span class="math inline">\(r\)</span> goes from <span class="math inline">\(0\)</span> to <span class="math inline">\(R\)</span>. We can define a cylindrical volume that is created by the submarine, where the velocity profile essentially mirrors that of the expression above.</p>
+<p><img src="images/image_P3_4.png" alt="sub" width="500"></p>
+<p>Now as we are only interested in the momentum along the horizontal direction, we can neglect the hydrostatic pressure contributions as they are the same at both ends.</p>
+<p>The first task is to apply continuity to quantify the massflow out of the side of the control volume. This is because the inflow at the front <em>is not equal to</em> the outflow at the rear. The fluid that leaves the sides does have momentum along the horizontal direction. At the inlet, we have</p>
 <p><span class="math display">\[
 \large
-\require{color}{\color[rgb]{0.986252,0.007236,0.027423}F}_{fluid} + \int_{0}^{h_1} {\color[rgb]{0.315209,0.728565,0.037706}p_1} d{\color[rgb]{0.131302,0.999697,0.023594}y} - \int_{0}^{h_1} {\color[rgb]{0.315209,0.728565,0.037706}p_2} d{\color[rgb]{0.131302,0.999697,0.023594}y} = {\color[rgb]{0.918231,0.469102,0.038229}\rho} h_2 {\color[rgb]{0.059472,0.501943,0.998465}v_2} {\color[rgb]{0.059472,0.501943,0.998465}v_2} - {\color[rgb]{0.918231,0.469102,0.038229}\rho} h_1 {\color[rgb]{0.059472,0.501943,0.998465}v_1 v_1}
+\require{color}\dot{m}_{in} = {\color[rgb]{0.918231,0.469102,0.038229}\rho } \pi R^2 {\color[rgb]{0.059472,0.501943,0.998465}U }
+\]</span></p>
+<p>and at the outflow at the rear:</p>
+<p><span class="math display">\[
+\large
+\require{color}\dot{m}_{out} = \int_{0}^{R} {\color[rgb]{0.918231,0.469102,0.038229}\rho } \pi {\color[rgb]{0.059472,0.501943,0.998465}U } 2 \pi r dr = \frac{1}{2} {\color[rgb]{0.918231,0.469102,0.038229}\rho } \pi R^2 {\color[rgb]{0.059472,0.501943,0.998465}U }
+\]</span></p>
+<p>From conservation of mass, we know that the massflow that exits at the sides must be</p>
+<p><span class="math display">\[
+\large
+\require{color}\dot{m}_{sides} = \dot{m}_{out} - \dot{m}_{in} = \frac{1}{2} {\color[rgb]{0.918231,0.469102,0.038229}\rho } \pi R^2 {\color[rgb]{0.059472,0.501943,0.998465}U }.
+\]</span></p>
+<p>To work out the drag, we setup the steady flow momentum equation along the horizontal direction, recognizing that the drag force is pointing along the positive horizontal direction (given that in our control volume the velocity is pointing along the negative horizontal direction).</p>
+<p><span class="math display">\[
+\large
+\require{color}F_{{\color[rgb]{0.986252,0.007236,0.027423}d}} = \sum \dot{m}_{out} {\color[rgb]{0.059472,0.501943,0.998465}v_{out}} - \sum \dot{m}_{in} {\color[rgb]{0.059472,0.501943,0.998465}v_{in}}
 \]</span></p>
 <p><span class="math display">\[
 \large
-\require{color}\Rightarrow{\color[rgb]{0.986252,0.007236,0.027423}F}_{fluid} = -\int_{0}^{h_1} {\color[rgb]{0.315209,0.728565,0.037706}p_1} d{\color[rgb]{0.131302,0.999697,0.023594}y} +\int_{0}^{h_1} {\color[rgb]{0.315209,0.728565,0.037706}p_2} d{\color[rgb]{0.131302,0.999697,0.023594}y} + {\color[rgb]{0.918231,0.469102,0.038229}\rho} h_2 {\color[rgb]{0.059472,0.501943,0.998465}v_2}^2 - {\color[rgb]{0.918231,0.469102,0.038229}\rho} h_1 {\color[rgb]{0.059472,0.501943,0.998465}v_1}^2
+\require{color}F_{{\color[rgb]{0.986252,0.007236,0.027423}d}} = \underbrace{-\int {\color[rgb]{0.918231,0.469102,0.038229}\rho} {\color[rgb]{0.059472,0.501943,0.998465}u}^2 dA }_{\textsf{outflow at back less than zero (neg. vel)}} + \underbrace{\dot{m}_{side}\left(-{\color[rgb]{0.059472,0.501943,0.998465}U} \right)}_{\textsf{outflow on sides}}  - \underbrace{\dot{m}_{in} \left(-{\color[rgb]{0.059472,0.501943,0.998465}U} \right)}_{\textsf{inflow at front}}
 \]</span></p>
-<p>where the force on the fluid, <span class="math inline">\(\require{color}{\color[rgb]{0.986252,0.007236,0.027423}F}_{fluid}\)</span> acts in the positive <span class="math inline">\(x-\)</span>direction. This is opposite to the force acting on the gate.</p>
-<p>Now, note the assumptions we have made: - velocities at <strong>1</strong> and <strong>2</strong> are uniform; - conditions are steady on average; - shear stress (fluid friction) may be ignored.</p>
-<p>Now we need to find the pressure forces at entry and exit, i.e., <span class="math inline">\({\color[rgb]{0.315209,0.728565,0.037706}p_1}\)</span> and <span class="math inline">\({\color[rgb]{0.315209,0.728565,0.037706}p_2}\)</span>. The streamlines at <strong>1</strong> and <strong>2</strong> are parallel, so there is no centripetal acceleration. Thus, the vertical pressure gradient balances the gravitational force. In other words, we have hydrostatic balance. Thus we have</p>
 <p><span class="math display">\[
 \large
-\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p_1} ={\color[rgb]{0.918231,0.469102,0.038229} \rho} g \left(h_1 - {\color[rgb]{0.131302,0.999697,0.023594}y }\right), \; \; \; \;
-{\color[rgb]{0.315209,0.728565,0.037706}p_2} ={\color[rgb]{0.918231,0.469102,0.038229} \rho} g \left(h_2 - {\color[rgb]{0.131302,0.999697,0.023594}y }\right).
+\require{color}F_{{\color[rgb]{0.986252,0.007236,0.027423}d}} = -\int_{0}^{R} {\color[rgb]{0.918231,0.469102,0.038229}\rho } \left( {\color[rgb]{0.059472,0.501943,0.998465}U } \left( \frac{r}{R} \right)^2  \right)^2 2 \pi r dr + \frac{1}{2} {\color[rgb]{0.918231,0.469102,0.038229}\rho } \pi R^2 {\color[rgb]{0.059472,0.501943,0.998465}U} \left(-{\color[rgb]{0.059472,0.501943,0.998465}U}\right) + {\color[rgb]{0.918231,0.469102,0.038229}\rho } \pi R^2 {\color[rgb]{0.059472,0.501943,0.998465}U}^2
 \]</span></p>
-<p>Computing the integrals (the terms from above), yields</p>
 <p><span class="math display">\[
 \large
-\require{color}\Rightarrow \int_{0}^{h_1} {\color[rgb]{0.315209,0.728565,0.037706}p_1} d{\color[rgb]{0.131302,0.999697,0.023594}y} = \frac{1}{2}{\color[rgb]{0.918231,0.469102,0.038229}\rho} g h_1^2, \; \; \; \; \Rightarrow \int_{0}^{h_2} {\color[rgb]{0.315209,0.728565,0.037706}p_2} d{\color[rgb]{0.131302,0.999697,0.023594}y} = \frac{1}{2}{\color[rgb]{0.918231,0.469102,0.038229}\rho} g h_2^2
+\require{color}F_{{\color[rgb]{0.986252,0.007236,0.027423}d}} = \frac{1}{2} {\color[rgb]{0.918231,0.469102,0.038229}\rho } \pi R^2 {\color[rgb]{0.059472,0.501943,0.998465}U}^2 - \frac{2 \pi {\color[rgb]{0.918231,0.469102,0.038229}\rho  {\color[rgb]{0.059472,0.501943,0.998465}U}^2} }{R^4} \left[ \frac{R^6}{6} \right]
 \]</span></p>
-<p>Thus we can combine the above to work out the force acting on the fluid, i.e.,</p>
 <p><span class="math display">\[
 \large
-\require{color}\Rightarrow{\color[rgb]{0.986252,0.007236,0.027423}F}_{fluid} = -\frac{1}{2}{\color[rgb]{0.918231,0.469102,0.038229}\rho} g h_1^2 + \frac{1}{2}{\color[rgb]{0.918231,0.469102,0.038229}\rho} g h_2^2 + {\color[rgb]{0.918231,0.469102,0.038229}\rho} h_2 {\color[rgb]{0.059472,0.501943,0.998465}v_2}^2 - {\color[rgb]{0.918231,0.469102,0.038229}\rho} h_1 {\color[rgb]{0.059472,0.501943,0.998465}v_1}^2.
+\require{color}F_{{\color[rgb]{0.986252,0.007236,0.027423}d}} = \frac{1}{6}\pi {\color[rgb]{0.918231,0.469102,0.038229}\rho  {\color[rgb]{0.059472,0.501943,0.998465}U}}^2 R^2
 \]</span></p>
-<p>The force acting on the gate is equal to the opposite, i.e.,</p>
-<span class="math display">\[
-\large
-\require{color}\Rightarrow{\color[rgb]{0.986252,0.007236,0.027423}F} = \frac{1}{2}{\color[rgb]{0.918231,0.469102,0.038229}\rho} g h_1^2 - \frac{1}{2}{\color[rgb]{0.918231,0.469102,0.038229}\rho} g h_2^2 - {\color[rgb]{0.918231,0.469102,0.038229}\rho} h_2 {\color[rgb]{0.059472,0.501943,0.998465}v_2}^2 + {\color[rgb]{0.918231,0.469102,0.038229}\rho} h_1 {\color[rgb]{0.059472,0.501943,0.998465}v_1}^2.
-\]</span>
 </details>
 
 
@@ -876,11 +916,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../sample_problems/lecture_5.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">L5 examples</span>
+      <a href="../index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Overview</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../demo.html" class="pagination-link">
+        <span class="nav-page-text">Jupyter introduction</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
