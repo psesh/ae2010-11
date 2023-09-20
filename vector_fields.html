@@ -288,6 +288,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">L6 examples</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sample_problems/lecture_9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L9 examples</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -440,7 +446,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 <p>The contour plot below plots <code>div_bool</code>.</p>
-<div class="cell" data-execution_count="8">
+<div class="cell" data-execution_count="7">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">4</span>))</span>
@@ -459,7 +465,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
-<pre><code>/var/folders/34/0177579s72zfk8k1ytk34_9c0346k7/T/ipykernel_23920/1478740457.py:5: MatplotlibDeprecationWarning: Unable to determine Axes to steal space for Colorbar. Using gca(), but will raise in the future. Either provide the *cax* argument to use as the Axes for the Colorbar, provide the *ax* argument to steal space from it, or add *mappable* to an Axes.
+<pre><code>/var/folders/34/0177579s72zfk8k1ytk34_9c0346k7/T/ipykernel_42334/1478740457.py:5: MatplotlibDeprecationWarning: Unable to determine Axes to steal space for Colorbar. Using gca(), but will raise in the future. Either provide the *cax* argument to use as the Axes for the Colorbar, provide the *ax* argument to steal space from it, or add *mappable* to an Axes.
   cbar = fig.colorbar(</code></pre>
 </div>
 <div class="cell-output cell-output-display">
@@ -484,7 +490,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 \large
 \require{color}h\left({\color[rgb]{0.986048,0.008333,0.501924}x}, {\color[rgb]{0.131302,0.999697,0.023594}y} \right) = -0.2 {\color[rgb]{0.131302,0.999697,0.023594}y}^2 - 0.2 {\color[rgb]{0.986048,0.008333,0.501924}x}^2 + 10
 \]</span></p>
-<div class="cell" data-execution_count="84">
+<div class="cell" data-execution_count="8">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>vel_X <span class="op">=</span> <span class="dv">3</span> <span class="op">+</span> <span class="dv">0</span> <span class="op">*</span> X</span>
@@ -492,7 +498,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span>  <span class="op">-</span><span class="fl">0.2</span><span class="op">*</span>Y<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> <span class="fl">0.2</span> <span class="op">*</span> X<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div class="cell" data-execution_count="85">
+<div class="cell" data-execution_count="9">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">4</span>))</span>
@@ -516,9 +522,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-display">
 <p><img src="vector_fields_files/figure-html/cell-10-output-1.png" class="img-fluid"></p>
 </div>
+<div class="cell-output cell-output-display">
+<p><img src="vector_fields_files/figure-html/cell-10-output-2.png" class="img-fluid"></p>
+</div>
 </div>
 <p>We now plot the output of the advection operator, which for a scalar field is given by</p>
-<div class="cell" data-execution_count="87">
+<div class="cell" data-execution_count="10">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>dh_dX <span class="op">=</span>  <span class="op">-</span><span class="dv">2</span> <span class="op">*</span> <span class="fl">0.2</span> <span class="op">*</span> X</span>
