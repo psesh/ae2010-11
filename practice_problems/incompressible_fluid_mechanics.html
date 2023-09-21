@@ -310,6 +310,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#problem-2" id="toc-problem-2" class="nav-link" data-scroll-target="#problem-2">Problem 2</a></li>
   <li><a href="#problem-3" id="toc-problem-3" class="nav-link" data-scroll-target="#problem-3">Problem 3</a></li>
   <li><a href="#problem-4" id="toc-problem-4" class="nav-link" data-scroll-target="#problem-4">Problem 4</a></li>
+  <li><a href="#problem-5" id="toc-problem-5" class="nav-link" data-scroll-target="#problem-5">Problem 5</a></li>
+  <li><a href="#problem-6" id="toc-problem-6" class="nav-link" data-scroll-target="#problem-6">Problem 6</a></li>
   </ul>
 </nav>
     </div>
@@ -333,7 +335,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p><mark>More problems will likely be added to this page; stay tuned.</mark></p>
 <section id="problem-1" class="level2">
 <h2 class="anchored" data-anchor-id="problem-1">Problem 1</h2>
 <p>A mixing tank has two inlets and one outlet, all of the same area, <span class="math inline">\(0.01 \; m^2\)</span>. Liquids of density <span class="math inline">\(\require{color}{\color[rgb]{0.918231,0.469102,0.038229}\rho_1 } = {\color[rgb]{0.918231,0.469102,0.038229}800 \; kg/m^3}\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.918231,0.469102,0.038229}\rho_2 } = {\color[rgb]{0.918231,0.469102,0.038229}900 \; kg/m^3}\)</span> flow into the tank through separate inlets. They have uniform inlet velocities of <span class="math inline">\(\require{color}{\color[rgb]{0.059472,0.501943,0.998465}3.1 \; m/s}\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.059472,0.501943,0.998465}1.9 \; m/s}\)</span> respectively. Mixing is assumed to be complete, and the conditions at the tank outlet are uniform. Assuming steady state conditions, find</p>
@@ -558,6 +559,206 @@ Solution
 \require{color}
 {\color[rgb]{0.315209,0.728565,0.037706}p_{B}} = {\color[rgb]{0.315209,0.728565,0.037706}p_{A}} + {\color[rgb]{0.918231,0.469102,0.038229}\rho} {\color[rgb]{0.059472,0.501943,0.998465}V}^2
 \]</span>
+</details>
+<p>{p}</p>
+</section>
+<section id="problem-5" class="level2">
+<h2 class="anchored" data-anchor-id="problem-5">Problem 5</h2>
+<p>Consider a nozzle as shown in the diagram in below. The nozzle converges gradually, and we assume that the flow in it is:</p>
+<ul>
+<li>approximately uniform over any particular horizontal station <span class="math inline">\(x\)</span>;</li>
+<li>it is incompressible;</li>
+<li>it is inviscid, and</li>
+<li>any gravitational effects are negligible.</li>
+</ul>
+<p><img src="images/image_P5_1.png" alt="duct" width="400"></p>
+<p>The volumetric flow rate in the nozzle is given as <span class="math inline">\(Q\)</span> and the ambient pressure is <span class="math inline">\(p_a\)</span>.</p>
+<ul>
+<li><p>Derive an expression for the gauge pressure at a horizontal station where the area is <span class="math inline">\(A\left(x\right)\)</span>.</p></li>
+<li><p>Show by integrating the <span class="math inline">\(x-\)</span>component of the pressure force on the nozzle’s interior walls, that the net <span class="math inline">\(x-\)</span>component of force on the nozzle due to the flow is independent of the specific nozzle contour and is given by</p></li>
+</ul>
+<p><span class="math display">\[
+\large
+F = \rho Q^2 \frac{\left(A_{inlet} - A_2\right)^2}{2A_{inlet} A^2_2}
+\]</span></p>
+<p>where <span class="math inline">\(A_2\)</span> is the area at the exit and <span class="math inline">\(A_{inlet}\)</span> is the area at the inlet.</p>
+<details>
+<summary>
+Solution
+</summary>
+<p>While it is natural to apply Bernoulli’s principle to such a problem, let us clarify why. Consider all the assumptions that underscore Bernoulli, i.e., the flow must be</p>
+<ul>
+<li>inviscid;</li>
+<li>along a streamline (satisfied by the fact that we are told the flow is approximately uniform);</li>
+<li>steady;</li>
+<li>constant density;</li>
+<li>no work / energy input or loss (e.g., there is no friction).</li>
+</ul>
+<p>This enables us to write:</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\underbrace{p\left(x\right) + \frac{1}{2}{\color[rgb]{0.918231,0.469102,0.038229}\rho} {\color[rgb]{0.059472,0.501943,0.998465}v}^2\left(x\right)}_{\textsf{station 1}} = \underbrace{{\color[rgb]{0.315209,0.728565,0.037706}p}_{a}  + \frac{1}{2}{\color[rgb]{0.918231,0.469102,0.038229}\rho}  {\color[rgb]{0.059472,0.501943,0.998465}v'}_{2}^2}_{\textsf{station 2}}
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.315209,0.728565,0.037706}p}\left(x\right) - {\color[rgb]{0.315209,0.728565,0.037706}p}_a = \frac{1}{2}{\color[rgb]{0.918231,0.469102,0.038229}\rho} \left( {\color[rgb]{0.059472,0.501943,0.998465}v}_2^2 - {\color[rgb]{0.059472,0.501943,0.998465}v}^2\left(x\right)\right)
+\]</span></p>
+<p>The gauge pressure <span class="math inline">\({\color[rgb]{0.315209,0.728565,0.037706}p}_{g}\)</span> is defined as the atmospheric pressure subtracted from a measured pressure, i.e.,</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.315209,0.728565,0.037706}p}_{g}  = {\color[rgb]{0.315209,0.728565,0.037706}p}\left( x \right) - {\color[rgb]{0.315209,0.728565,0.037706}p}_a
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+= \frac{1}{2}\rho \left({\color[rgb]{0.059472,0.501943,0.998465}v}_2^2 - {\color[rgb]{0.059472,0.501943,0.998465}v}^2\left(x\right) \right)
+\]</span></p>
+<p>Recognising that the velocity may be written as</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.059472,0.501943,0.998465}v}\left(x\right) = \frac{Q}{A\left(x\right)}
+\]</span></p>
+<p>we have</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.315209,0.728565,0.037706}p}_g = \frac{1}{2}{\color[rgb]{0.918231,0.469102,0.038229}\rho} \left({\color[rgb]{0.059472,0.501943,0.998465}v}_2^2 - \frac{Q^2}{A^2\left(x\right)} \right) = \frac{1}{2}{\color[rgb]{0.918231,0.469102,0.038229}\rho} Q^2 \left(\frac{1}{A_2^2} - \frac{1}{A^2\left(x\right)} \right) .
+\]</span></p>
+<p>The question asks us to integrate the <span class="math inline">\(x-\)</span>component of the pressure force, i.e.,</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\int_{inlet}^{2^{\ast}} {\color[rgb]{0.315209,0.728565,0.037706}p}_{g}\left(x\right) dA = F_{pressure,x}
+\]</span></p>
+<p>We still need to work out the relevant length along the vertical direction; see the Figure below.</p>
+<p><img src="images/image_P5_2.png" alt="duct" width="400"></p>
+<p><span class="math display">\[
+\large
+\require{color}
+F_{pressure,x}  = \int_{A_{inlet}}^{A_2} {\color[rgb]{0.315209,0.728565,0.037706}p}_{g} \; d\left[A_{inlet} - A \right]
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+= -\int_{A_{inlet}}^{A_2} {\color[rgb]{0.315209,0.728565,0.037706}p}_{g} \; dA
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+= -\frac{{\color[rgb]{0.918231,0.469102,0.038229}\rho} Q^2}{2} \int_{A_{inlet}}^{A_2} \left(\frac{1}{A_2^2} - \frac{1}{A^2\left(x\right)} \right)dA
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+=-\frac{{\color[rgb]{0.918231,0.469102,0.038229}\rho} Q^2}{2} \left\{ \left[ \frac{A}{A_2^2}\right]_{A_{inlet}}^{A_2} - \left[- \frac{1}{A}\right]_{A_{inlet}}^{A_2}\right\}
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+= -\frac{{\color[rgb]{0.918231,0.469102,0.038229}\rho} Q^2}{2} \left( \frac{A^2_{inlet} - 2A_{inlet}A_2 + A^2_{2}}{-A_{inlet}A_2^2} \right)
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+= \frac{{\color[rgb]{0.918231,0.469102,0.038229}\rho} Q^2}{2} \frac{\left(A_{inlet} - A_2 \right)^2}{A_{inlet}A_2^2}
+\]</span></p>
+<p>Note that this pressure force always points in the right direction regardless of whether <span class="math inline">\(A_2 &gt; A_{inlet}\)</span> or <span class="math inline">\(A_{inlet}&gt; A_2\)</span>.</p>
+</details>
+</section>
+<section id="problem-6" class="level2">
+<h2 class="anchored" data-anchor-id="problem-6">Problem 6</h2>
+<p>A circular nozzle is designed to produce a parallel jet of water (with density <span class="math inline">\({\color[rgb]{0.918231,0.469102,0.038229}\rho} ={\color[rgb]{0.918231,0.469102,0.038229} 1000 \; kg/m^3}\)</span>) inclined at <span class="math inline">\(60^{\circ}\)</span> to the entry direction, as shown in the figure below. The entry and exit diameters are <span class="math inline">\(200 \; mm\)</span> and <span class="math inline">\(100 \; mm\)</span> respectively. The water exists into the atmosphere with an exit velocity of <span class="math inline">\({\color[rgb]{0.059472,0.501943,0.998465}8 \; m/s}\)</span>. The flow through the nozzle can be assumed to be inviscid and gravity can be neglected.</p>
+<p><img src="images/image_P6_1.png" alt="Fluid moving through an inclined circular nozzle" width="300"></p>
+<ul>
+<li>Explain why the gauge pressure of the water is zero at the exit of the nozzle.</li>
+<li>Calculate the velocity at the inlet to the nozzle and the mass flow rate of water.</li>
+<li>Calculate the gauge pressure of the water at the entry to the nozzle.</li>
+<li>Calculate the force on the nozzle due to the water flow. Express the answer in terms of the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> coordinate system shown in the figure.</li>
+</ul>
+<details>
+<summary>
+Solution
+</summary>
+<p>Solutions are captured below.</p>
+<p>The question states that the nozzle is designed to produce a parallel jet of water. Thus, at the exit we have parallel streamlines and consequently no transverse pressure gradient.</p>
+<p><span class="math display">\[
+\large
+\require{color}
+A_1 = \frac{\pi }{4} \left(0.2\right)^2 = 0.031416 \; m^2, \; \; \; \; \; A_2 = \frac{\pi}{4} \left( 0.1 \right)^2 = 0.007854 \; m^2.
+\]</span></p>
+<p>The velocity at the entrance can be worked out via continuity. Since we are given no information on the density, we assume the flow is incompressible and therefore the volumetric flow rates are equal. This yields</p>
+<p><span class="math display">\[
+\large
+\require{color}
+A_1 {\color[rgb]{0.059472,0.501943,0.998465}v}_1 = A_2 {\color[rgb]{0.059472,0.501943,0.998465}v}_2  \; \; \; \Rightarrow \; \; \; {\color[rgb]{0.059472,0.501943,0.998465}v}_1 = \frac{A_2 {\color[rgb]{0.059472,0.501943,0.998465}v}_2}{A_1} = \frac{0.1^2 \times {\color[rgb]{0.059472,0.501943,0.998465}8}}{0.2^2} = {\color[rgb]{0.059472,0.501943,0.998465}2 \; m/s}.
+\]</span></p>
+<p>To work out the massflow rate, we use continuity</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\dot{m} = {\color[rgb]{0.918231,0.469102,0.038229}\rho} A_2 {\color[rgb]{0.059472,0.501943,0.998465}v}_2 = {\color[rgb]{0.918231,0.469102,0.038229}1000} {\color[rgb]{0.918231,0.469102,0.038229} \frac{kg}{m^3}} \times 0.007854 m^2 \times {\color[rgb]{0.059472,0.501943,0.998465}8} {\color[rgb]{0.059472,0.501943,0.998465} \frac{m}{s}} = 62.83 \frac{kg}{s}
+\]</span></p>
+<p>As this problem makes no statement on pressure losses within the circular nozzle, we can write</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.315209,0.728565,0.037706}p}_1 + \frac{1}{2}{\color[rgb]{0.918231,0.469102,0.038229}\rho} {\color[rgb]{0.059472,0.501943,0.998465}v}_1^2 = {\color[rgb]{0.315209,0.728565,0.037706}p}_2 + \frac{1}{2}{\color[rgb]{0.918231,0.469102,0.038229}\rho} {\color[rgb]{0.059472,0.501943,0.998465}v}_2^2
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+\Rightarrow {\color[rgb]{0.315209,0.728565,0.037706}p}_1 = 0 + \frac{1}{2} {\color[rgb]{0.918231,0.469102,0.038229}\rho} \left( {\color[rgb]{0.059472,0.501943,0.998465}v}_2^2 - {\color[rgb]{0.059472,0.501943,0.998465}v}_1^2\right)
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.315209,0.728565,0.037706}p}_1 = \frac{1}{2} \times 1000 \times \left(8^2 - 2^2\right) = 30 \; kPa
+\]</span></p>
+<p>To calculate the forces, consider the diagram below.</p>
+<p><img src="images/image_P6_2.png" alt="Fluid moving through an inclined circular nozzle--edited" width="300"></p>
+<p>Along the horizontal direction, we have the following steady flow momentum equation</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.315209,0.728565,0.037706}p}_1 A_1 - F_{x} - {\color[rgb]{0.315209,0.728565,0.037706}p}_2 A_2 cos\left(60^{\circ} \right) = \dot{m} {\color[rgb]{0.059472,0.501943,0.998465}v}_2 cos\left(60^{\circ}\right) - \dot{m} v_1
+\]</span></p>
+<p>where we have used the gauge pressure. Along the vertical direction we have</p>
+<p><span class="math display">\[
+\large
+\require{color}
+0 - F_y - {\color[rgb]{0.315209,0.728565,0.037706}p}_2 A_2 sin\left(60^{\circ}\right) = \dot{m}{\color[rgb]{0.059472,0.501943,0.998465}v}_2 sin\left( 60^{\circ}\right) - 0.
+\]</span></p>
+<p>Simplifying the above equations individually we have</p>
+<p><span class="math display">\[
+\large
+\require{color}
+F_{x}  = \left( {\color[rgb]{0.315209,0.728565,0.037706}p}_1 A_1 - {\color[rgb]{0.315209,0.728565,0.037706}p}_2 A_2 cos\left( 60^{\circ} \right) \right) + \dot{m}\left( {\color[rgb]{0.059472,0.501943,0.998465}v}_1 - {\color[rgb]{0.059472,0.501943,0.998465}v}_2 cos\left(60^{\circ} \right) \right)
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+\left( 30000 \times 0.031416  - 0 \right) + 62.83 \left(2 - 8 \times 0.5 \right)
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+942.48 - 125.66 =  816.82 N
+\]</span></p>
+<p>and along the vertical direction</p>
+<p><span class="math display">\[
+\large
+\require{color}
+F_y = \left(-{\color[rgb]{0.315209,0.728565,0.037706}p}_2 A_2 sin\left( 60^{\circ}\right) \right) - \dot{m}{\color[rgb]{0.059472,0.501943,0.998465}v}_2 sin\left( 60^{\circ} \right)
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+0 - 62.83 \times 8 \times \sqrt{3}/2  = -435.80N
+\]</span></p>
 </details>
 
 
