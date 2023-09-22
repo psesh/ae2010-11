@@ -318,6 +318,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#problem-4" id="toc-problem-4" class="nav-link" data-scroll-target="#problem-4">Problem 4</a></li>
   <li><a href="#problem-5" id="toc-problem-5" class="nav-link" data-scroll-target="#problem-5">Problem 5</a></li>
   <li><a href="#problem-6" id="toc-problem-6" class="nav-link" data-scroll-target="#problem-6">Problem 6</a></li>
+  <li><a href="#problem-7" id="toc-problem-7" class="nav-link" data-scroll-target="#problem-7">Problem 7</a></li>
   </ul>
 </nav>
     </div>
@@ -765,6 +766,54 @@ F_y = \left(-{\color[rgb]{0.315209,0.728565,0.037706}p}_2 A_2 sin\left( 60^{\cir
 \require{color}
 0 - 62.83 \times 8 \times \sqrt{3}/2  = -435.80N
 \]</span></p>
+</details>
+</section>
+<section id="problem-7" class="level2">
+<h2 class="anchored" data-anchor-id="problem-7">Problem 7</h2>
+<p>The velocity <span class="math inline">\(\require{color}{\color[rgb]{0.059472,0.501943,0.998465}v}\)</span> at a position <span class="math inline">\({\color[rgb]{0.986048,0.008333,0.501924}x}\)</span> along the center-line of the convergent entry nozzle of a wind tunnel operating at steady state is given by</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\mathbf{{\color[rgb]{0.059472,0.501943,0.998465}v}}  = \left({\color[rgb]{0.059472,0.501943,0.998465}v}_{{\color[rgb]{0.986048,0.008333,0.501924}x}}, {\color[rgb]{0.059472,0.501943,0.998465}v}_{{\color[rgb]{0.131302,0.999697,0.023594}y}}, {\color[rgb]{0.059472,0.501943,0.998465}v}_{{\color[rgb]{0.501963,0.000037,0.250983}z}} \right) \; \; \;
+\textrm{where} \; \;  \; \; {\color[rgb]{0.059472,0.501943,0.998465}v}_{{\color[rgb]{0.986048,0.008333,0.501924}x}} = \alpha\left(0.25 + 0.75 \frac{x}{L} \right), \; {\color[rgb]{0.059472,0.501943,0.998465}v}_{{\color[rgb]{0.131302,0.999697,0.023594}y}}= 0, \; \; \textrm{and} \; \; {\color[rgb]{0.059472,0.501943,0.998465}v}_{{\color[rgb]{0.501963,0.000037,0.250983}z}}=0.
+\]</span></p>
+<p>The nozzle has length <span class="math inline">\(\mathsf{L}\)</span> and the velocity in the working section is <span class="math inline">\(\alpha\)</span>.</p>
+<ol type="1">
+<li><p>If <span class="math inline">\(L = 1.2\)</span> m and <span class="math inline">\(\alpha=10\)</span> m/s, what is the center-line velocity at <span class="math inline">\(x=0.4\)</span> m?</p></li>
+<li><p>What is the rate of change of the velocity field, <span class="math inline">\(\partial \mathbf{{\color[rgb]{0.059472,0.501943,0.998465}v}}/\partial t\)</span> at this point? Include the units please.</p></li>
+<li><p>Write down the definition of the material (also known as substantial) derivative, <span class="math inline">\(D / Dt\)</span>, and simplify it for the special case where <span class="math inline">\({\color[rgb]{0.059472,0.501943,0.998465}v}_{{\color[rgb]{0.131302,0.999697,0.023594}y}}= 0\)</span> and <span class="math inline">\({\color[rgb]{0.059472,0.501943,0.998465}v}_{{\color[rgb]{0.501963,0.000037,0.250983}z}}= 0\)</span> in Cartesian coordinates. Use this to find the acceleration of a fluid blob as it passes this point. Include the units.</p></li>
+<li><p>Why are your answers to the above two questions different?</p></li>
+</ol>
+<details>
+<summary>
+Solution
+</summary>
+<p>Please find the solutions below:</p>
+<ol type="1">
+<li><p><span class="math inline">\({\color[rgb]{0.059472,0.501943,0.998465}v}_{{\color[rgb]{0.986048,0.008333,0.501924}x}} = 10 \times (0.25 + 0.75\frac{0.4}{1.2}) = 5 \; \textrm{m}/\textrm{s}\)</span>. Note that on the center-line <span class="math inline">\({\color[rgb]{0.059472,0.501943,0.998465}v}_{{\color[rgb]{0.131302,0.999697,0.023594}y}}\)</span> and <span class="math inline">\({\color[rgb]{0.059472,0.501943,0.998465}v}_{{\color[rgb]{0.501963,0.000037,0.250983}z}}\)</span> are both zero.</p></li>
+<li><p>The flow is steady so <span class="math inline">\(\partial \mathbf{{\color[rgb]{0.059472,0.501943,0.998465}v}} / \partial t\)</span> is zero at all points in the flow.</p></li>
+<li><p>The material derivative is defined as:</p></li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{D}{Dt} = \left( \frac{\partial }{\partial t}  + \mathbf{{\color[rgb]{0.059472,0.501943,0.998465}v}} \cdot \nabla \right)
+\]</span></p>
+<p>In the special case where <span class="math inline">\({\color[rgb]{0.059472,0.501943,0.998465}v}_{{\color[rgb]{0.986048,0.008333,0.501924}x}}\)</span> and <span class="math inline">\({\color[rgb]{0.059472,0.501943,0.998465}v}_{{\color[rgb]{0.131302,0.999697,0.023594}y}}\)</span> are zero, this reduces to:</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{D}{Dt} = \left( \frac{\partial}{\partial t} + {\color[rgb]{0.059472,0.501943,0.998465}v}_{{\color[rgb]{0.986048,0.008333,0.501924}x}} \frac{\partial}{\partial {\color[rgb]{0.986048,0.008333,0.501924}x}} \right)
+\]</span></p>
+<p>The acceleration of a fluid blob as it passes this point is given by <span class="math inline">\(D \mathbf{{\color[rgb]{0.059472,0.501943,0.998465}v}} / Dt\)</span>. We know that <span class="math inline">\({\color[rgb]{0.059472,0.501943,0.998465}v}_{\color[rgb]{0.131302,0.999697,0.023594}y}\)</span> and <span class="math inline">\({\color[rgb]{0.059472,0.501943,0.998465}v}_{\color[rgb]{0.501963,0.000037,0.250983}z}\)</span> are both zero, so this reduces to <span class="math inline">\(D{\color[rgb]{0.059472,0.501943,0.998465}v}_{{\color[rgb]{0.986048,0.008333,0.501924}x}} / Dt\)</span>:</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{D {\color[rgb]{0.059472,0.501943,0.998465}v}_{{\color[rgb]{0.986048,0.008333,0.501924}x}}}{Dt} = 0 + {\color[rgb]{0.059472,0.501943,0.998465}v}_{{\color[rgb]{0.986048,0.008333,0.501924}x}} \frac{0.75 \alpha}{L} = 5 \times \frac{0.75 \times 10}{1.2} = 31.25 \frac{m}{s^2}.
+\]</span></p>
+<ol start="4" type="1">
+<li>Although the flow is steady at all points in space, fluid blobs do accelerate as the move through the flow field. This is the main point of the question.</li>
+</ol>
 </details>
 
 
