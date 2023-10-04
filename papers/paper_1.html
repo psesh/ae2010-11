@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>AE2010/AE2011 - L10 examples</title>
+<title>AE2010/AE2011 - Incompressible fluid mechanics paper</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,8 +30,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../sample_problems/lecture_12.html" rel="next">
-<link href="../sample_problems/lecture_9.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -147,7 +111,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sample_problems/lecture_2.html">Examples</a></li><li class="breadcrumb-item"><a href="../sample_problems/lecture_10.html">L10 examples</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Incompressible fluid mechanics paper</li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -296,7 +260,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sample_problems/lecture_10.html" class="sidebar-item-text sidebar-link active">
+  <a href="../sample_problems/lecture_10.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">L10 examples</span></a>
   </div>
 </li>
@@ -324,16 +288,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#problem-1" id="toc-problem-1" class="nav-link active" data-scroll-target="#problem-1">Problem 1</a></li>
+  <li><a href="#incompressible-fluid-mechanics-paper" id="toc-incompressible-fluid-mechanics-paper" class="nav-link active" data-scroll-target="#incompressible-fluid-mechanics-paper">Incompressible fluid mechanics paper</a>
+  <ul class="collapse">
+  <li><a href="#fall-2023-ae2010-ae2011" id="toc-fall-2023-ae2010-ae2011" class="nav-link" data-scroll-target="#fall-2023-ae2010-ae2011">Fall 2023 | AE2010-AE2011</a>
+  <ul class="collapse">
+  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions:</a></li>
+  <li><a href="#problem-1" id="toc-problem-1" class="nav-link" data-scroll-target="#problem-1">Problem 1</a></li>
+  </ul></li>
+  <li><a href="#problem-2" id="toc-problem-2" class="nav-link" data-scroll-target="#problem-2">Problem 2</a></li>
+  <li><a href="#problem-3" id="toc-problem-3" class="nav-link" data-scroll-target="#problem-3">Problem 3</a></li>
+  <li><a href="#problem-4" id="toc-problem-4" class="nav-link" data-scroll-target="#problem-4">Problem 4</a></li>
+  </ul></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="paper_1.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">L10 examples</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
+<h1 class="title">Incompressible fluid mechanics paper</h1>
 </div>
 
 
@@ -348,34 +322,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="problem-1" class="level2">
-<h2 class="anchored" data-anchor-id="problem-1">Problem 1</h2>
-<p>Please calculate the pressure drop through a pipe if its length is <span class="math inline">\(1 \; km\)</span>; its diameter is <span class="math inline">\(1 m\)</span>, and if the fluid has viscosity of <span class="math inline">\(\require{color}{\color[rgb]{0.501963,0.000046,0.501966}\mu} = {\color[rgb]{0.501963,0.000046,0.501966}1.54 \; 10^{-3} kg/(m \cdot s)}\)</span> and the bulk velocity is <span class="math inline">\(\require{color}{\color[rgb]{0.059472,0.501943,0.998465}10\; m/s}\)</span>.</p>
-<p>This is a straightforward application of the Hagen-Poiseuille equation for the pressure loss across a pipe. Recall, from Lecture 10 we found out that</p>
+<section id="incompressible-fluid-mechanics-paper" class="level1">
+<h1>Incompressible fluid mechanics paper</h1>
+<section id="fall-2023-ae2010-ae2011" class="level2">
+<h2 class="anchored" data-anchor-id="fall-2023-ae2010-ae2011">Fall 2023 | AE2010-AE2011</h2>
+<section id="instructions" class="level3">
+<h3 class="anchored" data-anchor-id="instructions">Instructions:</h3>
+<p>Please do not attempt to copy or discuss the contents of this paper with any of your classmates during the course of this paper. Any such attempt, or even the action of glancing over someone else’s work will be viewed as a violation of Georgia Tech’s Honor Code, and this will result in a zero-point grade. Additionally, you are not permitted to use any electronic device during the course of this paper, aside from a standard calculator. You are permitted to use the restrooms, however, prior to leaving the lecture theatre, you are required to leave your cellular device(s) with the instructor. You may collect these once you return. As discussed, you are permitted to use two sides of a single 8.5” x 11” sheet of paper for formulas, notes, or derivations that you may find useful. There is no restriction on what your notes may comprise. Please do not turn in any scratch paper, and ensure your submitted answers do indeed answer the question that is being asked. Carefully read each question as the ask may be slightly different from questions you have practiced before. The numerical value after each question, e.g., <span class="math inline">\({\color[rgb]{0.028509,0.250925,0.501969}[5]}\)</span> denotes the number of marks assigned to that question.</p>
+</section>
+<section id="problem-1" class="level3">
+<h3 class="anchored" data-anchor-id="problem-1">Problem 1</h3>
+<p>A two-dimensional hydraulic jump occurs in a channel as shown in Figure 1. Well upstream and downstream of the jump, at sections 1 and 2, the flow is uniform and steady with velocities <span class="math inline">\({\color[rgb]{0.059472,0.501943,0.998465}V}_1\)</span> and <span class="math inline">\({\color[rgb]{0.059472,0.501943,0.998465}V}_2\)</span> and depths <span class="math inline">\(h_1\)</span> and <span class="math inline">\(h_2\)</span>.</p>
+<ol type="a">
+<li><p>Explain why the pressure distribution in the fluid at sections 1 and 2 may be treated as hydrostatic. <span class="math inline">\({\color[rgb]{0.028509,0.250925,0.501969}[2]}\)</span></p></li>
+<li><p>Using the force-momentum equation show that the expression below is true; carefully state any assumptions you have made in addition to those in part (a) <span class="math inline">\({\color[rgb]{0.028509,0.250925,0.501969}[5]}\)</span> :</p></li>
+</ol>
 <p><span class="math display">\[
-\large
-\require{color}\Delta {\color[rgb]{0.315209,0.728565,0.037706}p} = \frac{8 {\color[rgb]{0.501963,0.000046,0.501966}\mu} {\color[rgb]{0.059472,0.501943,0.998465}V} L}{{\color[rgb]{0.990448,0.502245,0.032881}R}^2}.
+h_1 {\color[rgb]{0.059472,0.501943,0.998465}V}^2_1 + \frac{1}{2} g h_1^2 = h_2 {\color[rgb]{0.059472,0.501943,0.998465}V}_2^2 + \frac{1}{2}gh_2^2
 \]</span></p>
-<p>Below we plug in the values to work this out.</p>
-<div class="cell" data-execution_count="4">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>mu <span class="op">=</span> <span class="fl">1.54</span> <span class="op">*</span> <span class="dv">10</span><span class="op">**</span>(<span class="op">-</span><span class="dv">3</span>) <span class="co"># viscosity</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>V <span class="op">=</span> <span class="dv">10</span> <span class="co"># velocity</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>D <span class="op">=</span> <span class="dv">1</span> <span class="co"># diameter</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> D<span class="op">/</span><span class="dv">2</span> <span class="co"># radius</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> <span class="dv">1000</span> <span class="co"># 1 km = 1000 m</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Delta_p <span class="op">=</span> (<span class="dv">8</span> <span class="op">*</span> mu <span class="op">*</span> V <span class="op">*</span> L)<span class="op">/</span>(R<span class="op">**</span><span class="dv">2</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The loss in pressure is '</span><span class="op">+</span><span class="bu">str</span>(np.around(Delta_p,<span class="dv">3</span>))<span class="op">+</span><span class="st">'Pa'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>The loss in pressure is 492.8Pa</code></pre>
-</div>
-</div>
+</section>
+</section>
+<section id="problem-2" class="level2">
+<h2 class="anchored" data-anchor-id="problem-2">Problem 2</h2>
+<p>By examining the curvature of the streamlines in Figure 2, indicate the regions of higher and lower pressure on a copy of the diagram. You can ignore the hydrostatic pressure variation owing to gravity. <span class="math inline">\({\color[rgb]{0.028509,0.250925,0.501969}[5]}\)</span></p>
+</section>
+<section id="problem-3" class="level2">
+<h2 class="anchored" data-anchor-id="problem-3">Problem 3</h2>
+<p>A viscous fluid flows down the slope of angle <span class="math inline">\(\gamma\)</span> as shown in Figure 3. The flow is steady and the upper surface of the fluid is open to the atmosphere.</p>
+<ol type="a">
+<li><p>Explain, stating any assumptions, why the pressure, velocity and fluid thickness <span class="math inline">\({\color[rgb]{0.990448,0.502245,0.032881}h}\)</span> are independent of the streamwise position <span class="math inline">\({\color[rgb]{0.986047,0.008333,0.501923}x}\)</span>. <span class="math inline">\({\color[rgb]{0.028509,0.250925,0.501969}[2]}\)</span></p></li>
+<li><p>Show that the variation of shear stress <span class="math inline">\({\color[rgb]{0.987422,0.657266,0.082096}\tau}\)</span> with distance perpendicular to the slope <span class="math inline">\({\color[rgb]{0.131302,0.999697,0.023594}y}\)</span> is given by the equation below <span class="math inline">\({\color[rgb]{0.028509,0.250925,0.501969}[3]}\)</span>:</p></li>
+</ol>
+<p><span class="math display">\[
+\frac{d {\color[rgb]{0.987422,0.657266,0.082096}\tau}}{d {\color[rgb]{0.131302,0.999697,0.023594}y}} = - {\color[rgb]{0.918231,0.469102,0.038229}\rho} g sin \left( \alpha \right)
+\]</span></p>
+<ol start="3" type="a">
+<li><p>Calculate the shear stress (units must be provided) if <span class="math inline">\({\color[rgb]{0.990448,0.502245,0.032881}h}= {\color[rgb]{0.990448,0.502245,0.032881}10 \; mm}\)</span>, the density of the fluid is <span class="math inline">\({\color[rgb]{0.918231,0.469102,0.038229}1500 \; kg/m^3}\)</span> and <span class="math inline">\(\alpha=10^{\circ}\)</span>. <span class="math inline">\({\color[rgb]{0.028509,0.250925,0.501969}[3]}\)</span></p></li>
+<li><p>Find an expression for the velocity profile <span class="math inline">\({\color[rgb]{0.059472,0.501943,0.998465}v}\left({\color[rgb]{0.131302,0.999697,0.023594}y} \right)\)</span>. <span class="math inline">\({\color[rgb]{0.028509,0.250925,0.501969}[5]}\)</span></p></li>
+<li><p>Find an expression for the volumetric flow rate per unit width. <span class="math inline">\({\color[rgb]{0.028509,0.250925,0.501969}[4]}\)</span></p></li>
+</ol>
+</section>
+<section id="problem-4" class="level2">
+<h2 class="anchored" data-anchor-id="problem-4">Problem 4</h2>
+<p>Please clarify whether the entire statement is true or false. You are <strong>not</strong> required to justify your answers for statements a. to g. For statements h. and i. some justification is required.</p>
+<ol type="a">
+<li><p>A shear force is equivalent to a friction force. <span class="math inline">\({\color[rgb]{0.028509,0.250925,0.501969}[1]}\)</span></p></li>
+<li><p>In streamline coordinates, in 2D flows, there are two components of velocity: one tangent to the velocity vector and one normal to the velocity vector. Neither can ever be zero. <span class="math inline">\({\color[rgb]{0.028509,0.250925,0.501969}[1]}\)</span></p></li>
+<li><p>The acceleration in the normal direction (following the question above) is always zero. <span class="math inline">\({\color[rgb]{0.028509,0.250925,0.501969}[1]}\)</span></p></li>
+<li><p>For flows moving over bodies, there is likely a competition between the diffusion of momentum and the pressure gradient. <span class="math inline">\({\color[rgb]{0.028509,0.250925,0.501969}[1]}\)</span></p></li>
+<li><p>You can always apply Bernoulli’s principle along a streamline and across it. <span class="math inline">\({\color[rgb]{0.028509,0.250925,0.501969}[1]}\)</span></p></li>
+<li><p>A static pressure measurement is made where the flow velocity has been brought to zero. <span class="math inline">\({\color[rgb]{0.028509,0.250925,0.501969}[1]}\)</span></p></li>
+<li><p>Flow through veins and arteries is an example of Couette flow. <span class="math inline">\({\color[rgb]{0.028509,0.250925,0.501969}[1]}\)</span></p></li>
+<li><p>The velocity field given by <span class="math inline">\(\mathbf{{\color[rgb]{0.059472,0.501943,0.998465}v}} = x^3 \hat{\mathbf{e}}_{x} - 5 y \hat{\mathbf{e}}_{y}\)</span> is a source at location <span class="math inline">\((x, y) = (2,1)\)</span>. <span class="math inline">\({\color[rgb]{0.028509,0.250925,0.501969}[4]}\)</span></p></li>
+<li><p>The expression <span class="math inline">\({\color[rgb]{0.990448,0.502245,0.032881}\rho} \left(\nabla \cdot \mathbf{{\color[rgb]{0.059472,0.501943,0.998465}v}} \right)=0\)</span> is another way to express continuity for incompressible flows, where <span class="math inline">\({\color[rgb]{0.990448,0.502245,0.032881}\rho}\)</span> is the density and <span class="math inline">\(\mathbf{{\color[rgb]{0.059472,0.501943,0.998465}v}}\)</span> is the velocity vector. <span class="math inline">\({\color[rgb]{0.028509,0.250925,0.501969}[3]}\)</span></p></li>
+</ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -778,18 +781,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../sample_problems/lecture_9.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">L9 examples</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../sample_problems/lecture_12.html" class="pagination-link">
-        <span class="nav-page-text">L12 examples</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 
 

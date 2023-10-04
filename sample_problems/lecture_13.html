@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>AE2010/AE2011 - L10 examples</title>
+<title>AE2010/AE2011 - L13 examples</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../sample_problems/lecture_12.html" rel="next">
-<link href="../sample_problems/lecture_9.html" rel="prev">
+<link href="../sample_problems/lecture_12.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -147,7 +146,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sample_problems/lecture_2.html">Examples</a></li><li class="breadcrumb-item"><a href="../sample_problems/lecture_10.html">L10 examples</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sample_problems/lecture_2.html">Examples</a></li><li class="breadcrumb-item"><a href="../sample_problems/lecture_13.html">L13 examples</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -296,7 +295,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sample_problems/lecture_10.html" class="sidebar-item-text sidebar-link active">
+  <a href="../sample_problems/lecture_10.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">L10 examples</span></a>
   </div>
 </li>
@@ -308,7 +307,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sample_problems/lecture_13.html" class="sidebar-item-text sidebar-link">
+  <a href="../sample_problems/lecture_13.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">L13 examples</span></a>
   </div>
 </li>
@@ -325,6 +324,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#problem-1" id="toc-problem-1" class="nav-link active" data-scroll-target="#problem-1">Problem 1</a></li>
+  <li><a href="#problem-2" id="toc-problem-2" class="nav-link" data-scroll-target="#problem-2">Problem 2</a></li>
+  <li><a href="#problem-3" id="toc-problem-3" class="nav-link" data-scroll-target="#problem-3">Problem 3</a></li>
   </ul>
 </nav>
     </div>
@@ -333,7 +334,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">L10 examples</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
+<div class="quarto-title-block"><div><h1 class="title">L13 examples</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
 </div>
 
 
@@ -350,30 +351,213 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="problem-1" class="level2">
 <h2 class="anchored" data-anchor-id="problem-1">Problem 1</h2>
-<p>Please calculate the pressure drop through a pipe if its length is <span class="math inline">\(1 \; km\)</span>; its diameter is <span class="math inline">\(1 m\)</span>, and if the fluid has viscosity of <span class="math inline">\(\require{color}{\color[rgb]{0.501963,0.000046,0.501966}\mu} = {\color[rgb]{0.501963,0.000046,0.501966}1.54 \; 10^{-3} kg/(m \cdot s)}\)</span> and the bulk velocity is <span class="math inline">\(\require{color}{\color[rgb]{0.059472,0.501943,0.998465}10\; m/s}\)</span>.</p>
-<p>This is a straightforward application of the Hagen-Poiseuille equation for the pressure loss across a pipe. Recall, from Lecture 10 we found out that</p>
+<p>0.1 kg of ammonia gas is maintained at a constant pressure of <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}2}\)</span> bar in a cylinder by means of a weighted piston. The ammonia is slowly heated with a Bunsen burner flame from an initial temperature of <span class="math inline">\(\require{color}{\color[rgb]{0.164799,0.878862,0.723179}10}\)</span> degrees Celcius to a final temperature of <span class="math inline">\(\require{color}{\color[rgb]{0.164799,0.878862,0.723179}20}\)</span> degrees Celcius. Calculate:</p>
+<ol type="a">
+<li>the change in the volume of the gas<br>
+</li>
+<li>the work done during the expansion<br>
+</li>
+<li>the heat addition during the process</li>
+</ol>
+<p>To solve this problem you will need to use the two tables provided in Lecture 13. They are reproduced below for your convenience.</p>
+<p><img src="images/image_L13_1.png" alt="table1" width="600"></p>
+<p><img src="images/image_L13_2.png" alt="table2" width="600"></p>
+<details>
+<summary>
+Solution
+</summary>
+<p>The relevant formulas for the solutions are detailed below. For the numerical solutions, please go throught the code.</p>
+<ol type="a">
+<li>The change in volume is given by</li>
+</ol>
 <p><span class="math display">\[
 \large
-\require{color}\Delta {\color[rgb]{0.315209,0.728565,0.037706}p} = \frac{8 {\color[rgb]{0.501963,0.000046,0.501966}\mu} {\color[rgb]{0.059472,0.501943,0.998465}V} L}{{\color[rgb]{0.990448,0.502245,0.032881}R}^2}.
+\require{color}
+{\color[rgb]{0.079785,0.618358,0.483717}\Delta V} = m \left( {\color[rgb]{0.918231,0.469102,0.038229}\nu_2 }- {\color[rgb]{0.918231,0.469102,0.038229}\nu_1} \right).
 \]</span></p>
-<p>Below we plug in the values to work this out.</p>
-<div class="cell" data-execution_count="4">
+<ol start="2" type="a">
+<li>The work done is given by the integral</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.562040,0.190215,0.568721}W} = \int_{1}^{2} {\color[rgb]{0.315209,0.728565,0.037706}p}d{\color[rgb]{0.079785,0.618358,0.483717}V} = {\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.079785,0.618358,0.483717}\Delta V}
+\]</span></p>
+<p>as the pressure is constant.</p>
+<ol start="3" type="a">
+<li>The heat addition during the process is:</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.334690,0.296180,0.998454}Q} - {\color[rgb]{0.562040,0.190215,0.568721}W} = {\color[rgb]{0.999993,0.999963,0.041015}\Delta U} \Rightarrow {\color[rgb]{0.562040,0.190215,0.568721}W} + m \left({\color[rgb]{0.999993,0.999963,0.041015}u_2} - {\color[rgb]{0.999993,0.999963,0.041015}u_1} \right)
+\]</span></p>
+In the solutions below, please be wary of the units.
+</details>
+<div class="cell" data-execution_count="16">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>mu <span class="op">=</span> <span class="fl">1.54</span> <span class="op">*</span> <span class="dv">10</span><span class="op">**</span>(<span class="op">-</span><span class="dv">3</span>) <span class="co"># viscosity</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>V <span class="op">=</span> <span class="dv">10</span> <span class="co"># velocity</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>D <span class="op">=</span> <span class="dv">1</span> <span class="co"># diameter</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> D<span class="op">/</span><span class="dv">2</span> <span class="co"># radius</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> <span class="dv">1000</span> <span class="co"># 1 km = 1000 m</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Delta_p <span class="op">=</span> (<span class="dv">8</span> <span class="op">*</span> mu <span class="op">*</span> V <span class="op">*</span> L)<span class="op">/</span>(R<span class="op">**</span><span class="dv">2</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The loss in pressure is '</span><span class="op">+</span><span class="bu">str</span>(np.around(Delta_p,<span class="dv">3</span>))<span class="op">+</span><span class="st">'Pa'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># a.</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>nu_2 <span class="op">=</span> <span class="fl">0.69952</span> <span class="co"># specific volume table entry at 20 degrees @ 2 bar</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>nu_1 <span class="op">=</span> <span class="fl">0.67320</span> <span class="co"># specific volume table entry at 10 degrees @ 2 bar</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="fl">0.1</span> <span class="co"># kg</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>Delta_V <span class="op">=</span> m <span class="op">*</span> (nu_2 <span class="op">-</span> nu_1)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The change in volume is '</span><span class="op">+</span><span class="bu">str</span>(np.<span class="bu">round</span>(Delta_V, <span class="dv">4</span>))<span class="op">+</span><span class="st">' m^3 </span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># b.</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> <span class="dv">10</span><span class="op">**</span><span class="dv">5</span> <span class="co"># 2 bar = 200 kPa = 2 * 10^5 Pa</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>W <span class="op">=</span> p <span class="op">*</span> Delta_V</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The work done during expansion is '</span><span class="op">+</span><span class="bu">str</span>(np.<span class="bu">round</span>(W,<span class="dv">4</span>)<span class="op">/</span><span class="dv">10</span><span class="op">**</span><span class="dv">3</span>)<span class="op">+</span><span class="st">' kJ </span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># c. </span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>u_2 <span class="op">=</span> <span class="fl">1369.28</span> <span class="co"># specific internal energy table entry at 20 degrees @ 2 bar</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>u_1 <span class="op">=</span> <span class="fl">1351.87</span> <span class="co"># specific internal energy table entry at 10 degrees @ 2 bar</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>Q <span class="op">=</span> W<span class="op">/</span><span class="dv">10</span><span class="op">**</span><span class="dv">3</span> <span class="op">+</span> m <span class="op">*</span> (u_2 <span class="op">-</span> u_1)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The head addition is '</span><span class="op">+</span><span class="bu">str</span>(np.around(Q,<span class="dv">4</span>))<span class="op">+</span><span class="st">' kJ </span><span class="ch">\n</span><span class="st">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>The loss in pressure is 492.8Pa</code></pre>
+<pre><code>The change in volume is 0.0026 m^3 
+
+The work done during expansion is 0.5264 kJ 
+
+The head addition is 2.2674 kJ 
+</code></pre>
 </div>
 </div>
+</section>
+<section id="problem-2" class="level2">
+<h2 class="anchored" data-anchor-id="problem-2">Problem 2</h2>
+<p>Dry air has a molar composition of <span class="math inline">\(21 \% \; O_2 \; (M=32 \; g/mol)\)</span> and <span class="math inline">\(79 \% \; N_2 \; (M=28.15 \; g/mol)\)</span>. Calculate:</p>
+<ol type="a">
+<li>The specific gas constant for air;<br>
+</li>
+<li>The mass of 1 liter of air at <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}1.013 \; bar}\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.164799,0.878862,0.723179} 25^{\circ}\; C}\)</span>.<br>
+</li>
+<li>The density of air at these conditions.</li>
+</ol>
+<details>
+<summary>
+Solution
+</summary>
+<ol type="a">
+<li>The molecular mass of air is given by</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+M_{air} = \frac{21}{100}  M_{O_2} + \frac{79}{100}  M_{N_2} = 0.21 \times 32 + 0.79 \times 28.15 = 28.96 \frac{g}{mol}.
+\]</span></p>
+<p>This can then be used to work out the specific gas constant</p>
+<p><span class="math display">\[
+\large
+\require{color}
+R_{air}  = \frac{\bar{R}}{M_{air}} = \frac{8.314 \frac{J}{mol \cdot K}}{M_{air} \; \frac{g}{mol}} = \frac{8.314 \; J }{28.96 \; g \cdot K} = \frac{8.314 \times 10^{3} \; J }{28.96 \; kg \cdot K} = 287 \; \frac{J}{kg \cdot K}
+\]</span></p>
+<p>which represents the solution in the standard units.</p>
+<ol start="2" type="a">
+<li>To calculate the mass, we simply utilize the idea gas law in the form</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+m = \frac{{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.079785,0.618358,0.483717}V}}{R {\color[rgb]{0.164799,0.878862,0.723179}T}} =  \frac{\left( {\color[rgb]{0.315209,0.728565,0.037706}1.013 \times 10^{5} \; Pa} \right) \left( {\color[rgb]{0.079785,0.618358,0.483717} 1 \; liter \times \frac{0.001 m^3}{1 \; liter} }\right) }{\left( 287 \; \frac{J}{kg \cdot K} \right)\left( {\color[rgb]{0.164799,0.878862,0.723179}298.15 \; K }\right) } = 0.00118 \; kg
+\]</span></p>
+<ol start="3" type="a">
+<li>To work out the density, we simply divide the mass by the volume</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.918231,0.469102,0.038229}\rho} = \frac{m}{{\color[rgb]{0.079785,0.618358,0.483717}V}} = \frac{0.00118 \; kg}{{\color[rgb]{0.079785,0.618358,0.483717}0.001 \; m^3}} ={\color[rgb]{0.918231,0.469102,0.038229} 1.18 \; \frac{kg}{m^3}}.
+\]</span></p>
+</details>
+</section>
+<section id="problem-3" class="level2">
+<h2 class="anchored" data-anchor-id="problem-3">Problem 3</h2>
+<p>1 kg of air initially at a temperature of <span class="math inline">\(\require{color}{\color[rgb]{0.164799,0.878862,0.723179} 300^ \; K}\)</span> undergoes the following cycle:</p>
+<ol type="i">
+<li>expansion at a constant pressure until the volume is doubled;<br>
+</li>
+<li>cooling at a constant volume;<br>
+</li>
+<li>isothermal compression to the initial state.</li>
+</ol>
+<p>Plot the cycle on a <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p}-{\color[rgb]{0.918231,0.469102,0.038229}\nu}\)</span> diagram and calculate (a) the heat and work transfers and internal energy changes during each stage of the cycle, (b) the net work produced, and (c) the net work as a fraction of the <em>positive</em> heat addition.</p>
+<p>You will need these two values: <span class="math inline">\(R = 287 \; \frac{J}{kg \cdot K}\)</span>, and <span class="math inline">\({\color[rgb]{0.878548,0.880173,0.060757}c}_{\color[rgb]{0.079785,0.618358,0.483717}V} = 718 \; \frac{J}{kg \cdot K}\)</span>.</p>
+<details>
+<summary>
+Solution
+</summary>
+<p>The diagram is shown below, where the work done is the area enclosed by the graph, i.e., the shaded region.</p>
+<p><img src="images/image_L13_3.png" alt="table1" width="400"></p>
+<ol type="a">
+<li>It will be useful to break this solution up into its constitutent parts; for (i) we have: <span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.562040,0.190215,0.568721}W} = \int {\color[rgb]{0.315209,0.728565,0.037706}p}d{\color[rgb]{0.079785,0.618358,0.483717}V} = {\color[rgb]{0.315209,0.728565,0.037706}p} \left({\color[rgb]{0.079785,0.618358,0.483717}V_2} - {\color[rgb]{0.079785,0.618358,0.483717}V_1} \right)
+\]</span> <span class="math display">\[
+\large
+\require{color}
+= mR \left({\color[rgb]{0.164799,0.878862,0.723179}T_2} - {\color[rgb]{0.164799,0.878862,0.723179}T_1} \right) = 1 \times 287 \times {\color[rgb]{0.164799,0.878862,0.723179}300} = {\color[rgb]{0.562040,0.190215,0.568721}86.1 \; kJ}
+\]</span></li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.878548,0.880173,0.060757}\Delta U }= m{\color[rgb]{0.878548,0.880173,0.060757}c}_{{\color[rgb]{0.079785,0.618358,0.483717}V}} \left({\color[rgb]{0.164799,0.878862,0.723179}T_2} - {\color[rgb]{0.164799,0.878862,0.723179}T_1} \right) = 1 \times 718 \times {\color[rgb]{0.164799,0.878862,0.723179}300} = {\color[rgb]{0.878548,0.880173,0.060757}215.4 \; kJ }
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.334690,0.296180,0.998454}Q} = {\color[rgb]{0.562040,0.190215,0.568721}W} + {\color[rgb]{0.878548,0.880173,0.060757}\Delta U }= {\color[rgb]{0.562040,0.190215,0.568721}86.1} + {\color[rgb]{0.878548,0.880173,0.060757}215.4} = {\color[rgb]{0.334690,0.296180,0.998454}301.5 \; kJ}
+\]</span></p>
+<p>Next, for (ii) we have:</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.562040,0.190215,0.568721}W} = \int {\color[rgb]{0.315209,0.728565,0.037706}p} d{\color[rgb]{0.079785,0.618358,0.483717}V} = 0
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.878548,0.880173,0.060757}\Delta U} = m {\color[rgb]{0.878548,0.880173,0.060757}c}_{{\color[rgb]{0.079785,0.618358,0.483717}V}} \left({\color[rgb]{0.164799,0.878862,0.723179}T_3} - {\color[rgb]{0.164799,0.878862,0.723179}T_2} \right) = 1 \times 718 \times ({\color[rgb]{0.164799,0.878862,0.723179}-300}) = {\color[rgb]{0.878548,0.880173,0.060757}-215.4 \; kJ}
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.334690,0.296180,0.998454}Q} = {\color[rgb]{0.562040,0.190215,0.568721}W} + {\color[rgb]{0.878548,0.880173,0.060757}\Delta U }={\color[rgb]{0.334690,0.296180,0.998454}-215.4 \; kJ}
+\]</span></p>
+<p>Finally, for (iii) we have:</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.562040,0.190215,0.568721}W} = \int {\color[rgb]{0.315209,0.728565,0.037706}p}d{\color[rgb]{0.079785,0.618358,0.483717}V} = \int \frac{mR{\color[rgb]{0.164799,0.878862,0.723179}T}}{{\color[rgb]{0.079785,0.618358,0.483717}V}} d{\color[rgb]{0.079785,0.618358,0.483717}V} = mR{\color[rgb]{0.164799,0.878862,0.723179}T} ln \left( \frac{{\color[rgb]{0.079785,0.618358,0.483717}V_1}}{{\color[rgb]{0.079785,0.618358,0.483717}V_2}} \right) = 1 \times 287 \times {\color[rgb]{0.164799,0.878862,0.723179}300} \times ln \left( \frac{1}{2} \right) = {\color[rgb]{0.562040,0.190215,0.568721}-59.7 \; kJ}
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.334690,0.296180,0.998454}Q} = {\color[rgb]{0.562040,0.190215,0.568721}W} + {\color[rgb]{0.878548,0.880173,0.060757}\Delta U }={\color[rgb]{0.334690,0.296180,0.998454}-59.7 \; kJ}
+\]</span></p>
+<ol start="2" type="a">
+<li>The net work produced is given by</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.562040,0.190215,0.568721}W} = {\color[rgb]{0.562040,0.190215,0.568721}W_{12}} + {\color[rgb]{0.562040,0.190215,0.568721}W_{23}} + {\color[rgb]{0.562040,0.190215,0.568721}W_{31} } = {\color[rgb]{0.562040,0.190215,0.568721}86.1} + {\color[rgb]{0.562040,0.190215,0.568721}0 }- {\color[rgb]{0.562040,0.190215,0.568721}59.7} = {\color[rgb]{0.562040,0.190215,0.568721}26.4 \; kJ}
+\]</span></p>
+<ol start="3" type="a">
+<li>The net work as a fraction of the positive heat addition</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{{\color[rgb]{0.562040,0.190215,0.568721}W}}{{\color[rgb]{0.334690,0.296180,0.998454}Q_{in}}} = \frac{{\color[rgb]{0.562040,0.190215,0.568721}26.4}}{{\color[rgb]{0.334690,0.296180,0.998454}301.5}} = 8.7 \; \%
+\]</span></p>
+<p><em>Notes</em>: As the problem is cyclic, <span class="math inline">\({\color[rgb]{0.878548,0.880173,0.060757}\Delta U}\)</span> overall is zero and the net heat transfer balances the net work produced. This is an example of a heat engine – i.e., a device that converts heat into work. However, it is extremely impractical and very inefficient: most of the positive heat input is rejected to the environment.</p>
+</details>
 
 
 </section>
@@ -780,14 +964,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../sample_problems/lecture_9.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">L9 examples</span>
+      <a href="../sample_problems/lecture_12.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">L12 examples</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../sample_problems/lecture_12.html" class="pagination-link">
-        <span class="nav-page-text">L12 examples</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

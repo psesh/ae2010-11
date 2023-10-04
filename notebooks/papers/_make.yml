@@ -1,0 +1,17 @@
+format: 
+  pdf: 
+    documentclass: report
+    classoption: [twocolumn, landscape]
+    geometry:
+      - heightrounded
+    fontfamily: libertinus
+    colorlinks: true
+    include-in-header:
+      - text: |
+          \usepackage[usenames]{color}
+          \usepackage{enumitem}
+          \usepackage{amsmath,amssymb,graphicx,bbm}
+          \usepackage{amsthm,verbatim,enumitem}
+          \usepackage{mathrsfs,mathtools}
+          \pagenumbering{gobble}
+
