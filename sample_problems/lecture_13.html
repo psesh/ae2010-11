@@ -64,6 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../sample_problems/lecture_14.html" rel="next">
 <link href="../sample_problems/lecture_12.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -311,6 +312,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">L13 examples</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L14 examples</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -325,7 +332,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#problem-1" id="toc-problem-1" class="nav-link active" data-scroll-target="#problem-1">Problem 1</a></li>
   <li><a href="#problem-2" id="toc-problem-2" class="nav-link" data-scroll-target="#problem-2">Problem 2</a></li>
-  <li><a href="#problem-3" id="toc-problem-3" class="nav-link" data-scroll-target="#problem-3">Problem 3</a></li>
   </ul>
 </nav>
     </div>
@@ -472,91 +478,6 @@ m = \frac{{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.079785,0.618
 \require{color}
 {\color[rgb]{0.918231,0.469102,0.038229}\rho} = \frac{m}{{\color[rgb]{0.079785,0.618358,0.483717}V}} = \frac{0.00118 \; kg}{{\color[rgb]{0.079785,0.618358,0.483717}0.001 \; m^3}} ={\color[rgb]{0.918231,0.469102,0.038229} 1.18 \; \frac{kg}{m^3}}.
 \]</span></p>
-</details>
-</section>
-<section id="problem-3" class="level2">
-<h2 class="anchored" data-anchor-id="problem-3">Problem 3</h2>
-<p>1 kg of air initially at a temperature of <span class="math inline">\(\require{color}{\color[rgb]{0.164799,0.878862,0.723179} 300^ \; K}\)</span> undergoes the following cycle:</p>
-<ol type="i">
-<li>expansion at a constant pressure until the volume is doubled;<br>
-</li>
-<li>cooling at a constant volume;<br>
-</li>
-<li>isothermal compression to the initial state.</li>
-</ol>
-<p>Plot the cycle on a <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p}-{\color[rgb]{0.918231,0.469102,0.038229}\nu}\)</span> diagram and calculate (a) the heat and work transfers and internal energy changes during each stage of the cycle, (b) the net work produced, and (c) the net work as a fraction of the <em>positive</em> heat addition.</p>
-<p>You will need these two values: <span class="math inline">\(R = 287 \; \frac{J}{kg \cdot K}\)</span>, and <span class="math inline">\({\color[rgb]{0.878548,0.880173,0.060757}c}_{\color[rgb]{0.079785,0.618358,0.483717}V} = 718 \; \frac{J}{kg \cdot K}\)</span>.</p>
-<details>
-<summary>
-Solution
-</summary>
-<p>The diagram is shown below, where the work done is the area enclosed by the graph, i.e., the shaded region.</p>
-<p><img src="images/image_L13_3.png" alt="table1" width="400"></p>
-<ol type="a">
-<li>It will be useful to break this solution up into its constitutent parts; for (i) we have: <span class="math display">\[
-\large
-\require{color}
-{\color[rgb]{0.562040,0.190215,0.568721}W} = \int {\color[rgb]{0.315209,0.728565,0.037706}p}d{\color[rgb]{0.079785,0.618358,0.483717}V} = {\color[rgb]{0.315209,0.728565,0.037706}p} \left({\color[rgb]{0.079785,0.618358,0.483717}V_2} - {\color[rgb]{0.079785,0.618358,0.483717}V_1} \right)
-\]</span> <span class="math display">\[
-\large
-\require{color}
-= mR \left({\color[rgb]{0.164799,0.878862,0.723179}T_2} - {\color[rgb]{0.164799,0.878862,0.723179}T_1} \right) = 1 \times 287 \times {\color[rgb]{0.164799,0.878862,0.723179}300} = {\color[rgb]{0.562040,0.190215,0.568721}86.1 \; kJ}
-\]</span></li>
-</ol>
-<p><span class="math display">\[
-\large
-\require{color}
-{\color[rgb]{0.878548,0.880173,0.060757}\Delta U }= m{\color[rgb]{0.878548,0.880173,0.060757}c}_{{\color[rgb]{0.079785,0.618358,0.483717}V}} \left({\color[rgb]{0.164799,0.878862,0.723179}T_2} - {\color[rgb]{0.164799,0.878862,0.723179}T_1} \right) = 1 \times 718 \times {\color[rgb]{0.164799,0.878862,0.723179}300} = {\color[rgb]{0.878548,0.880173,0.060757}215.4 \; kJ }
-\]</span></p>
-<p><span class="math display">\[
-\large
-\require{color}
-{\color[rgb]{0.334690,0.296180,0.998454}Q} = {\color[rgb]{0.562040,0.190215,0.568721}W} + {\color[rgb]{0.878548,0.880173,0.060757}\Delta U }= {\color[rgb]{0.562040,0.190215,0.568721}86.1} + {\color[rgb]{0.878548,0.880173,0.060757}215.4} = {\color[rgb]{0.334690,0.296180,0.998454}301.5 \; kJ}
-\]</span></p>
-<p>Next, for (ii) we have:</p>
-<p><span class="math display">\[
-\large
-\require{color}
-{\color[rgb]{0.562040,0.190215,0.568721}W} = \int {\color[rgb]{0.315209,0.728565,0.037706}p} d{\color[rgb]{0.079785,0.618358,0.483717}V} = 0
-\]</span></p>
-<p><span class="math display">\[
-\large
-\require{color}
-{\color[rgb]{0.878548,0.880173,0.060757}\Delta U} = m {\color[rgb]{0.878548,0.880173,0.060757}c}_{{\color[rgb]{0.079785,0.618358,0.483717}V}} \left({\color[rgb]{0.164799,0.878862,0.723179}T_3} - {\color[rgb]{0.164799,0.878862,0.723179}T_2} \right) = 1 \times 718 \times ({\color[rgb]{0.164799,0.878862,0.723179}-300}) = {\color[rgb]{0.878548,0.880173,0.060757}-215.4 \; kJ}
-\]</span></p>
-<p><span class="math display">\[
-\large
-\require{color}
-{\color[rgb]{0.334690,0.296180,0.998454}Q} = {\color[rgb]{0.562040,0.190215,0.568721}W} + {\color[rgb]{0.878548,0.880173,0.060757}\Delta U }={\color[rgb]{0.334690,0.296180,0.998454}-215.4 \; kJ}
-\]</span></p>
-<p>Finally, for (iii) we have:</p>
-<p><span class="math display">\[
-\large
-\require{color}
-{\color[rgb]{0.562040,0.190215,0.568721}W} = \int {\color[rgb]{0.315209,0.728565,0.037706}p}d{\color[rgb]{0.079785,0.618358,0.483717}V} = \int \frac{mR{\color[rgb]{0.164799,0.878862,0.723179}T}}{{\color[rgb]{0.079785,0.618358,0.483717}V}} d{\color[rgb]{0.079785,0.618358,0.483717}V} = mR{\color[rgb]{0.164799,0.878862,0.723179}T} ln \left( \frac{{\color[rgb]{0.079785,0.618358,0.483717}V_1}}{{\color[rgb]{0.079785,0.618358,0.483717}V_2}} \right) = 1 \times 287 \times {\color[rgb]{0.164799,0.878862,0.723179}300} \times ln \left( \frac{1}{2} \right) = {\color[rgb]{0.562040,0.190215,0.568721}-59.7 \; kJ}
-\]</span></p>
-<p><span class="math display">\[
-\large
-\require{color}
-{\color[rgb]{0.334690,0.296180,0.998454}Q} = {\color[rgb]{0.562040,0.190215,0.568721}W} + {\color[rgb]{0.878548,0.880173,0.060757}\Delta U }={\color[rgb]{0.334690,0.296180,0.998454}-59.7 \; kJ}
-\]</span></p>
-<ol start="2" type="a">
-<li>The net work produced is given by</li>
-</ol>
-<p><span class="math display">\[
-\large
-\require{color}
-{\color[rgb]{0.562040,0.190215,0.568721}W} = {\color[rgb]{0.562040,0.190215,0.568721}W_{12}} + {\color[rgb]{0.562040,0.190215,0.568721}W_{23}} + {\color[rgb]{0.562040,0.190215,0.568721}W_{31} } = {\color[rgb]{0.562040,0.190215,0.568721}86.1} + {\color[rgb]{0.562040,0.190215,0.568721}0 }- {\color[rgb]{0.562040,0.190215,0.568721}59.7} = {\color[rgb]{0.562040,0.190215,0.568721}26.4 \; kJ}
-\]</span></p>
-<ol start="3" type="a">
-<li>The net work as a fraction of the positive heat addition</li>
-</ol>
-<p><span class="math display">\[
-\large
-\require{color}
-\frac{{\color[rgb]{0.562040,0.190215,0.568721}W}}{{\color[rgb]{0.334690,0.296180,0.998454}Q_{in}}} = \frac{{\color[rgb]{0.562040,0.190215,0.568721}26.4}}{{\color[rgb]{0.334690,0.296180,0.998454}301.5}} = 8.7 \; \%
-\]</span></p>
-<p><em>Notes</em>: As the problem is cyclic, <span class="math inline">\({\color[rgb]{0.878548,0.880173,0.060757}\Delta U}\)</span> overall is zero and the net heat transfer balances the net work produced. This is an example of a heat engine – i.e., a device that converts heat into work. However, it is extremely impractical and very inefficient: most of the positive heat input is rejected to the environment.</p>
 </details>
 
 
@@ -969,6 +890,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../sample_problems/lecture_14.html" class="pagination-link">
+        <span class="nav-page-text">L14 examples</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
