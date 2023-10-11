@@ -35,11 +35,13 @@ website:
       - section: "Practice Problems"
         contents: 
           - practice_problems/incompressible_fluid_mechanics.ipynb
+          - practice_problems/thermodynamics.ipynb
       - section: "Notebooks"
         contents:
           - demo.ipynb
           - for_loops.ipynb
           - vector_fields.ipynb
+          - dataframes.ipynb
           - couette_flow.ipynb
           - poiseuille_flow.ipynb
           - flow_around_bend.ipynb
@@ -57,3 +59,4 @@ website:
           - sample_problems/lecture_12.ipynb
           - sample_problems/lecture_13.ipynb
           - sample_problems/lecture_14.ipynb
+          - sample_problems/lecture_15.ipynb
