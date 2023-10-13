@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>AE2010/AE2011 - L12 examples</title>
+<title>AE2010/AE2011 - L16 examples</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../sample_problems/lecture_13.html" rel="next">
-<link href="../sample_problems/lecture_10.html" rel="prev">
+<link href="../sample_problems/lecture_15.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -147,7 +146,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sample_problems/lecture_2.html">Examples</a></li><li class="breadcrumb-item"><a href="../sample_problems/lecture_12.html">L12 examples</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sample_problems/lecture_2.html">Examples</a></li><li class="breadcrumb-item"><a href="../sample_problems/lecture_16.html">L16 examples</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -314,7 +313,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sample_problems/lecture_12.html" class="sidebar-item-text sidebar-link active">
+  <a href="../sample_problems/lecture_12.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">L12 examples</span></a>
   </div>
 </li>
@@ -338,7 +337,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sample_problems/lecture_16.html" class="sidebar-item-text sidebar-link">
+  <a href="../sample_problems/lecture_16.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">L16 examples</span></a>
   </div>
 </li>
@@ -355,6 +354,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#problem-1" id="toc-problem-1" class="nav-link active" data-scroll-target="#problem-1">Problem 1</a></li>
+  <li><a href="#problem-2" id="toc-problem-2" class="nav-link" data-scroll-target="#problem-2">Problem 2</a></li>
   </ul>
 </nav>
     </div>
@@ -363,7 +363,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">L12 examples</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
+<div class="quarto-title-block"><div><h1 class="title">L16 examples</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
 </div>
 
 
@@ -380,46 +380,119 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="problem-1" class="level2">
 <h2 class="anchored" data-anchor-id="problem-1">Problem 1</h2>
-<p>A quantity of dry air is slowly compressed in a cylinder by means of a piston, until its volume is halved. The initial pressure and volume are <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}1 \; bar \; \; (10^5\; Pa)}\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.079785,0.618358,0.483717}1 \;liter}\)</span> respectively, and during the compression the pressure varies inversely with the volume. Sketch the process on a <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p}-{\color[rgb]{0.079785,0.618358,0.483717}V}\)</span> diagram and calculate the work transfer. Is this a positive or negative quantity?</p>
+<p>A gas-powered refrigerator works by taking in heat from a heat exchanger at <span class="math inline">\({\color[rgb]{0.164799,0.878862,0.723179}500^{\circ} \; C}\)</span> and from a cold space at <span class="math inline">\({\color[rgb]{0.164799,0.878862,0.723179}-10^{\circ} \; C}\)</span>, while rejecting heat to the environment at <span class="math inline">\({\color[rgb]{0.164799,0.878862,0.723179}35^{\circ} \; C}\)</span>. The refrigerator is a cyclic device, and there is no work input or output. Use the Clausius inequality to find the minimum rate at which heat must be supplied by the heat exchanger in order to extract heat at a rate of <span class="math inline">\({\color[rgb]{0.334690,0.296180,0.998454}1 \; kW}\)</span> from the cold space.</p>
 <details>
 <summary>
 Solution
 </summary>
-<p>Note that 1 liter is <span class="math inline">\(10^{-3} \; m^3\)</span>. Consider the diagram below; the work done is given by</p>
-<p><img src="images/image_L12_1.png" alt="PV" width="300"></p>
+<p>This problem is very similar to the one covered in Lecture 16. It will be useful to consider the diagram below.</p>
+<p><img src="images/image_L16_1.png" alt="cycle" width="500"></p>
+<p>From the 1st law we have:</p>
 <p><span class="math display">\[
 \large
 \require{color}
-{\color[rgb]{0.562040,0.190215,0.568721}W} = \int_{{\color[rgb]{0.079785,0.618358,0.483717}V}_1}^{{\color[rgb]{0.079785,0.618358,0.483717}V}_2} {\color[rgb]{0.315209,0.728565,0.037706}p}d{\color[rgb]{0.079785,0.618358,0.483717}V} = \int_{{\color[rgb]{0.079785,0.618358,0.483717}V}_1}^{{\color[rgb]{0.079785,0.618358,0.483717}V}_2} \frac{C}{{\color[rgb]{0.079785,0.618358,0.483717}V}} d{\color[rgb]{0.079785,0.618358,0.483717}V} = \left[ C \; ln \left( {\color[rgb]{0.079785,0.618358,0.483717}V} \right) \right]_{{\color[rgb]{0.079785,0.618358,0.483717}V}_1}^{{\color[rgb]{0.079785,0.618358,0.483717}V}_2}.
+{\color[rgb]{0.334690,0.296180,0.998454}\dot{Q}_{1}} + {\color[rgb]{0.334690,0.296180,0.998454}\dot{Q}_{2}} = {\color[rgb]{0.334690,0.296180,0.998454}\dot{Q}_{3} }
 \]</span></p>
-<p>From the conditions at state 1, we have</p>
+<p>and from the second law (the Clausius inequality):</p>
 <p><span class="math display">\[
 \large
 \require{color}
-C = {\color[rgb]{0.315209,0.728565,0.037706}p}_1 {\color[rgb]{0.079785,0.618358,0.483717}V}_1 = {\color[rgb]{0.315209,0.728565,0.037706}p}_2 {\color[rgb]{0.079785,0.618358,0.483717}V}_2,
+\sum \frac{{\color[rgb]{0.334690,0.296180,0.998454}\dot{Q}_{i}}}{{\color[rgb]{0.164799,0.878862,0.723179}T_i}} \leq 0
 \]</span></p>
-<p>yielding</p>
+<p>As noted in Lecture 16, the minus sign sign that preceeds <span class="math inline">\(\require{color}{\color[rgb]{0.334690,0.296180,0.998454}\dot{Q}_{3}}\)</span> denotes it is going out of the system. Eliminating <span class="math inline">\(\require{color}{\color[rgb]{0.334690,0.296180,0.998454}\dot{Q}_{3}}\)</span> from the two expressions yields:</p>
 <p><span class="math display">\[
 \large
 \require{color}
-{\color[rgb]{0.562040,0.190215,0.568721}W} = {\color[rgb]{0.315209,0.728565,0.037706}p}_1 {\color[rgb]{0.079785,0.618358,0.483717}V}_1 ln \left( \frac{{\color[rgb]{0.079785,0.618358,0.483717}V}_2}{{\color[rgb]{0.079785,0.618358,0.483717}V}_1} \right) = {\color[rgb]{0.315209,0.728565,0.037706}10^{5} }\times {\color[rgb]{0.079785,0.618358,0.483717}10^{-3}} \times ln \left( \frac{{\color[rgb]{0.079785,0.618358,0.483717}1}}{{\color[rgb]{0.079785,0.618358,0.483717}2}} \right)
+\frac{{\color[rgb]{0.334690,0.296180,0.998454}\dot{Q}_{1}}}{{\color[rgb]{0.164799,0.878862,0.723179}T_1}} + \frac{{\color[rgb]{0.334690,0.296180,0.998454}\dot{Q}_{2}}}{{\color[rgb]{0.164799,0.878862,0.723179}T_2}} - \frac{\left( {\color[rgb]{0.334690,0.296180,0.998454}\dot{Q}_{1}} + {\color[rgb]{0.334690,0.296180,0.998454}\dot{Q}_{2}}\right) }{{\color[rgb]{0.164799,0.878862,0.723179}T_3}} \leq 0
 \]</span></p>
-Solving the above
+<p>Rearranging the above gives</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{{\color[rgb]{0.334690,0.296180,0.998454}\dot{Q}_{1}}}{{\color[rgb]{0.334690,0.296180,0.998454}\dot{Q}_{2}}} \geq \left( \frac{{\color[rgb]{0.164799,0.878862,0.723179}1/T_2} - {\color[rgb]{0.164799,0.878862,0.723179}1/T_3}}{{\color[rgb]{0.164799,0.878862,0.723179}1/T_3} - {\color[rgb]{0.164799,0.878862,0.723179}1/T_1}} \right)
+\]</span></p>
+<p>with the numerical solution given below.</p>
 </details>
 <div class="cell" data-execution_count="2">
 <details>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>work <span class="op">=</span> <span class="dv">10</span><span class="op">**</span><span class="dv">5</span> <span class="op">*</span> <span class="dv">10</span><span class="op">**</span>(<span class="op">-</span><span class="dv">3</span>) <span class="op">*</span> np.log(<span class="fl">0.5</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">str</span>(work)<span class="op">+</span><span class="st">' J'</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The work is negative and thus the work is transferred to the system.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>absolute_zero <span class="op">=</span> <span class="fl">273.15</span> </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>T_1 <span class="op">=</span> <span class="dv">500</span> <span class="op">+</span> absolute_zero <span class="co"># all in Kelvin!</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>T_2 <span class="op">=</span> <span class="op">-</span><span class="dv">10</span> <span class="op">+</span> absolute_zero</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>T_3 <span class="op">=</span> <span class="dv">35</span> <span class="op">+</span> absolute_zero</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>dot_Q1_by_dot_Q2 <span class="op">=</span> (<span class="fl">1.</span><span class="op">/</span>T_2 <span class="op">-</span> <span class="fl">1.</span><span class="op">/</span>T_3)<span class="op">/</span>(<span class="fl">1.</span><span class="op">/</span>T_3 <span class="op">-</span> <span class="fl">1.</span><span class="op">/</span>T_1)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>dot_Q2 <span class="op">=</span> <span class="dv">1</span> <span class="co"># kW</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>dot_Q1 <span class="op">=</span> dot_Q1_by_dot_Q2 <span class="op">*</span> dot_Q2</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The minimum heat supply rate from the heat exchanger (source) is '</span><span class="op">+</span><span class="bu">str</span>(np.<span class="bu">round</span>(dot_Q1, <span class="dv">3</span>))<span class="op">+</span><span class="st">' kW'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>-69.31471805599453 J
-The work is negative and thus the work is transferred to the system.</code></pre>
+<pre><code>The minimum heat supply rate from the heat exchanger (source) is 0.284 kW</code></pre>
 </div>
 </div>
+</section>
+<section id="problem-2" class="level2">
+<h2 class="anchored" data-anchor-id="problem-2">Problem 2</h2>
+<p>A cyclic heat pump takes <span class="math inline">\({\color[rgb]{0.334690,0.296180,0.998454}600 \; MJ}\)</span> (mega joules) of heat at <span class="math inline">\({\color[rgb]{0.164799,0.878862,0.723179}27^{\circ} \; C}\)</span> while rejecting heat to a system whose temperature rises <span class="math inline">\({\color[rgb]{0.164799,0.878862,0.723179}1^{\circ} \; C}\)</span> for each MJ of energy supplied to it. Initially this system is also at <span class="math inline">\({\color[rgb]{0.164799,0.878862,0.723179}27^{\circ} \; C}\)</span>.</p>
+<ol type="a">
+<li>Explain why there is a limit on the final temperature of the system. State whether it is an upper or lower limit, and under what circumstances it would be reached.<br>
+</li>
+<li>Calculate the limit on the final temperature of the system. What is the work input to the heat pump when this limit is achieved?</li>
+</ol>
+<details>
+<summary>
+Solution
+</summary>
+<p>As before, it will be useful to sketch out a diagram of the process above.</p>
+<p><img src="images/image_L16_2.png" alt="cycle" width="300"></p>
+<ol type="a">
+<li>From the first law, it is clear that</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.334690,0.296180,0.998454}\delta Q_2}= {\color[rgb]{0.334690,0.296180,0.998454}\delta Q_1} + {\color[rgb]{0.562040,0.190215,0.568721}\delta W}.
+\]</span></p>
+<p>Note that if the pump were reversible, then it would be as efficient as possible, implying that the amount of work <span class="math inline">\(\require{color}{\color[rgb]{0.562040,0.190215,0.568721}\delta W}\)</span> required by the pump would be as low as possible. This sets a lower limit on work, which consequently also sets a lower limit on <span class="math inline">\(\require{color}{\color[rgb]{0.334690,0.296180,0.998454}\delta Q_2}\)</span>, and therefore on <span class="math inline">\(\require{color}{\color[rgb]{0.164799,0.878862,0.723179}T_2}\)</span>.</p>
+<ol start="2" type="a">
+<li>Consider the Clausius statement (with appropriate signs)</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{{\color[rgb]{0.334690,0.296180,0.998454}\delta Q_1}}{{\color[rgb]{0.164799,0.878862,0.723179}T_1}} - \frac{{\color[rgb]{0.334690,0.296180,0.998454}\delta Q_2}}{{\color[rgb]{0.164799,0.878862,0.723179}T_2}} \leq 0
+\]</span></p>
+<p>From the problem statement, we can infer that the constant <span class="math inline">\({\color[rgb]{0.000000,0.000000,0.000000}c = 1 \; MJ/K}\)</span>, leading to</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{c {\color[rgb]{0.164799,0.878862,0.723179}\delta T_2}}{{\color[rgb]{0.164799,0.878862,0.723179}T_2}} \geq \frac{{\color[rgb]{0.334690,0.296180,0.998454}\delta Q_1}}{{\color[rgb]{0.164799,0.878862,0.723179}T_1}}.
+\]</span></p>
+<p>Integrating both sides of this equation</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\int_{{\color[rgb]{0.164799,0.878862,0.723179}300}}^{{\color[rgb]{0.164799,0.878862,0.723179}T_f}}\frac{c {\color[rgb]{0.164799,0.878862,0.723179}\delta T_2}}{{\color[rgb]{0.164799,0.878862,0.723179}T_2}} \geq \frac{{\color[rgb]{0.334690,0.296180,0.998454}Q_1}}{{\color[rgb]{0.164799,0.878862,0.723179}T_1}}
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+\Rightarrow 1 \times ln \left( \frac{{\color[rgb]{0.164799,0.878862,0.723179}T_f}}{{\color[rgb]{0.164799,0.878862,0.723179}300.15}} \right) \geq \frac{{\color[rgb]{0.334690,0.296180,0.998454}600}}{{\color[rgb]{0.164799,0.878862,0.723179}300.15}}\Rightarrow {\color[rgb]{0.164799,0.878862,0.723179}T_f} \geq {\color[rgb]{0.164799,0.878862,0.723179}2217.82 \; K}
+\]</span></p>
+<p>Note that for the reversible case</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.334690,0.296180,0.998454}Q_2} = \left({\color[rgb]{0.164799,0.878862,0.723179}2217.82} - {\color[rgb]{0.164799,0.878862,0.723179}300.15} \right) / c = {\color[rgb]{0.334690,0.296180,0.998454}1917.67} \; {\color[rgb]{0.334690,0.296180,0.998454}MJ}
+\]</span></p>
+<p>Thus the work input is</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.562040,0.190215,0.568721}W} = {\color[rgb]{0.334690,0.296180,0.998454}1917.67} - {\color[rgb]{0.334690,0.296180,0.998454}600} = {\color[rgb]{0.562040,0.190215,0.568721}1316.7 \; MJ}
+\]</span>.</p>
+</details>
 
 
 </section>
@@ -826,14 +899,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../sample_problems/lecture_10.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">L10 examples</span>
+      <a href="../sample_problems/lecture_15.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">L15 examples</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../sample_problems/lecture_13.html" class="pagination-link">
-        <span class="nav-page-text">L13 examples</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

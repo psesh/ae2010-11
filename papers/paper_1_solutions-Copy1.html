@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>AE2010/AE2011 - L12 examples</title>
+<title>AE2010/AE2011 - Incompressible fluid mechanics paper solutions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,8 +30,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../sample_problems/lecture_13.html" rel="next">
-<link href="../sample_problems/lecture_10.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -147,7 +111,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sample_problems/lecture_2.html">Examples</a></li><li class="breadcrumb-item"><a href="../sample_problems/lecture_12.html">L12 examples</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Incompressible fluid mechanics paper solutions</li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -314,7 +278,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sample_problems/lecture_12.html" class="sidebar-item-text sidebar-link active">
+  <a href="../sample_problems/lecture_12.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">L12 examples</span></a>
   </div>
 </li>
@@ -354,16 +318,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#problem-1" id="toc-problem-1" class="nav-link active" data-scroll-target="#problem-1">Problem 1</a></li>
+  <li><a href="#incompressible-fluid-mechanics-paper-late" id="toc-incompressible-fluid-mechanics-paper-late" class="nav-link active" data-scroll-target="#incompressible-fluid-mechanics-paper-late">Incompressible fluid mechanics paper (late)</a>
+  <ul class="collapse">
+  <li><a href="#fall-2023-ae2010-ae2011" id="toc-fall-2023-ae2010-ae2011" class="nav-link" data-scroll-target="#fall-2023-ae2010-ae2011">Fall 2023 | AE2010-AE2011</a></li>
+  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions">Solutions</a>
+  <ul class="collapse">
+  <li><a href="#problem-1" id="toc-problem-1" class="nav-link" data-scroll-target="#problem-1">Problem 1</a></li>
+  <li><a href="#solution-1" id="toc-solution-1" class="nav-link" data-scroll-target="#solution-1">Solution 1</a></li>
+  </ul></li>
+  <li><a href="#problem-2" id="toc-problem-2" class="nav-link" data-scroll-target="#problem-2">Problem 2</a></li>
+  <li><a href="#problem-3" id="toc-problem-3" class="nav-link" data-scroll-target="#problem-3">Problem 3</a>
+  <ul class="collapse">
+  <li><a href="#solution-3" id="toc-solution-3" class="nav-link" data-scroll-target="#solution-3">Solution 3</a></li>
+  </ul></li>
+  <li><a href="#problem-4" id="toc-problem-4" class="nav-link" data-scroll-target="#problem-4">Problem 4</a></li>
+  </ul></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="paper_1_solutions-Copy1.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">L12 examples</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
+<h1 class="title">Incompressible fluid mechanics paper solutions</h1>
 </div>
 
 
@@ -378,50 +356,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="problem-1" class="level2">
-<h2 class="anchored" data-anchor-id="problem-1">Problem 1</h2>
-<p>A quantity of dry air is slowly compressed in a cylinder by means of a piston, until its volume is halved. The initial pressure and volume are <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}1 \; bar \; \; (10^5\; Pa)}\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.079785,0.618358,0.483717}1 \;liter}\)</span> respectively, and during the compression the pressure varies inversely with the volume. Sketch the process on a <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p}-{\color[rgb]{0.079785,0.618358,0.483717}V}\)</span> diagram and calculate the work transfer. Is this a positive or negative quantity?</p>
-<details>
-<summary>
-Solution
-</summary>
-<p>Note that 1 liter is <span class="math inline">\(10^{-3} \; m^3\)</span>. Consider the diagram below; the work done is given by</p>
-<p><img src="images/image_L12_1.png" alt="PV" width="300"></p>
-<p><span class="math display">\[
-\large
-\require{color}
-{\color[rgb]{0.562040,0.190215,0.568721}W} = \int_{{\color[rgb]{0.079785,0.618358,0.483717}V}_1}^{{\color[rgb]{0.079785,0.618358,0.483717}V}_2} {\color[rgb]{0.315209,0.728565,0.037706}p}d{\color[rgb]{0.079785,0.618358,0.483717}V} = \int_{{\color[rgb]{0.079785,0.618358,0.483717}V}_1}^{{\color[rgb]{0.079785,0.618358,0.483717}V}_2} \frac{C}{{\color[rgb]{0.079785,0.618358,0.483717}V}} d{\color[rgb]{0.079785,0.618358,0.483717}V} = \left[ C \; ln \left( {\color[rgb]{0.079785,0.618358,0.483717}V} \right) \right]_{{\color[rgb]{0.079785,0.618358,0.483717}V}_1}^{{\color[rgb]{0.079785,0.618358,0.483717}V}_2}.
-\]</span></p>
-<p>From the conditions at state 1, we have</p>
-<p><span class="math display">\[
-\large
-\require{color}
-C = {\color[rgb]{0.315209,0.728565,0.037706}p}_1 {\color[rgb]{0.079785,0.618358,0.483717}V}_1 = {\color[rgb]{0.315209,0.728565,0.037706}p}_2 {\color[rgb]{0.079785,0.618358,0.483717}V}_2,
-\]</span></p>
-<p>yielding</p>
-<p><span class="math display">\[
-\large
-\require{color}
-{\color[rgb]{0.562040,0.190215,0.568721}W} = {\color[rgb]{0.315209,0.728565,0.037706}p}_1 {\color[rgb]{0.079785,0.618358,0.483717}V}_1 ln \left( \frac{{\color[rgb]{0.079785,0.618358,0.483717}V}_2}{{\color[rgb]{0.079785,0.618358,0.483717}V}_1} \right) = {\color[rgb]{0.315209,0.728565,0.037706}10^{5} }\times {\color[rgb]{0.079785,0.618358,0.483717}10^{-3}} \times ln \left( \frac{{\color[rgb]{0.079785,0.618358,0.483717}1}}{{\color[rgb]{0.079785,0.618358,0.483717}2}} \right)
-\]</span></p>
-Solving the above
-</details>
-<div class="cell" data-execution_count="2">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>work <span class="op">=</span> <span class="dv">10</span><span class="op">**</span><span class="dv">5</span> <span class="op">*</span> <span class="dv">10</span><span class="op">**</span>(<span class="op">-</span><span class="dv">3</span>) <span class="op">*</span> np.log(<span class="fl">0.5</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">str</span>(work)<span class="op">+</span><span class="st">' J'</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The work is negative and thus the work is transferred to the system.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>-69.31471805599453 J
-The work is negative and thus the work is transferred to the system.</code></pre>
-</div>
-</div>
+<section id="incompressible-fluid-mechanics-paper-late" class="level1">
+<h1>Incompressible fluid mechanics paper (late)</h1>
+<section id="fall-2023-ae2010-ae2011" class="level2">
+<h2 class="anchored" data-anchor-id="fall-2023-ae2010-ae2011">Fall 2023 | AE2010-AE2011</h2>
+</section>
+<section id="solutions" class="level2">
+<h2 class="anchored" data-anchor-id="solutions">Solutions</h2>
+<section id="problem-1" class="level3">
+<h3 class="anchored" data-anchor-id="problem-1">Problem 1</h3>
+<p>A two-dimensional hydraulic jump occurs in a channel as shown in Figure 1. Well upstream and downstream of the jump, at sections 1 and 2, the flow is uniform and steady with velocities <span class="math inline">\({\color[rgb]{0.059472,0.501943,0.998465}V}_1\)</span> and <span class="math inline">\({\color[rgb]{0.059472,0.501943,0.998465}V}_2\)</span> and depths <span class="math inline">\(h_1\)</span> and <span class="math inline">\(h_2\)</span>.</p>
+</section>
+<section id="solution-1" class="level3">
+<h3 class="anchored" data-anchor-id="solution-1">Solution 1</h3>
+
+</section>
+</section>
+<section id="problem-2" class="level2">
+<h2 class="anchored" data-anchor-id="problem-2">Problem 2</h2>
+<p>By examining the curvature of the streamlines in Figure 2, indicate the regions of higher and lower pressure on a copy of the diagram. You can ignore the hydrostatic pressure variation owing to gravity. <span class="math inline">\({\color[rgb]{0.028509,0.250925,0.501969}[5]}\)</span></p>
+<p>Please see the annotated figure below.</p>
+<p>.</p>
+</section>
+<section id="problem-3" class="level2">
+<h2 class="anchored" data-anchor-id="problem-3">Problem 3</h2>
+<p>A viscous fluid flows down the slope of angle <span class="math inline">\(\gamma\)</span> as shown in Figure 3. The flow is steady and the upper surface of the fluid is open to the atmosphere.</p>
+<section id="solution-3" class="level3">
+<h3 class="anchored" data-anchor-id="solution-3">Solution 3</h3>
+
+</section>
+</section>
+<section id="problem-4" class="level2">
+<h2 class="anchored" data-anchor-id="problem-4">Problem 4</h2>
+<p>Please clarify whether the entire statement is true or false. You are <strong>not</strong> required to justify your answers for statements a. to g. For statements h. and i. some justification is required.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -824,18 +794,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../sample_problems/lecture_10.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">L10 examples</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../sample_problems/lecture_13.html" class="pagination-link">
-        <span class="nav-page-text">L13 examples</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 
 
