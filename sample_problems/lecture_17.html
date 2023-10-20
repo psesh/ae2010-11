@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>AE2010/AE2011 - Thermodynamics</title>
+<title>AE2010/AE2011 - L17 examples</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,8 +30,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../demo.html" rel="next">
-<link href="../practice_problems/incompressible_fluid_mechanics.html" rel="prev">
+<link href="../sample_problems/lecture_16.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -147,7 +112,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../practice_problems/incompressible_fluid_mechanics.html">Practice Problems</a></li><li class="breadcrumb-item"><a href="../practice_problems/thermodynamics.html">Thermodynamics</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sample_problems/lecture_2.html">Examples</a></li><li class="breadcrumb-item"><a href="../sample_problems/lecture_17.html">L17 examples</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -190,7 +155,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../practice_problems/thermodynamics.html" class="sidebar-item-text sidebar-link active">
+  <a href="../practice_problems/thermodynamics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Thermodynamics</span></a>
   </div>
 </li>
@@ -344,7 +309,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sample_problems/lecture_17.html" class="sidebar-item-text sidebar-link">
+  <a href="../sample_problems/lecture_17.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">L17 examples</span></a>
   </div>
 </li>
@@ -371,7 +336,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Thermodynamics</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
+<h1 class="title">L17 examples</h1>
 </div>
 
 
@@ -386,237 +351,149 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p><mark>More problems will be added to this page; stay tuned!</mark></p>
 <section id="problem-1" class="level2">
 <h2 class="anchored" data-anchor-id="problem-1">Problem 1</h2>
-<p>Carbon dioxide (with a molar mass of <span class="math inline">\(44 \; g/mol\)</span>) behaves like a <strong>semi-perfect gas</strong> at moderate pressures and temperatures. Over the temperature range <span class="math inline">\(\require{color}{\color[rgb]{0.164799,0.878862,0.723179}500^{\circ} \; C}\)</span> to <span class="math inline">\(\require{color}{\color[rgb]{0.164799,0.878862,0.723179}1200^{\circ} \; C}\)</span>, its constant volume specific heat capacity is accurately represented by the linear relation:</p>
-<p><span class="math display">\[
-\large
-\require{color}
-{\color[rgb]{0.878548,0.880173,0.060757}c}_{\color[rgb]{0.079785,0.618358,0.483717}V} = \alpha + \beta {\color[rgb]{0.164799,0.878862,0.723179}T}
-\]</span></p>
-<p>where <span class="math inline">\(\alpha=555.65 \; J / \left( kg \cdot K \right)\)</span> and <span class="math inline">\(\beta = 0.392 \; J / \left( kg \cdot K^2 \right)\)</span>. Please note that in the expression above <span class="math inline">\(\require{color}{\color[rgb]{0.164799,0.878862,0.723179}T}\)</span> is in units Kelvin. A quantity of carbon dioxide undergoes a fully resisted expansion in an insulated cylinder. The initial pressure, volume, and temperature are <span class="math inline">\({\color[rgb]{0.315209,0.728565,0.037706}0.3 \; MPa}\)</span>, <span class="math inline">\({\color[rgb]{0.079785,0.618358,0.483717}0.1 \; m^3}\)</span> and <span class="math inline">\({\color[rgb]{0.164799,0.878862,0.723179}950^{\circ} \; C}\)</span> respectively. At the end of the expansion the temperature has fallen to <span class="math inline">\({\color[rgb]{0.164799,0.878862,0.723179}600^{\circ} \; C}\)</span>. You will need the universal gas constant value of <span class="math inline">\(8.3145 \; J / \left( mol \cdot K \right)\)</span>.</p>
+<p>A mass of air is compressed <em>rapidly</em> within a cylinder by a piston. The initial pressure and temperature are <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}1 \; bar}\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.164799,0.878862,0.723179}290 \; K}\)</span>, and the work input is <span class="math inline">\(\require{color}{\color[rgb]{0.562040,0.190215,0.568721}100 \; kJ}\)</span> per kilogram of air. Calculate the final pressure and temperature if</p>
 <ol type="a">
-<li><p>Calculate the mass of carbon dioxide in the cylinder.</p></li>
-<li><p>Is the relationship <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p}{\color[rgb]{0.079785,0.618358,0.483717}V}^{\gamma} = constant\)</span> valid for this process?</p></li>
-<li><p>Calculate the final volume and pressure.</p></li>
-<li><p>Determine the work done during the expansion.</p></li>
+<li>the compression is reversible<br>
+</li>
+<li>irreversibilities account for an increase in specific entropy of <span class="math inline">\(\require{color} {\color[rgb]{0.599997,0.600015,0.600005}0.06 \; kJ/(kg \; K)}\)</span></li>
 </ol>
+<p>Sketch these two cases on a T-s diagram. The specific heat capacity at constant volume for air is <span class="math inline">\({\color[rgb]{0.878548,0.880173,0.060757}0.72 \; kJ/(kg \; K)}\)</span>, the specific heat capacity at constant pressure for air is <span class="math inline">\({\color[rgb]{0.986252,0.007236,0.027423}1.01 \; kJ/(kg \; K)}\)</span>.</p>
 <details>
 <summary>
 Solution
 </summary>
+<p>The first in specific quantities is given by</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.334690,0.296180,0.998454}q} - {\color[rgb]{0.562040,0.190215,0.568721}w} = {\color[rgb]{0.878548,0.880173,0.060757}\Delta u}
+\]</span></p>
+<p>Now as air is a perfect gas,</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.878548,0.880173,0.060757}\Delta u} = {\color[rgb]{0.878548,0.880173,0.060757}c}_{{\color[rgb]{0.079785,0.618358,0.483717}V}} {\color[rgb]{0.164799,0.878862,0.723179}\Delta T}.
+\]</span></p>
+<p>As the process takes place rapidly, we assume that there is no time for heat transfer and therefore it is adiabatic. This implies that <span class="math inline">\(\require{color}{\color[rgb]{0.334690,0.296180,0.998454}q} = 0\)</span>, and thus</p>
+<p><span class="math display">\[
+\large
+\require{color}
+- {\color[rgb]{0.562040,0.190215,0.568721}w} = {\color[rgb]{0.878548,0.880173,0.060757}\Delta u}.
+\]</span></p>
+<p>Plugging this into the prior equation results in</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.164799,0.878862,0.723179}\Delta T} = \frac{-{\color[rgb]{0.562040,0.190215,0.568721}w}}{{\color[rgb]{0.878548,0.880173,0.060757}c}_{{\color[rgb]{0.079785,0.618358,0.483717}V}} } = -\frac{-{\color[rgb]{0.562040,0.190215,0.568721}100}}{{\color[rgb]{0.878548,0.880173,0.060757}0.72}} = {\color[rgb]{0.164799,0.878862,0.723179}139 \; K}.
+\]</span></p>
+<p>Note that there is a negative sign on the work term as the work is done on the system. From this, we arrive at the final temperature of <span class="math inline">\(\require{color}{\color[rgb]{0.164799,0.878862,0.723179}T_2} = {\color[rgb]{0.164799,0.878862,0.723179}T_1} + {\color[rgb]{0.164799,0.878862,0.723179}\Delta T} = {\color[rgb]{0.164799,0.878862,0.723179}290} + {\color[rgb]{0.164799,0.878862,0.723179}139} = {\color[rgb]{0.164799,0.878862,0.723179}429 \; K}\)</span></p>
+<p>Now we consider the two cases below:</p>
 <ol type="a">
-<li>The mass is given by</li>
+<li>From lecture, we learnt that a reversible process that is also adiabatic must be isentropic. This implies we can use the isentropic relations.</li>
 </ol>
 <p><span class="math display">\[
 \large
 \require{color}
-m = \frac{{\color[rgb]{0.315209,0.728565,0.037706}p}V}{ R{\color[rgb]{0.164799,0.878862,0.723179}T}}
+\left( \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_2}}{{\color[rgb]{0.315209,0.728565,0.037706}p_1}} \right) = \left( \frac{{\color[rgb]{0.164799,0.878862,0.723179}T_2}}{{\color[rgb]{0.164799,0.878862,0.723179}T_1}} \right)^{\frac{\gamma}{\gamma - 1}} = \left( \frac{{\color[rgb]{0.164799,0.878862,0.723179}429}}{{\color[rgb]{0.164799,0.878862,0.723179}290}} \right)^{\frac{1.4}{0.4}} = {\color[rgb]{0.315209,0.728565,0.037706}3.94}
 \]</span></p>
-<p>where for carbon dioxide we have</p>
-<p><span class="math display">\[
-\large
-R = \frac{8.3145 \; \frac{J}{mol \cdot K}}{44 \; \frac{g}{mol}} = 0.18896 \frac{J}{g \cdot K} \times \frac{1000 \; g }{kg} = 189 \frac{J}{kg \cdot K}.
-\]</span></p>
-<p>Please note that for both perfect and semi-perfect gases, the ideal gas equation is valid. Thus the mass is given by</p>
-<p><span class="math display">\[
-\large
-\require{color}
-m = {\color[rgb]{0.315209,0.728565,0.037706}0.3 \times 10^6} \times \frac{{\color[rgb]{0.079785,0.618358,0.483717}0.1}}{189 \times \left({\color[rgb]{0.164799,0.878862,0.723179} 950 + 273.15}\right) }=0.130 \; kg
-\]</span></p>
+<p>Thus <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p_2} = {\color[rgb]{0.315209,0.728565,0.037706}3.94 \; bar}\)</span>.</p>
 <ol start="2" type="a">
-<li><p>No the relationship is not constant because this is not a perfect gas (where <span class="math inline">\(\require{color}{\color[rgb]{0.878548,0.880173,0.060757}c}_{\color[rgb]{0.079785,0.618358,0.483717}V}\)</span> is a constant).</p></li>
-<li><p>The first law per unit mass (using specific quantities) is given by</p></li>
+<li>For an irreversible adiabatic process we need to make use of the <em>Tds</em> relations. Thus we have</li>
 </ol>
 <p><span class="math display">\[
 \large
 \require{color}
-{\color[rgb]{0.334690,0.296180,0.998454}dq} - {\color[rgb]{0.562040,0.190215,0.568721}dw} = {\color[rgb]{0.878548,0.880173,0.060757}du}
-\]</span></p>
-<p>As the cylinder is given to be fully insulated, we assume an adiabatic process, i.e., <span class="math inline">\(\require{color}{\color[rgb]{0.334690,0.296180,0.998454}dq} = 0\)</span>. Additionally as its fully resisted, we have</p>
-<p><span class="math display">\[
-\large
-\require{color}
-{\color[rgb]{0.562040,0.190215,0.568721}dw} = {\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.918231,0.469102,0.038229}d \nu}
-\]</span></p>
-<p>where <span class="math inline">\(\require{color}{\color[rgb]{0.918231,0.469102,0.038229}\nu}\)</span> is the specific volume. From these relationships we arrive at</p>
-<p><span class="math display">\[
-\large
-\require{color}
-{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.918231,0.469102,0.038229}d \nu} + {\color[rgb]{0.878548,0.880173,0.060757}du} = 0
-\]</span></p>
-<p>Recognizing that the internal energy is specific and using the definition of an ideal gas we have</p>
-<p><span class="math display">\[
-\large
-\require{color}
-R{\color[rgb]{0.164799,0.878862,0.723179}T}\frac{{\color[rgb]{0.918231,0.469102,0.038229}d\nu}}{{\color[rgb]{0.918231,0.469102,0.038229}\nu}} + {\color[rgb]{0.878548,0.880173,0.060757}c}_{{\color[rgb]{0.079785,0.618358,0.483717}V}} {\color[rgb]{0.164799,0.878862,0.723179}dT}  = 0
+{\color[rgb]{0.599997,0.600015,0.600005}\Delta s} = {\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} \; ln \left( \frac{{\color[rgb]{0.164799,0.878862,0.723179}T_2}}{{\color[rgb]{0.164799,0.878862,0.723179}T_1}} \right) - R \; ln \left( \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_2}}{{\color[rgb]{0.315209,0.728565,0.037706}p_1}} \right)
 \]</span></p>
 <p><span class="math display">\[
 \large
 \require{color}
-\Rightarrow R{\color[rgb]{0.164799,0.878862,0.723179}T}\frac{{\color[rgb]{0.918231,0.469102,0.038229}d\nu}}{{\color[rgb]{0.918231,0.469102,0.038229}\nu}} +  \left( \alpha + \beta {\color[rgb]{0.164799,0.878862,0.723179}T} \right) {\color[rgb]{0.164799,0.878862,0.723179}dT}  = 0
+\Rightarrow {\color[rgb]{0.599997,0.600015,0.600005} 0.06} = {\color[rgb]{0.986252,0.007236,0.027423}1.01} \; ln \left( \frac{{\color[rgb]{0.164799,0.878862,0.723179}429}}{{\color[rgb]{0.164799,0.878862,0.723179}290}} \right) - 0.287 \; ln \left( \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_2}}{{\color[rgb]{0.315209,0.728565,0.037706}1}} \right)
 \]</span></p>
 <p><span class="math display">\[
 \large
 \require{color}
-\Rightarrow R{\color[rgb]{0.164799,0.878862,0.723179}T}\frac{{\color[rgb]{0.918231,0.469102,0.038229}d\nu}}{{\color[rgb]{0.918231,0.469102,0.038229}\nu}} +   \alpha {\color[rgb]{0.164799,0.878862,0.723179}dT}+ \beta {\color[rgb]{0.164799,0.878862,0.723179}T}  {\color[rgb]{0.164799,0.878862,0.723179}dT}  = 0
+\Rightarrow {\color[rgb]{0.315209,0.728565,0.037706}p_2} =  {\color[rgb]{0.315209,0.728565,0.037706}3.22 \; bar}
 \]</span></p>
-<p><span class="math display">\[
-\large
-\require{color}
-\Rightarrow R \frac{{\color[rgb]{0.918231,0.469102,0.038229}d\nu}}{{\color[rgb]{0.918231,0.469102,0.038229}\nu}} +   \frac{\alpha}{{\color[rgb]{0.164799,0.878862,0.723179}T}} {\color[rgb]{0.164799,0.878862,0.723179}dT}+ \beta  {\color[rgb]{0.164799,0.878862,0.723179}dT}  = 0
-\]</span></p>
-<p>Now integrating between states 1 and 2 yields</p>
-<p><span class="math display">\[
-\large
-\require{color}
-R \; ln \left( \frac{{\color[rgb]{0.918231,0.469102,0.038229}\nu_2}}{{\color[rgb]{0.918231,0.469102,0.038229}\nu_1}} \right) = \alpha \; ln \left( \frac{{\color[rgb]{0.164799,0.878862,0.723179}T_1}}{{\color[rgb]{0.164799,0.878862,0.723179}T_2}} \right) + \beta \left({\color[rgb]{0.164799,0.878862,0.723179}T_1} - {\color[rgb]{0.164799,0.878862,0.723179}T_2} \right)
-\]</span></p>
-<p><span class="math display">\[
-\large
-\require{color}
-\Rightarrow ln \left( \frac{{\color[rgb]{0.079785,0.618358,0.483717}V_2}}{{\color[rgb]{0.079785,0.618358,0.483717}V_1}} \right) =  ln \left( \frac{{\color[rgb]{0.918231,0.469102,0.038229}\nu_2}}{{\color[rgb]{0.918231,0.469102,0.038229}\nu_1}} \right) = \frac{\alpha}{R} ln \left( \frac{{\color[rgb]{0.164799,0.878862,0.723179}T_1}}{{\color[rgb]{0.164799,0.878862,0.723179}T_2}} \right) + \frac{\beta}{R} \left({\color[rgb]{0.164799,0.878862,0.723179}T_1} - {\color[rgb]{0.164799,0.878862,0.723179}T_2} \right)
-\]</span></p>
-<p><span class="math display">\[
-\large
-\require{color}
-= \frac{555.65}{189} \; ln \left(\frac{{\color[rgb]{0.164799,0.878862,0.723179}1223.15}}{{\color[rgb]{0.164799,0.878862,0.723179}873.15}} \right)  + \frac{0.392}{189} \left({\color[rgb]{0.164799,0.878862,0.723179}1223.15} - {\color[rgb]{0.164799,0.878862,0.723179}873.15} \right)
-\]</span></p>
-<p>This leads to</p>
-<p><span class="math display">\[
-\large
-\require{color}
-{\color[rgb]{0.079785,0.618358,0.483717}V_2} = 5.567 {\color[rgb]{0.079785,0.618358,0.483717}V_1} \Rightarrow {\color[rgb]{0.079785,0.618358,0.483717}V_2} = {\color[rgb]{0.079785,0.618358,0.483717}0.557 \; m^3}
-\]</span></p>
-<p>Now we can work out the final pressure, i.e.,</p>
-<p><span class="math display">\[
-\large
-\require{color}
-{\color[rgb]{0.315209,0.728565,0.037706}p_2} = \frac{mR{\color[rgb]{0.164799,0.878862,0.723179}T_2}}{{\color[rgb]{0.079785,0.618358,0.483717}V_2}} = \frac{0.130 \times 189 \times {\color[rgb]{0.164799,0.878862,0.723179}873.15}}{{\color[rgb]{0.079785,0.618358,0.483717}0.557}} = {\color[rgb]{0.315209,0.728565,0.037706}38.50 \; kPa}
-\]</span></p>
-<ol start="4" type="a">
-<li>The work done during the expansion is given by</li>
-</ol>
-<p><span class="math display">\[
-\require{color}
-\large
-{\color[rgb]{0.562040,0.190215,0.568721}W }= -{\color[rgb]{0.878548,0.880173,0.060757}\Delta U} = - m \int_{1}^{2} {\color[rgb]{0.878548,0.880173,0.060757}c}_{\color[rgb]{0.079785,0.618358,0.483717}V} {\color[rgb]{0.164799,0.878862,0.723179}dT} = m \int_{2}^{1} {\color[rgb]{0.878548,0.880173,0.060757}c}_{\color[rgb]{0.079785,0.618358,0.483717}V} {\color[rgb]{0.164799,0.878862,0.723179}dT} = m \left[ \alpha \left( {\color[rgb]{0.164799,0.878862,0.723179}T_1} - {\color[rgb]{0.164799,0.878862,0.723179}T_2} \right) + \frac{1}{2} \beta \left( {\color[rgb]{0.164799,0.878862,0.723179}T_1}^2 - {\color[rgb]{0.164799,0.878862,0.723179}T_2}^2 \right) \right].
-\]</span></p>
-<p>The numerical solution is given below</p>
-</details>
-<div class="cell" data-execution_count="5">
+<p>These two processes are captured in the <em>T-s</em> diagram below.</p>
+<p><img src="images/image_L17_1.png" alt="cycle" width="700"></p>
 <details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="fl">0.130</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>T_2 <span class="op">=</span> <span class="dv">600</span> <span class="op">+</span> <span class="fl">273.15</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>T_1 <span class="op">=</span> <span class="dv">950</span> <span class="op">+</span> <span class="fl">273.15</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>alpha <span class="op">=</span> <span class="fl">555.65</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>beta <span class="op">=</span> <span class="fl">0.392</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>W <span class="op">=</span> m <span class="op">*</span> (alpha <span class="op">*</span> (T_1 <span class="op">-</span> T_2) <span class="op">+</span> <span class="fl">0.5</span> <span class="op">*</span> beta <span class="op">*</span> (T_1<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> T_2<span class="op">**</span><span class="dv">2</span>))</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Work done is '</span><span class="op">+</span><span class="bu">str</span>(np.<span class="bu">round</span>(W<span class="op">/</span><span class="dv">1000</span>, <span class="dv">3</span>))<span class="op">+</span><span class="st">' kJ'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>Work done is 43.977 kJ</code></pre>
-</div>
-</div>
-</section>
+</details></details></section>
 <section id="problem-2" class="level2">
 <h2 class="anchored" data-anchor-id="problem-2">Problem 2</h2>
-<p>A quantity of argon gas with <span class="math inline">\(\gamma = 1.67\)</span>, initially at <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}1 \; bar}\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.164799,0.878862,0.723179}300 \; K}\)</span> is compressed adiabatically and reversibly (and hence isentropically) to half its initial volume. Calculate the final pressure and temperature.</p>
+<p>Consider a closed system that comprises two symmetric chambers. The chamber on the left contains 0.1 kg of air, and the right hand chamber is initially evacuated. The diaphragm is burst and the system comes to equilibrium adiabatically. Find the increase in entropy during the process.</p>
 <details>
 <summary>
 Solution
 </summary>
-<p>As the question states, the process is isentropic. We can make use of the isentropic relations presented in Lecture 14, i.e.,</p>
+<p>From the first law,</p>
 <p><span class="math display">\[
 \large
 \require{color}
-\frac{{\color[rgb]{0.315209,0.728565,0.037706}p_2}}{{\color[rgb]{0.315209,0.728565,0.037706}p_1}} = \left( \frac{{\color[rgb]{0.164799,0.878862,0.723179}V_1}}{{\color[rgb]{0.164799,0.878862,0.723179}V_2}} \right)^{\gamma} \Rightarrow {\color[rgb]{0.315209,0.728565,0.037706}p_2} = {\color[rgb]{0.315209,0.728565,0.037706}p_1} \left( \frac{{\color[rgb]{0.164799,0.878862,0.723179}V_1}}{{\color[rgb]{0.164799,0.878862,0.723179}V_2}} \right)^{\gamma} = {\color[rgb]{0.315209,0.728565,0.037706}1} \times {\color[rgb]{0.079785,0.618358,0.483717}2}^{1.67} = {\color[rgb]{0.315209,0.728565,0.037706}3.18 \; bar}
+{\color[rgb]{0.334690,0.296180,0.998454}Q} - {\color[rgb]{0.562040,0.190215,0.568721}W} = {\color[rgb]{0.878548,0.880173,0.060757}\Delta U } = 0
 \]</span></p>
-<p>and for the temperature, we have</p>
+<p>Treating air as a perfect gas</p>
 <p><span class="math display">\[
 \large
 \require{color}
-{\color[rgb]{0.164799,0.878862,0.723179}T_2} = {\color[rgb]{0.164799,0.878862,0.723179}T_1} \left( \frac{{\color[rgb]{0.079785,0.618358,0.483717}V_1}}{{\color[rgb]{0.079785,0.618358,0.483717}V_2}} \right)^{\gamma - 1} = {\color[rgb]{0.164799,0.878862,0.723179}300} \times {\color[rgb]{0.079785,0.618358,0.483717}2}^{0.67} = {\color[rgb]{0.164799,0.878862,0.723179}477.3 \; K}
+{\color[rgb]{0.878548,0.880173,0.060757}\Delta U} = m{\color[rgb]{0.878548,0.880173,0.060757}c}_{{\color[rgb]{0.079785,0.618358,0.483717}V}} {\color[rgb]{0.164799,0.878862,0.723179}\Delta T} = 0 \; \; \; \; \Rightarrow {\color[rgb]{0.164799,0.878862,0.723179}T_2} = {\color[rgb]{0.164799,0.878862,0.723179}T_1}
+\]</span></p>
+<p>The entropy change for a perfect gas undergoing a general change of state is given by the expressions derived in Lecture 17. As the temperature remains constant, and we know the volume doubles, we choose the expression involving <span class="math inline">\(\require{color}{\color[rgb]{0.164799,0.878862,0.723179}T}\)</span> and <span class="math inline">\({\color[rgb]{0.918231,0.469102,0.038229}\nu}\)</span>, i.e.,</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.599997,0.600015,0.600005}\Delta S} = m{\color[rgb]{0.878548,0.880173,0.060757}c}_{{\color[rgb]{0.079785,0.618358,0.483717}V}} ln \left( \frac{{\color[rgb]{0.164799,0.878862,0.723179}T_2}}{{\color[rgb]{0.164799,0.878862,0.723179}T_1}} \right) + m R \; ln \left( \frac{{\color[rgb]{0.079785,0.618358,0.483717}V_2}}{{\color[rgb]{0.079785,0.618358,0.483717}V_1}} \right).
+\]</span></p>
+<p>Noting that <span class="math inline">\(\require{color}{\color[rgb]{0.164799,0.878862,0.723179}T_1} = {\color[rgb]{0.164799,0.878862,0.723179}T_2}\)</span> and that <span class="math inline">\(\require{color}{\color[rgb]{0.079785,0.618358,0.483717}V_2} = 2{\color[rgb]{0.079785,0.618358,0.483717}V_1}\)</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.599997,0.600015,0.600005}\Delta S} =  m R \; ln \left(2 \right) = 0.1 \times 287 \times ln\left(2 \right) = {\color[rgb]{0.599997,0.600015,0.600005}19.9 \; J/K}.
 \]</span></p>
 </details>
 </section>
 <section id="problem-3" class="level2">
 <h2 class="anchored" data-anchor-id="problem-3">Problem 3</h2>
-<p>A polytropic process is defined by the relation</p>
-<p><span class="math display">\[
-\large
-\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p}{\color[rgb]{0.079785,0.618358,0.483717}V}^{n} = k
-\]</span></p>
-<p>where <span class="math inline">\(n\)</span> and <span class="math inline">\(k\)</span> are constants.</p>
-<ol type="a">
-<li>Show that for a fully resisted (i.e.&nbsp;quasi-equilibrium) polytropic expansion or compression of a gas between states 1 and 2, the displacement work done by the gas is given by</li>
-</ol>
-<p><span class="math display">\[
-\large
-\require{color}{\color[rgb]{0.562040,0.190215,0.568721}W} = \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_1} {\color[rgb]{0.079785,0.618358,0.483717}V_1} - {\color[rgb]{0.315209,0.728565,0.037706}p_2} {\color[rgb]{0.079785,0.618358,0.483717}V_2}}{n-1}
-\]</span></p>
-<p>provided <span class="math inline">\(1 \neq n\)</span>.</p>
-<ol start="2" type="a">
-<li>Hence show that for a perfect gas undergoing a polytropic process, the ratio of heat to work transfer is:</li>
-</ol>
-<p><span class="math display">\[
-\large
-\require{color}\frac{{\color[rgb]{0.334690,0.296180,0.998454}Q}}{{\color[rgb]{0.562040,0.190215,0.568721}W}} = \frac{\gamma - n}{\gamma - 1}
-\]</span></p>
-<ol start="3" type="a">
-<li>Use the result of b. to suggest how the value of <span class="math inline">\(n\)</span> is likely to vary with the rate at which the process is undertaken. What happens to <span class="math inline">\(\require{color}{\color[rgb]{0.334690,0.296180,0.998454}Q}\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.562040,0.190215,0.568721}W}\)</span> in the case of an extremely rapid expansion?</li>
-</ol>
+<p>A completely evacuated bottle of volume <span class="math inline">\(\require{color}{\color[rgb]{0.079785,0.618358,0.483717}0.1 \; m^3}\)</span> is to be filled with helium from a main where the pressure is <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}5 \; bar}\)</span> and the temperature is <span class="math inline">\(\require{color}{\color[rgb]{0.164799,0.878862,0.723179}300 \; K}\)</span>. The bottle is connected as shown, the valve is opened, helium enters the bottle and the valve is shut when the pressure in the bottle is <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}5 \; bar}\)</span>. The bottle is well lagged so there is no heat loss to the surroundings. Using a control volume approach, calculate the final temperature in the bottle and the mass entering. Assume that helium behaves as a perfect gas with <span class="math inline">\(R = 2.08 \; kJ / (kg K )\)</span> and <span class="math inline">\(\gamma = 1.67\)</span>, and that kinetic and potential energy terms can be ignored.</p>
+<p><img src="images/image_L17_2.png" alt="cycle" width="500"></p>
 <details>
 <summary>
 Solution
 </summary>
-<ol type="a">
-<li>The displacement work is given by</li>
-</ol>
+<p>The solution is given as follows. Neglecting the kinetic and potential energy terms we have the conservation of energy</p>
 <p><span class="math display">\[
 \large
 \require{color}
-{\color[rgb]{0.562040,0.190215,0.568721}W} =  \int {\color[rgb]{0.315209,0.728565,0.037706}p} \; {\color[rgb]{0.079785,0.618358,0.483717}dV} = \int_{1}^{2} \frac{k}{{\color[rgb]{0.079785,0.618358,0.483717}V}^n} {\color[rgb]{0.079785,0.618358,0.483717}dV} = k \left[ \frac{{\color[rgb]{0.079785,0.618358,0.483717}V}^{1-n}}{1-n} \right]_{1}^{2} = \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_1} {\color[rgb]{0.079785,0.618358,0.483717}V_1} - {\color[rgb]{0.315209,0.728565,0.037706}p_2} {\color[rgb]{0.079785,0.618358,0.483717}V_2}}{n-1}
+{\color[rgb]{0.334690,0.296180,0.998454}\delta Q} - {\color[rgb]{0.562040,0.190215,0.568721}\delta W_{x} }= {\color[rgb]{1.000000,0.869732,0.000000}\delta E}_{cv} - \delta m_i {\color[rgb]{0.986252,0.007236,0.027423}h_i }
 \]</span></p>
-<p>since <span class="math inline">\(\require{color}k = {\color[rgb]{0.315209,0.728565,0.037706}p_1} {\color[rgb]{0.079785,0.618358,0.483717}V_1}^{n} = {\color[rgb]{0.315209,0.728565,0.037706}p_2} {\color[rgb]{0.079785,0.618358,0.483717}V_2}^{n}\)</span>.</p>
-<ol start="2" type="a">
-<li>For a perfect gas <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p}V = mR{\color[rgb]{0.164799,0.878862,0.723179}T}\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.878548,0.880173,0.060757}\Delta U} = m {\color[rgb]{0.878548,0.880173,0.060757}c}_{\color[rgb]{0.079785,0.618358,0.483717}V} {\color[rgb]{0.164799,0.878862,0.723179}\Delta T}\)</span>, which results in</li>
-</ol>
+<p>Recognizing that <span class="math inline">\(\require{color}{\color[rgb]{0.334690,0.296180,0.998454}\delta Q} = 0\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.562040,0.190215,0.568721}\delta W_{x} } = 0\)</span>, we have</p>
 <p><span class="math display">\[
 \large
 \require{color}
-{\color[rgb]{0.562040,0.190215,0.568721}W} = \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_1} {\color[rgb]{0.079785,0.618358,0.483717}V_1} - {\color[rgb]{0.315209,0.728565,0.037706}p_2} {\color[rgb]{0.079785,0.618358,0.483717}V_2}}{n-1} = mR \frac{\left({\color[rgb]{0.164799,0.878862,0.723179}T_1} - {\color[rgb]{0.164799,0.878862,0.723179}T_2}\right)}{n-1}
+{\color[rgb]{1.000000,0.869732,0.000000}\delta E}_{cv} = \delta m_i {\color[rgb]{0.986252,0.007236,0.027423}h_i }
 \]</span></p>
+<p>As <span class="math inline">\(\require{color}{\color[rgb]{0.986252,0.007236,0.027423}h_i }\)</span> is a constant in the main section over the whole process we get</p>
 <p><span class="math display">\[
 \large
 \require{color}
-{\color[rgb]{0.878548,0.880173,0.060757}\Delta U} = m {\color[rgb]{0.878548,0.880173,0.060757}c}_{\color[rgb]{0.079785,0.618358,0.483717}V} \left({\color[rgb]{0.164799,0.878862,0.723179}T_2} - {\color[rgb]{0.164799,0.878862,0.723179}T_1} \right) = m R \frac{\left( {\color[rgb]{0.164799,0.878862,0.723179}T_2} - {\color[rgb]{0.164799,0.878862,0.723179}T_1} \right) }{\left(\gamma - 1\right) }
+m_i \left( {\color[rgb]{0.878548,0.880173,0.060757}c}_{\color[rgb]{0.079785,0.618358,0.483717}V} {\color[rgb]{0.164799,0.878862,0.723179}T_2} + {\color[rgb]{0.878548,0.880173,0.060757}u_0} \right) = m_i \left( {\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_i} + {\color[rgb]{0.878548,0.880173,0.060757}u_0} \right)
 \]</span></p>
-<p>This yields</p>
+<p>where <span class="math inline">\(\require{color}{\color[rgb]{0.878548,0.880173,0.060757}u_0}\)</span> is an arbitrary datum. The above results in</p>
 <p><span class="math display">\[
 \large
 \require{color}
-{\color[rgb]{0.334690,0.296180,0.998454}Q} = {\color[rgb]{0.878548,0.880173,0.060757}\Delta U} + {\color[rgb]{0.562040,0.190215,0.568721}W} = m R \left({\color[rgb]{0.164799,0.878862,0.723179}T_1} - {\color[rgb]{0.164799,0.878862,0.723179}T_2} \right) \left[ \frac{1}{n-1} - \frac{1}{\gamma - 1} \right]
+{\color[rgb]{0.164799,0.878862,0.723179}T_2} = \frac{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p}}{{\color[rgb]{0.878548,0.880173,0.060757}c}_{\color[rgb]{0.079785,0.618358,0.483717}V}} {\color[rgb]{0.164799,0.878862,0.723179}T_i} = \gamma {\color[rgb]{0.164799,0.878862,0.723179}T_i} = 1.67 \times {\color[rgb]{0.164799,0.878862,0.723179}300} = {\color[rgb]{0.164799,0.878862,0.723179}501 \; K}
 \]</span></p>
-<p>Thus</p>
+<p>From the ideal gas relation we have</p>
 <p><span class="math display">\[
 \large
 \require{color}
-\frac{{\color[rgb]{0.334690,0.296180,0.998454}Q}}{{\color[rgb]{0.562040,0.190215,0.568721}W}} = \left[ \frac{1}{n-1} - \frac{1}{\gamma-1} \right] \left(n - 1 \right) = \frac{\gamma - n}{\gamma - 1}
+{\color[rgb]{0.315209,0.728565,0.037706}p_2} {\color[rgb]{0.079785,0.618358,0.483717}V} = m_i R {\color[rgb]{0.164799,0.878862,0.723179}T_2} \Rightarrow m_i = \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_2} {\color[rgb]{0.079785,0.618358,0.483717}V}}{R {\color[rgb]{0.164799,0.878862,0.723179}T_2}} = \frac{{\color[rgb]{0.315209,0.728565,0.037706}5 \times 10^5} \times {\color[rgb]{0.079785,0.618358,0.483717}0.1}}{2080 \times {\color[rgb]{0.164799,0.878862,0.723179}501}} = 0.048 \; kg
 \]</span></p>
-<ol start="3" type="a">
-<li>For rapid processes, there is no time for heat transfer so <span class="math inline">\(\require{color}{\color[rgb]{0.334690,0.296180,0.998454}Q} = 0\)</span> (adiabatic). Inspection of the above relation then shows <span class="math inline">\(n = γ\)</span>. For very slow processes the system remains in thermal equilibrium with the surroundings, so the process tends towards <em>isothermal</em>. Thus <span class="math display">\[
-\large
-\require{color}
-\frac{{\color[rgb]{0.334690,0.296180,0.998454}Q}}{{\color[rgb]{0.562040,0.190215,0.568721}W}} \rightarrow 1
-\]</span></li>
-</ol>
-and hence <span class="math inline">\(n \rightarrow 1\)</span>. In the case of an extremely rapid expansion, the process is unresisted so no work will be extracted and there will be no time for heat transfer.
+<p>The use of <span class="math inline">\(\require{color}{\color[rgb]{0.878548,0.880173,0.060757}u_0}\)</span> arises because only changes in internal energy can be calculated, so for our general case we take it to be an arbitrary reference datum.</p>
+<p>Note that the negation of kinetic energy at the entry to the bottle may seem rather dubious; velocities are infact very high here. However, the helium entering at this point originally came from upstream in the main where the velocities are low, and it may be shown that the value of <span class="math inline">\(\require{color}{\color[rgb]{0.986252,0.007236,0.027423}h_i}\)</span> used above is correct.</p>
 </details>
 
 
@@ -1024,14 +901,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../practice_problems/incompressible_fluid_mechanics.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Incompressible fluid mechanics</span>
+      <a href="../sample_problems/lecture_16.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">L16 examples</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../demo.html" class="pagination-link">
-        <span class="nav-page-text">Jupyter introduction</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
