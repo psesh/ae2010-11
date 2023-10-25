@@ -225,12 +225,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../dataframes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dataframes and plotly</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../couette_flow.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Couette flow</span></a>
   </div>
@@ -257,6 +251,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../supersonic_flow_friction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Supersonic flow with friction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../dataframes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dataframes and plotly</span></a>
   </div>
 </li>
       </ul>
@@ -656,6 +656,102 @@ and hence <span class="math inline">\(n \rightarrow 1\)</span>. In the case of a
 <ol start="4" type="a">
 <li>Explain why the equation in (c) can be applied to an irreversible process.</li>
 </ol>
+<details>
+<summary>
+Solution
+</summary>
+<p>Students, carefully note the various assumptions that are made below. Simply providing the equations is not sufficient; reasoning is key.</p>
+<ol type="a">
+<li>From the first law of thermodynamics we have</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.334690,0.296180,0.998454}Q} - {\color[rgb]{0.562040,0.190215,0.568721}W} = {\color[rgb]{0.878548,0.880173,0.060757}\Delta E}
+\]</span></p>
+<p>where the contributions to energy are</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.878548,0.880173,0.060757}\Delta E} = {\color[rgb]{0.878548,0.880173,0.060757}\Delta PE} + {\color[rgb]{0.878548,0.880173,0.060757}\Delta KE} + {\color[rgb]{0.878548,0.880173,0.060757}\Delta U}
+\]</span></p>
+<p>Consider a simple compressible system undergoing an infinitesimal change of state by heat and work interactions with its surroundings. The first law then gives:</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.334690,0.296180,0.998454}\delta Q }- {\color[rgb]{0.562040,0.190215,0.568721}\delta W} = {\color[rgb]{0.878548,0.880173,0.060757}dU}
+\]</span></p>
+<p>From the definition of entropy,</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.334690,0.296180,0.998454}\delta Q }= {\color[rgb]{0.164799,0.878862,0.723179}T}{\color[rgb]{0.599997,0.600015,0.600005}dS}
+\]</span></p>
+<p>and for fully-resisted compression</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.562040,0.190215,0.568721}\delta W} = {\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.079785,0.618358,0.483717}dV}
+\]</span></p>
+<p>so for a reversible process we have:</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.164799,0.878862,0.723179}T}{\color[rgb]{0.599997,0.600015,0.600005}dS} - {\color[rgb]{0.315209,0.728565,0.037706}p}{\color[rgb]{0.079785,0.618358,0.483717}dV} = {\color[rgb]{0.878548,0.880173,0.060757}dU}
+\]</span></p>
+<p>Now, dividing by the mass of the system and re-arranging we arrive at:</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.164799,0.878862,0.723179}T}{\color[rgb]{0.599997,0.600015,0.600005}ds} = {\color[rgb]{0.878548,0.880173,0.060757}du} + {\color[rgb]{0.315209,0.728565,0.037706}p}{\color[rgb]{0.918231,0.469102,0.038229}d \nu}
+\]</span></p>
+<ol start="2" type="a">
+<li>From the definition of enthalpy we have</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.986252,0.007236,0.027423}h} = {\color[rgb]{0.878548,0.880173,0.060757}u} + {\color[rgb]{0.315209,0.728565,0.037706}p}{\color[rgb]{0.918231,0.469102,0.038229} \nu}.
+\]</span></p>
+<p>Computing derivatives, we arrive at</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.986252,0.007236,0.027423}dh} = {\color[rgb]{0.878548,0.880173,0.060757}du} + {\color[rgb]{0.315209,0.728565,0.037706}p}{\color[rgb]{0.918231,0.469102,0.038229}d\nu} {\color[rgb]{0.918231,0.469102,0.038229}\nu} {\color[rgb]{0.315209,0.728565,0.037706}dp}
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+\Rightarrow {\color[rgb]{0.878548,0.880173,0.060757}du} + {\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.918231,0.469102,0.038229}d \nu} = {\color[rgb]{0.986252,0.007236,0.027423}dh} - {\color[rgb]{0.918231,0.469102,0.038229}\nu} {\color[rgb]{0.315209,0.728565,0.037706}dp}
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+\Rightarrow {\color[rgb]{0.164799,0.878862,0.723179}T}{\color[rgb]{0.599997,0.600015,0.600005}ds} = {\color[rgb]{0.986252,0.007236,0.027423}dh} - {\color[rgb]{0.918231,0.469102,0.038229}\nu} {\color[rgb]{0.315209,0.728565,0.037706}dp}
+\]</span></p>
+<ol start="3" type="a">
+<li>For a perfect gas changing reversibly from state 1 to state 2, the above equations apply and also <span class="math inline">\(\require{color}{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p}\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.878548,0.880173,0.060757}c}_{\color[rgb]{0.079785,0.618358,0.483717}V}\)</span> are constant. This leads to</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+\int_{{\color[rgb]{0.599997,0.600015,0.600005}s_1}}^{{\color[rgb]{0.599997,0.600015,0.600005}s_2}} {\color[rgb]{0.599997,0.600015,0.600005}ds} = \int_{{\color[rgb]{0.986252,0.007236,0.027423}h_1}}^{{\color[rgb]{0.986252,0.007236,0.027423}h_2}} \frac{{\color[rgb]{0.986252,0.007236,0.027423}dh}}{{\color[rgb]{0.164799,0.878862,0.723179}T}} - \int_{{\color[rgb]{0.315209,0.728565,0.037706}p_1}}^{{\color[rgb]{0.315209,0.728565,0.037706}p_2}} \frac{{\color[rgb]{0.918231,0.469102,0.038229}\nu} {\color[rgb]{0.315209,0.728565,0.037706}dp}}{{\color[rgb]{0.164799,0.878862,0.723179}T}}
+\]</span></p>
+<p>but by definition <span class="math inline">\(\require{color}{\color[rgb]{0.986252,0.007236,0.027423}dh} = {\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}dT}\)</span>. Additionally, since the ideal gas relation holds for a perfect gas, we can re-write the above as</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\int_{{\color[rgb]{0.599997,0.600015,0.600005}s_1}}^{{\color[rgb]{0.599997,0.600015,0.600005}s_2}} {\color[rgb]{0.599997,0.600015,0.600005}ds} =  {\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} \int_{{\color[rgb]{0.164799,0.878862,0.723179}T_1}}^{{\color[rgb]{0.164799,0.878862,0.723179}T_2}} \frac{{\color[rgb]{0.164799,0.878862,0.723179}dT}}{{\color[rgb]{0.164799,0.878862,0.723179}T}} - R \int_{{\color[rgb]{0.315209,0.728565,0.037706}p_1}}^{{\color[rgb]{0.315209,0.728565,0.037706}p_2}} \frac{{\color[rgb]{0.315209,0.728565,0.037706}dp}}{{\color[rgb]{0.315209,0.728565,0.037706}p}}
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+\Rightarrow {\color[rgb]{0.599997,0.600015,0.600005}s_2} - {\color[rgb]{0.599997,0.600015,0.600005}s_1} = {\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} \; ln \left( \frac{{\color[rgb]{0.164799,0.878862,0.723179}T_2}}{{\color[rgb]{0.164799,0.878862,0.723179}T_1}} \right) - R ln \left( \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_2}}{{\color[rgb]{0.315209,0.728565,0.037706}p_1}}  \right)
+\]</span></p>
+<ol start="4" type="a">
+<li>Because <span class="math inline">\(\require{color}{\color[rgb]{0.599997,0.600015,0.600005}S}, {\color[rgb]{0.164799,0.878862,0.723179}T}\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p}\)</span> are thermodynamic properties, this relation also applies to irreversible processes.</li>
+</ol>
+</details>
 
 
 </section>

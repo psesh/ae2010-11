@@ -41,12 +41,12 @@ website:
           - demo.ipynb
           - for_loops.ipynb
           - vector_fields.ipynb
-          - dataframes.ipynb
           - couette_flow.ipynb
           - poiseuille_flow.ipynb
           - flow_around_bend.ipynb
           - normal_shocks.ipynb
           - supersonic_flow_friction.ipynb
+          - dataframes.ipynb
       - section: "Examples"
         contents:
           - sample_problems/lecture_2.ipynb
