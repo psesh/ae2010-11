@@ -14,6 +14,7 @@ format:
       
 
 website:
+  favicon: images/logo.ico
   title: "AE2010/AE2011"
   page-navigation: true
   navbar:
@@ -68,3 +69,4 @@ website:
           - sample_problems/lecture_18.ipynb
           - sample_problems/lecture_19.ipynb
           - sample_problems/lecture_21.ipynb
+          - sample_problems/lecture_22.ipynb
