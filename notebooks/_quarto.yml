@@ -11,6 +11,13 @@ format:
       light: flatly
       dark: darkly
     code-tools: true
+    keywords: pranay seshadri, thermofluids, fluid mechanics, thermodynamics, compressible flows, incompressible flows
+    pagetitle: AE2010/AE2011 | Georgia Institute of Technology
+    description-meta: Course website for AE2010/AE2011 that comprises fluid fundamentals and thermodynamics. It can be taken either as a 3-credit course (without thermodynamics) or as a 4-credit course (with thermodynamics). It is a mandatory course for all aerospace engineering students. 
+    favicon: images/logo.ico
+    twitter-card:
+      image: "images/fluids.png"
+
       
 
 website:
@@ -22,7 +29,9 @@ website:
       - text: "Home"
         file: index.ipynb
       - text: "Notebooks"
-        file: index.ipynb
+        file: notebooks.ipynb
+      - text: "Canvas"
+        href: https://canvas.gatech.edu
     right:
       - icon: github
         href: https://github.com/psesh/ae2010-11
@@ -70,3 +79,4 @@ website:
           - sample_problems/lecture_19.ipynb
           - sample_problems/lecture_21.ipynb
           - sample_problems/lecture_22.ipynb
+          - sample_problems/lecture_23.ipynb
