@@ -46,6 +46,7 @@ website:
         contents: 
           - practice_problems/incompressible_fluid_mechanics.ipynb
           - practice_problems/thermodynamics.ipynb
+          - practice_problems/compressible_fluid_mechanics.ipynb
       - section: "Notebooks"
         contents:
           - demo.ipynb
