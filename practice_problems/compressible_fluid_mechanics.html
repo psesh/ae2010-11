@@ -124,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../practice_problems/incompressible_fluid_mechanics.html">Practice Problems</a></li><li class="breadcrumb-item"><a href="../practice_problems/compressible_fluid_mechanics.html">Compressible Fluid Mechanics</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../practice_problems/incompressible_fluid_mechanics.html">Practice Problems</a></li><li class="breadcrumb-item"><a href="../practice_problems/compressible_fluid_mechanics.html">Compressible fluid mechanics</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -174,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../practice_problems/compressible_fluid_mechanics.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Compressible Fluid Mechanics</span></a>
+ <span class="menu-text">Compressible fluid mechanics</span></a>
   </div>
 </li>
       </ul>
@@ -399,6 +399,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#problem-1" id="toc-problem-1" class="nav-link active" data-scroll-target="#problem-1">Problem 1</a></li>
   <li><a href="#problem-2" id="toc-problem-2" class="nav-link" data-scroll-target="#problem-2">Problem 2</a></li>
   <li><a href="#problem-3" id="toc-problem-3" class="nav-link" data-scroll-target="#problem-3">Problem 3</a></li>
+  <li><a href="#problem-4" id="toc-problem-4" class="nav-link" data-scroll-target="#problem-4">Problem 4</a></li>
+  <li><a href="#problem-5" id="toc-problem-5" class="nav-link" data-scroll-target="#problem-5">Problem 5</a></li>
+  <li><a href="#problem-6" id="toc-problem-6" class="nav-link" data-scroll-target="#problem-6">Problem 6</a></li>
   </ul>
 </nav>
     </div>
@@ -407,7 +410,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Compressible Fluid Mechanics</h1>
+<h1 class="title">Compressible fluid mechanics</h1>
 </div>
 
 
@@ -567,11 +570,189 @@ Solution
 </ol>
 <p>A quick table look-up for Mach numbers of <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}1.88}\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}0.60}\)</span> reveal that <span class="math inline">\(\require{color}F/\dot{m}\sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_0}} = 1.0940\)</span>. As the stagnation temperature, and massflow rate is the same, the force must be equivalent too. From the above it is clear that case (i) and case (iii) have the same pressure force on flow in the divergence. Therefore, the two cases must have the same friction force. Note that the subsonic flow has a lower average <span class="math inline">\(\require{color}{\color[rgb]{0.918231,0.469102,0.038229}\rho} {\color[rgb]{0.059472,0.501943,0.998465}v}^2\)</span>, hence lower average wall stress, hence a longer pipe is possible.</p>
 <p><em>Extra comment:</em> It may be useful to re-think of this problem in the following light; see the figure below.</p>
-<p><img src="images/image_P9_3.png" alt="cycle" width="500"></p>
+<p><img src="images/image_P9_3.png" alt="cycle" width="700"></p>
 </details>
-
-
 </section>
+<section id="problem-4" class="level2">
+<h2 class="anchored" data-anchor-id="problem-4">Problem 4</h2>
+<p>An aeroengine afterburner shown below consists of a cylindrical duct of constant cross-sectional area <span class="math inline">\(A\)</span> followed by a convergent nozzle with a variable exit area <span class="math inline">\(A_N\)</span>. Both the duct and nozzle are frictionless and there are no shocks within the afterburner. The flow can be treated as a perfect gas with the ratio of specific heat capacities <span class="math inline">\(\gamma = 1.333\)</span> and with the specific heat capacity at constant pressure <span class="math inline">\(\require{color}{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} = {\color[rgb]{0.986252,0.007236,0.027423}1149} \;{\color[rgb]{0.986252,0.007236,0.027423} J/\left( kg \cdot K \right)}\)</span>. The inlet stagnation temperature is <span class="math inline">\(\require{color}{\color[rgb]{0.164799,0.878862,0.723179}T_{01}} = {\color[rgb]{0.164799,0.878862,0.723179}600 \; K}\)</span>, the inlet stagnation pressure is <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p_{01}}\)</span> is <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}3 \; bar}\)</span> and the exit static pressure downstream of the nozzle is <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}1 \; bar}\)</span>. It is required that both with and without heat addition the inlet Mach number is <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}M_1} = {\color[rgb]{0.041732,0.352132,0.699576}0.4}\)</span>.</p>
+<p><img src="images/image_P9_4.png" alt="afterburner" width="500"></p>
+<p>For the case of no heat addition:</p>
+<ol type="a">
+<li><p>calculate the required nozzle area ratio <span class="math inline">\(A_{N}/A\)</span>.</p></li>
+<li><p>calculate the specific impulse, <span class="math inline">\(\require{color}{\color[rgb]{1.000000,0.869732,0.000000}F}/ \dot{m}\)</span>, at the nozzle exit;</p></li>
+</ol>
+<details>
+<summary>
+Solution
+</summary>
+<ol type="a">
+<li>Note that since <span class="math inline">\(\gamma\)</span> is <span class="math inline">\(1.333\)</span>, we will use the <code>gas-properties.pdf</code> tables for this value of <span class="math inline">\(\gamma\)</span>. First note that exit-static-to-inlet-stagnation pressure ratio is given by <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p_3} / {\color[rgb]{0.315209,0.728565,0.037706}p_{01}}\)</span>. If this value is less than 0.5398, then the flow at the exit may be assumed choked, i.e., <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}M_3} = {\color[rgb]{0.041732,0.352132,0.699576}1.0}\)</span>. From the values given to us, we note</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{{\color[rgb]{0.315209,0.728565,0.037706}p_3}}{{\color[rgb]{0.315209,0.728565,0.037706}p_{01}}} = \frac{{\color[rgb]{0.315209,0.728565,0.037706}1 \; bar}}{{\color[rgb]{0.315209,0.728565,0.037706}3 \; bar}} = 0.333 &lt; 0.5398.
+\]</span></p>
+<p>As the flow at <span class="math inline">\(A_N\)</span> is choked, we can use the following values</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{A_N}{A} = \frac{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_{01}} }}{{\color[rgb]{0.315209,0.728565,0.037706}p_{01}} A } \times \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{01}} A_{N} }{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_{01}} }} = 0.8427 \times \frac{1}{1.3468} = 0.6257
+\]</span></p>
+<ol start="2" type="a">
+<li>The specific impulse, i.e., <span class="math inline">\(\require{color}{\color[rgb]{1.000000,0.869732,0.000000}F}/ \dot{m}\)</span> can be worked out using</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{{\color[rgb]{1.000000,0.869732,0.000000}F}}{\dot{m}} = \frac{{\color[rgb]{1.000000,0.869732,0.000000}F}}{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_0}} } \times \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_0}}.
+\]</span></p>
+<p>When <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}M_3} = {\color[rgb]{0.041732,0.352132,0.699576}1.0}\)</span>, this leads to</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{{\color[rgb]{1.000000,0.869732,0.000000}F}}{\dot{m}} = 0.9351 \times \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_0}}
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+\Rightarrow \frac{{\color[rgb]{1.000000,0.869732,0.000000}F}}{\dot{m}} = 0.9351 \times \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}1149} \times {\color[rgb]{0.164799,0.878862,0.723179}600} } = 776.4 \; \frac{N \cdot s}{kg}
+\]</span></p>
+</details>
+</section>
+<section id="problem-5" class="level2">
+<h2 class="anchored" data-anchor-id="problem-5">Problem 5</h2>
+<p>Re-visit Problem 4 when the afterburner is operating: heat is added uniformly along the duct between locations 1 and 2 at a rate of <span class="math inline">\(\require{color}{\color[rgb]{0.334690,0.296180,0.998454}300} \; {\color[rgb]{0.334690,0.296180,0.998454}kJ}\)</span> per kg of air flowing.</p>
+<details>
+<summary>
+Solution
+</summary>
+<ol type="a">
+<li>As before, to work out the required area ratio, we need to establish whether the nozzle is still choked. Recall from Rayleigh flows that between stations 1 and 2 the specific impulse function will stay the same as there is no net force. Also note that at station 2 there will be a change in the stagnation temperature; this can be worked out:</li>
+</ol>
+<p><span class="math display">\[
+\require{color}
+\large
+{\color[rgb]{0.164799,0.878862,0.723179}T_{02}} = {\color[rgb]{0.164799,0.878862,0.723179}T_{01}} + \frac{{\color[rgb]{0.334690,0.296180,0.998454}q}}{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p}} = {\color[rgb]{0.164799,0.878862,0.723179}600} + \frac{{\color[rgb]{0.334690,0.296180,0.998454}300 \times 10^{3} } }{{\color[rgb]{0.986252,0.007236,0.027423}1149}} = {\color[rgb]{0.164799,0.878862,0.723179}861.1 \; K }
+\]</span></p>
+<p>At a Mach number of <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}0.4}\)</span>, we have</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{{\color[rgb]{1.000000,0.869732,0.000000}F}_{1}}{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_{01}} }} = 1.2959
+\]</span></p>
+<p>Now, since the specific impulse between stations 1 and 2 are the same we can write</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{{\color[rgb]{1.000000,0.869732,0.000000}F_2}}{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_{02}} }} = \frac{{\color[rgb]{1.000000,0.869732,0.000000}F_1}}{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_{01}} }} \times \sqrt{\frac{{\color[rgb]{0.164799,0.878862,0.723179}T_{01}}}{{\color[rgb]{0.164799,0.878862,0.723179}T_{02}}}} = 1.2959 \times \sqrt{\frac{600}{861.1}} = 1.0817
+\]</span></p>
+<p>From the tables, this value of the non-dimensional impulse function appears at <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}M_2} = {\color[rgb]{0.041732,0.352132,0.699576}0.546}\)</span>. This leads to</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{A_N}{A} = \frac{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_{02}} }}{{\color[rgb]{0.315209,0.728565,0.037706}p_{02}} A } \times \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{02}} A_{N} }{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_{02}} }} = 1.0641 \times \frac{1}{1.3468} = 0.7901
+\]</span></p>
+<p><strong>where we have assumed the nozzle is still choked.</strong> We need to demonstrate why this is so. Recall, that it will be choked if the pressure ratio <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p_3} / {\color[rgb]{0.315209,0.728565,0.037706}p_{03}} &lt; 0.5398\)</span>. Note that unlike Problem 3, the flow is no longer isentropic between stations 1 and 2, which is why the denominator has been changed from <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p_{01}}\)</span> to <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p_{03}}\)</span>. To work out this ratio we have recognize that</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{{\color[rgb]{0.315209,0.728565,0.037706}p_3}}{{\color[rgb]{0.315209,0.728565,0.037706}p_{03}}} = {\color[rgb]{0.315209,0.728565,0.037706}p_3} \times \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{02}}}{{\color[rgb]{0.315209,0.728565,0.037706}p_{03}}} \times \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{01}}}{{\color[rgb]{0.315209,0.728565,0.037706}p_{02}}} \times \frac{1}{{\color[rgb]{0.315209,0.728565,0.037706}p_{01} }}
+\]</span></p>
+<p>where we can work out <span class="math display">\[
+\large
+\require{color}
+\frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{02}}}{{\color[rgb]{0.315209,0.728565,0.037706}p_{01}}} = \underbrace{\frac{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_{01}} } }{A{\color[rgb]{0.315209,0.728565,0.037706} p_{01}} } }_{at \; {\color[rgb]{0.041732,0.352132,0.699576}M_1}={\color[rgb]{0.041732,0.352132,0.699576}0.4}} \times \underbrace{\frac{A{\color[rgb]{0.315209,0.728565,0.037706} p_{02}} }{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_{02}} } } }_{at \; {\color[rgb]{0.041732,0.352132,0.699576}M_2}={\color[rgb]{0.041732,0.352132,0.699576}0.546}} \times \sqrt{\frac{{\color[rgb]{0.164799,0.878862,0.723179}T_{02}}}{{\color[rgb]{0.164799,0.878862,0.723179}T_{01}}}} = 0.8427 \times \frac{1}{1.0641} \times \sqrt{\frac{{\color[rgb]{0.164799,0.878862,0.723179}861.1}}{{\color[rgb]{0.164799,0.878862,0.723179}600}}} = 0.9487.
+\]</span></p>
+<p>Ordinarily this ratio would be one, however, the flow between stations 1 and 2 is not isentropic (but between stations 2 and 3 it is). Now, we have:</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{{\color[rgb]{0.315209,0.728565,0.037706}p_3}}{{\color[rgb]{0.315209,0.728565,0.037706}p_{03}}} = {\color[rgb]{0.315209,0.728565,0.037706}1 \; bar} \times{\color[rgb]{0.315209,0.728565,0.037706} 1} \times \frac{1}{0.9487} \times \frac{1}{{\color[rgb]{0.315209,0.728565,0.037706}3 \; bar}} = 0.3513 &lt; 0.5398
+\]</span></p>
+<p>which tells us that the flow is choked at the nozzle exit, i.e., station 3.</p>
+<p><em>Note that the nozzle area is larger in the case where we have heat transfer</em>.</p>
+<ol start="2" type="a">
+<li>The specific heat impulse can now be worked out via</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{{\color[rgb]{1.000000,0.869732,0.000000}F}}{\dot{m}} = \frac{{\color[rgb]{1.000000,0.869732,0.000000}F}}{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_{03}}} } \times \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_{03}}} = 0.9351 \times \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}1149} \times {\color[rgb]{0.164799,0.878862,0.723179}861.1}} = 930.1 \; \frac{N\cdot s}{kg}
+\]</span></p>
+</details>
+</section>
+<section id="problem-6" class="level2">
+<h2 class="anchored" data-anchor-id="problem-6">Problem 6</h2>
+<p>A converging-diverging nozzle with a throat area of half the exit area is supplied wuth air at a stagnation pressure of <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}140} \; {\color[rgb]{0.315209,0.728565,0.037706}kPa}\)</span>. It discharges into an atmosphere where the static pressure is <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}100 \; kPa}\)</span>. Find the stagnation pressure of the air at the exit from the nozzle, and the Mach number just upstream of the normal shock in the diverging section. If the angle of divergence of the nozzle is constant, find the position of the shock. Assume that the nozzle is 2D and that the throat is choked and that <span class="math inline">\(\gamma = 1.4\)</span>.</p>
+<details>
+<summary>
+Solution
+</summary>
+<p>As the throat is choked, we have:</p>
+<p><span class="math display">\[
+\require{color}
+\large
+\frac{\dot{m}\sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_0}}}{A_{\ast} {\color[rgb]{0.315209,0.728565,0.037706}p_{0}}} = 1.281.
+\]</span></p>
+<p>Since the question refers to the shock in divergence, we assume that the pressure conditions are consistent, i.e., <span class="math inline">\({\color[rgb]{0.315209,0.728565,0.037706}p_{b}} = {\color[rgb]{0.315209,0.728565,0.037706}p_{e}}\)</span>. At the nozzle exit, we have</p>
+<p><span class="math display">\[
+\require{color}
+\large
+\frac{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_0}}}{A {\color[rgb]{0.315209,0.728565,0.037706}p}}  = \frac{\dot{m}\sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p}  {\color[rgb]{0.164799,0.878862,0.723179}T_0}}}{2 A_{\ast} {\color[rgb]{0.315209,0.728565,0.037706}p_{0,\ast}}} \times \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{0, \ast}}}{{\color[rgb]{0.315209,0.728565,0.037706}p}}
+\]</span></p>
+<p><span class="math display">\[
+\require{color}
+\large
+\frac{1}{2} \times 1.281 \times \frac{{\color[rgb]{0.315209,0.728565,0.037706}140}}{{\color[rgb]{0.315209,0.728565,0.037706}100}} = 0.897
+\]</span></p>
+<p>From the table this corresponds to a Mach number of <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}0.40}\)</span> at the exit. From another table look-up we know that <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p}/{\color[rgb]{0.315209,0.728565,0.037706}p_0}\)</span> at the exit is <span class="math inline">\(0.896\)</span>. Thus, the stagnation pressure at the exit is <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p_{0,exit}} = {\color[rgb]{0.315209,0.728565,0.037706}100} / 0.896 = {\color[rgb]{0.315209,0.728565,0.037706}111.5 \; kPa}\)</span>.</p>
+<p>Now, the stagnation pressure ratio across the shock is <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}111.6}/{\color[rgb]{0.315209,0.728565,0.037706}140}=0.797\)</span>. From the tables, the Mach number in front of the shock is <span class="math inline">\({\color[rgb]{0.041732,0.352132,0.699576}1.84}\)</span>.</p>
+<p>When the Mach number is <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}1.84}\)</span>, the non-dimensional flow capacity is given by</p>
+<p><span class="math display">\[
+\require{color}
+\large
+\frac{\dot{m}\sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_0}}}{A {\color[rgb]{0.315209,0.728565,0.037706}p_{0}}} = 0.863
+\]</span></p>
+<p>where the <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p_0}\)</span> is the same as at the throat. Thus, we have</p>
+<p><span class="math display">\[
+\require{color}
+\large
+\frac{A_s}{A_{\ast}} = \frac{1.281}{0.863} = 1.484
+\]</span></p>
+<p>Assuming a two-dimensional passage with constant angle of divergence, as per the image below (only diverging section shown)</p>
+<p><img src="images/image_P9_5.png" alt="afterburner" width="500"></p>
+<p>we can write</p>
+<p><span class="math display">\[
+\require{color}
+\large
+tan \left( {\color[rgb]{0.599997,0.600015,0.600005}\phi} \right) = \frac{A_s - A_{\ast} }{x_s} = \frac{A_{exit} - A_{\ast}}{x_{exit} }
+\]</span></p>
+<p><span class="math display">\[
+\large
+\Rightarrow \frac{A_s - A_{\ast} }{x_s} = \frac{2A_{\ast} - A_{\ast}}{x_{exit} }
+\]</span></p>
+<p><span class="math display">\[
+\require{color}
+\large
+\Rightarrow \frac{A_s - A_{\ast} }{x_s} = \frac{A_{\ast}}{x_{exit} }
+\]</span></p>
+<p><span class="math display">\[
+\require{color}
+\large
+\Rightarrow \frac{A_s - A_{\ast} }{A_{\ast}} = \frac{x_s}{x_{exit} }
+\]</span></p>
+<p><span class="math display">\[
+\require{color}
+\large
+\Rightarrow  \frac{A_s}{A_{\ast}} - 1 = \frac{x_s}{x_{exit}} \Rightarrow x_{s} = \left( 1.484 - 1 \right) x_{exit} = 0.484 x_{exit}
+\]</span></p>
+<p>Thus, the shock is located nearly halfway through the diverging section.</p>
+<details>
+
+
+</details></details></section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
