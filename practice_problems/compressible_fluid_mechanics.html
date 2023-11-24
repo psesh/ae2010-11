@@ -397,6 +397,8 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#problem-1" id="toc-problem-1" class="nav-link active" data-scroll-target="#problem-1">Problem 1</a></li>
+  <li><a href="#problem-2" id="toc-problem-2" class="nav-link" data-scroll-target="#problem-2">Problem 2</a></li>
+  <li><a href="#problem-3" id="toc-problem-3" class="nav-link" data-scroll-target="#problem-3">Problem 3</a></li>
   </ul>
 </nav>
     </div>
@@ -422,7 +424,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="problem-1" class="level2">
 <h2 class="anchored" data-anchor-id="problem-1">Problem 1</h2>
-<p>At a certain point in a converging passage, air flows steadily with a velocity of <span class="math inline">\(150 \; m/s\)</span> and has a static pressure of <span class="math inline">\(70 \; kPa\)</span> and a static temperature of <span class="math inline">\(4\; ^{\circ}C\)</span>. The flow is adiabatic and reversible. Calculate the maximum possible reduction in area and the following quantities for the minimum area: Mach number, stagnation pressure, stagnation temperature, static pressure, static temperature and velocity.</p>
+<p>At a certain point in a converging passage, air flows steadily with a velocity of <span class="math inline">\(\require{color}{\color[rgb]{0.000066,0.001801,0.998229}150 \; m/s}\)</span> and has a static pressure of <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}70 \; kPa}\)</span> and a static temperature of <span class="math inline">\(\require{color}{\color[rgb]{0.164799,0.878862,0.723179}4^{\circ} \; C}\)</span>. The flow is adiabatic and reversible. Calculate the maximum possible reduction in area and the following quantities for the minimum area: Mach number, stagnation pressure, stagnation temperature, static pressure, static temperature and velocity.</p>
 <details>
 <summary>
 Solution
@@ -432,56 +434,140 @@ Solution
 <p><span class="math display">\[
 \require{color}
 \large
-M_1 = \frac{150}{\sqrt{1.4 \times 287 \times 277.15}} = 0.449 \approx 0.450
+{\color[rgb]{0.041732,0.352132,0.699576}M_1} = \frac{{\color[rgb]{0.000066,0.001801,0.998229}150}}{\sqrt{1.4 \times 287 \times {\color[rgb]{0.164799,0.878862,0.723179}277.15} }} = 0.449 \approx 0.450
 \]</span></p>
 <p>Now, from the tables, at this Mach number we have</p>
 <p><span class="math display">\[
 \require{color}
 \large
-\frac{p_{1}}{p_{0,1}} = 0.8703, \; \; \; \; \frac{T_1}{T_{0,1}} = 0.9611, \; \; \; \; \frac{\dot{m}\sqrt{c_p T_0}}{A_1 p_{0,1}} = 0.8843
+\frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{1}} }{{\color[rgb]{0.315209,0.728565,0.037706}p_{0,1}} } = 0.8703, \; \; \; \; \frac{{\color[rgb]{0.164799,0.878862,0.723179}T_1}}{{\color[rgb]{0.164799,0.878862,0.723179}T_{0,1}}} = 0.9611, \; \; \; \; \frac{\dot{m}\sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} T_0}}{A_1 {\color[rgb]{0.315209,0.728565,0.037706}p_{0,1}} } = 0.8843
 \]</span></p>
-<p>Note that the maximum possible reduction in area occurs if <span class="math inline">\(M_2=1\)</span>, where</p>
+<p>Note that the maximum possible reduction in area occurs if <span class="math inline">\({\color[rgb]{0.041732,0.352132,0.699576}M_2}={\color[rgb]{0.041732,0.352132,0.699576}1}\)</span>, where</p>
 <p><span class="math display">\[
 \require{color}
 \large
-\frac{\dot{m}\sqrt{c_p T_{0,1}}}{A_{2} p_{0,1}} = 1.281
+\frac{\dot{m}\sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_{0,1}} }}{A_{2} {\color[rgb]{0.315209,0.728565,0.037706}p_{0,1}} } = 1.281
 \]</span></p>
 <p>We can express the area ratio as</p>
 <p><span class="math display">\[
 \require{color}
 \large
-\frac{A_{2}}{A_1} = \frac{\frac{\dot{m}\sqrt{c_p T_{0,1}}}{A_{2} p_{0,1}}}{\frac{\dot{m}\sqrt{c_p T_{0,1}}}{A_{1} p_{0,1}}} = \frac{0.8843}{1.281} = 0.6903
+\frac{A_{2}}{A_1} = \frac{\frac{\dot{m}\sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_{0,1}} }}{A_{2} {\color[rgb]{0.315209,0.728565,0.037706}p_{0,1}} }}{\frac{\dot{m}\sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_{0,1}} }}{A_{1} {\color[rgb]{0.315209,0.728565,0.037706}p_{0,1}} }} = \frac{0.8843}{1.281} = 0.6903
 \]</span></p>
 <p>This corresponds to a reduction in the area of <span class="math inline">\(100 - 69.03 = 30.1\%\)</span>. Furthermore, given the values of the static quantities, and the static-to-stagnation ratios above, we can determine:</p>
 <p><span class="math display">\[
 \require{color}
 \large
-p_{0,1} = \frac{p_1}{0.8703} = \frac{70 \; kPa}{0.8703} = 80.432 \; kPa, \; \; \;
+{\color[rgb]{0.315209,0.728565,0.037706}p_{0,1}} = \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_1} }{0.8703} = \frac{{\color[rgb]{0.315209,0.728565,0.037706}70 \; kPa}}{0.8703} = {\color[rgb]{0.315209,0.728565,0.037706}80.432 \; kPa},
 \]</span></p>
 <p>and</p>
 <p><span class="math display">\[
 \require{color}
 \large
-T_{0,1} = \frac{T_1}{0.9611} = \frac{277.15 \; K}{0.9611} = 288.367 \; K.
+{\color[rgb]{0.164799,0.878862,0.723179}T_{0,1}} = \frac{{\color[rgb]{0.164799,0.878862,0.723179}T_1}}{0.9611} = \frac{{\color[rgb]{0.164799,0.878862,0.723179}277.15 \; K}}{0.9611} = {\color[rgb]{0.164799,0.878862,0.723179}288.367 \; K}.
 \]</span></p>
-<p>At <span class="math inline">\(M_2=1\)</span>, the table gives <span class="math inline">\(p_{2} / p_{0,2} = 0.528\)</span> and <span class="math inline">\(T_{2}/T_{0,2} = 0.8333\)</span>. As the stagnation pressure and temperature remain constant throughout the passage, we have</p>
+<p>At <span class="math inline">\({\color[rgb]{0.041732,0.352132,0.699576}M_2}={\color[rgb]{0.041732,0.352132,0.699576}1}\)</span>, the table gives <span class="math inline">\({\color[rgb]{0.315209,0.728565,0.037706}p_{2}} / {\color[rgb]{0.315209,0.728565,0.037706}p_{0,2}} = 0.528\)</span> and <span class="math inline">\({\color[rgb]{0.164799,0.878862,0.723179}T_{2}}/{\color[rgb]{0.164799,0.878862,0.723179}T_{0,2}} = 0.8333\)</span>. As the stagnation pressure and temperature remain constant throughout the passage, we have</p>
 <p><span class="math display">\[
 \require{color}
 \large
-p_2 = 80.432 \times 0.528 = 46.46 \; kPa.
+{\color[rgb]{0.315209,0.728565,0.037706}p_2} = {\color[rgb]{0.315209,0.728565,0.037706}80.432} \times 0.528 = {\color[rgb]{0.315209,0.728565,0.037706}46.46 \; kPa}.
 \]</span></p>
 <p>Repeating the same step for the static temperature to obtain</p>
 <p><span class="math display">\[
 \require{color}
 \large
-T_2 = 288.367 \times 0.8333 = 240.296 \; K.
+{\color[rgb]{0.164799,0.878862,0.723179}T_2} = {\color[rgb]{0.164799,0.878862,0.723179}288.367} \times 0.8333 = {\color[rgb]{0.164799,0.878862,0.723179}240.296 \; K}.
 \]</span></p>
-<p>At <span class="math inline">\(M_2=1\)</span>, the velocity is given by</p>
+<p>At <span class="math inline">\({\color[rgb]{0.041732,0.352132,0.699576}M_2}={\color[rgb]{0.041732,0.352132,0.699576}1}\)</span>, the velocity is given by</p>
 <span class="math display">\[
 \require{color}
 \large
-v_2 = 1 \times \sqrt{1.4 \times 287 \times 240.296} = 310.72 \; m/s
+{\color[rgb]{0.059472,0.501943,0.998465}v_2} = {\color[rgb]{0.041732,0.352132,0.699576}1} \times \sqrt{1.4 \times 287 \times {\color[rgb]{0.164799,0.878862,0.723179}240.296}} = {\color[rgb]{0.059472,0.501943,0.998465}310.72 \; m/s}
 \]</span>
+</details>
+</section>
+<section id="problem-2" class="level2">
+<h2 class="anchored" data-anchor-id="problem-2">Problem 2</h2>
+<p>Air is supplied from a reservoir to a convergent-divergent nozzle and from there to a long pipe of constant diameter. The flow may be regarded as adiabatic throughout the whole duct system, inviscid in the nozzle but subject to the influence of friction in the pipe. It will be useful to consider the schematic shown in Figure below.</p>
+<p><img src="images/image_P9_1.png" alt="cycle" width="500"></p>
+<ol type="a">
+<li><p>Show that, if the flow is sonic both at the nozzle throat and at the pipe exit, the ratio of the pressure at the exit to the pressure in the reservoir is fixed and independent of pipe length.</p></li>
+<li><p>Find the value of this pressure ratio for the case of a nozzle designed to give a supersonic Mach number of <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}1.88}\)</span> at the end of the divergence.</p></li>
+<li><p>Show that for a given pressure and temperature in the reservoir, and sonic conditions at the nozzle throat and pipe exit, the net longitudinal force exerted by the flow on the walls of the pipe and the nozzle divergence is independent of pipe length.</p></li>
+</ol>
+<details>
+<summary>
+Solution
+</summary>
+<ol type="a">
+<li>There are multiple ways to answer this. Perhaps the most intuitive is recognizing that the since the flow is sonic at the throat, from the tables we have the condition that</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_0}}}{A_{\ast}^{nozzle} {\color[rgb]{0.315209,0.728565,0.037706}p_{0,reservoir}}} = 1.281
+\]</span></p>
+<p>Additionally, noting that the flow at the exit is also sonic, we use the non-dimensional flow capacity with the static pressure to assert</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_0}}}{A^{exit} {\color[rgb]{0.315209,0.728565,0.037706}p_{exit}}} = 2.425.
+\]</span></p>
+<p>Thus we have</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{exit}}}{{\color[rgb]{0.315209,0.728565,0.037706}p_{0, reservoir}}} = \frac{A_{\ast}^{nozzle}}{A^{exit}} \times \frac{1.281}{2.425} = 0.5282 \frac{A_{\ast}^{nozzle}}{A^{exit}},
+\]</span></p>
+<p>where we have used the fact that <span class="math inline">\(\dot{m}_{nozzle} = \dot{m}_{exit}\)</span> owing to continuity, and <span class="math inline">\(\mathsf{T_0}\)</span> is constant throughout because the flow is given to be adiabatic. The area ratios correspond to cross-sectional areas, and therefore have no bearing on the length of the pipe.</p>
+<ol start="2" type="a">
+<li>If the Mach number at the end of the diverging section is <span class="math inline">\(\mathsf{1.88}\)</span>, we know that from the supersonic flow tables</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_0}}}{A_{diverging} {\color[rgb]{0.315209,0.728565,0.037706}p_{0, diverging}}} = 0.8368
+\]</span></p>
+<p>But note that the area at the end of the diverging section is the same as the area of the pipe, and thus area of the exit.In this case, we assume that there is no shock between the reservoir and the end of divergence. Thus <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p_{0,diverging}} = {\color[rgb]{0.315209,0.728565,0.037706}p_{0,reservoir}}\)</span>, and also note that <span class="math inline">\(A^{exit} = A^{diverging}\)</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{A^{exit} {\color[rgb]{0.315209,0.728565,0.037706}p_{exit}}}{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_0}}} \times  \frac{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_0}}}{A^{diverging} {\color[rgb]{0.315209,0.728565,0.037706}p_{0, diverging}}} = \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{exit}}}{{\color[rgb]{0.315209,0.728565,0.037706}p_{0, diverging}}} = \frac{0.8368}{2.425} = 0.345
+\]</span></p>
+<ol start="3" type="a">
+<li>Consider the control volume shown below.</li>
+</ol>
+<p><img src="images/image_P9_2.png" alt="cycle" width="500"></p>
+<p>From the conservation of momentum,</p>
+<p><span class="math display">\[
+\large
+\require{color}
+-\textsf{net force due to walls} + {\color[rgb]{0.315209,0.728565,0.037706}p_{\ast}}A_{\ast} - {\color[rgb]{0.315209,0.728565,0.037706}p_{exit}}A_{exit} = {\color[rgb]{0.315209,0.728565,0.037706}p_{exit}}{\color[rgb]{0.059472,0.501943,0.998465}v^2_{exit}}A_{exit} - {\color[rgb]{0.315209,0.728565,0.037706}p_{\ast}}{\color[rgb]{0.059472,0.501943,0.998465}v^2_{\ast}}A_{\ast}
+\]</span></p>
+<p>The net force due to the walls is zero because the pressure in the divergence balances out the frictional force. This can be observed by noting that the non-dimensional impulse function is the same for a pipe with an exit Mach number of one, and a duct where the throat is choked. Naturally, this is independent of the pipe length.</p>
+</details>
+</section>
+<section id="problem-3" class="level2">
+<h2 class="anchored" data-anchor-id="problem-3">Problem 3</h2>
+<p>(This builds upon Problem 2) For a nozzle designed to give a supersonic Mach number of <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}1.88}\)</span>, calculate the values of <span class="math inline">\(4c_fL/D\)</span> for the pipe which will give maximum length:</p>
+<ol type="a">
+<li><p>with supersonic flow maintained up to the pipe exit;</p></li>
+<li><p>with sonic conditions at the nozzle throat;</p></li>
+<li><p>with supersonic flow throughout the nozzle divergence.</p></li>
+</ol>
+<p>Explain why the net effect of friction can be the same for different lengths of pipe.</p>
+<details>
+<summary>
+Solution
+</summary>
+<ol type="a">
+<li><p>If the flow continues to remain supersonic to the exit, where the Mach number is unity, the lowest possible value of <span class="math inline">\(4c_fL/D\)</span> is <span class="math inline">\(0\)</span>. Thus, the highest value is <span class="math inline">\(0.268\)</span>.</p></li>
+<li><p>If the flow in the nozzle is choked, with subsonic flow in the divergence, we shall get the lowest possible Mach number at the nozzle exit for choked conditions, with the highest value of <span class="math inline">\(4 c_f L_{max}/D\)</span> for subsonic flow in the pipe. For reversible adiabatic flow through the nozzle, when the Mach number is <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}1.88}\)</span>, the non-dimensional flow capacity was found to be <span class="math inline">\(0.837\)</span>. The same value of the non-dimensional flow capacity can be obtained at a <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}M} = \require{color}{\color[rgb]{0.041732,0.352132,0.699576}0.420}\)</span>, for which <span class="math inline">\(4 c_f L_{max}/D \approx 1.9744\)</span>.</p></li>
+<li><p>With supersonic flow throughout the nozzle divergence, there will be a shock at the nozzle end. This will yield a low subsonic Mach number a the beginning of the pipe. A <span class="math inline">\(\mathsf{M=1.88}\)</span> gives a <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}M_s}={\color[rgb]{0.041732,0.352132,0.699576}0.5996}\)</span> post-shock. Another table look-up (subsonic this time) for the latter Mach number yields <span class="math inline">\(4c_fL_{max}/D = 0.4908\)</span>.</p></li>
+</ol>
+<p>A quick table look-up for Mach numbers of <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}1.88}\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}0.60}\)</span> reveal that <span class="math inline">\(\require{color}F/\dot{m}\sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_0}} = 1.0940\)</span>. As the stagnation temperature, and massflow rate is the same, the force must be equivalent too. From the above it is clear that case (i) and case (iii) have the same pressure force on flow in the divergence. Therefore, the two cases must have the same friction force. Note that the subsonic flow has a lower average <span class="math inline">\(\require{color}{\color[rgb]{0.918231,0.469102,0.038229}\rho} {\color[rgb]{0.059472,0.501943,0.998465}v}^2\)</span>, hence lower average wall stress, hence a longer pipe is possible.</p>
+<p><em>Extra comment:</em> It may be useful to re-think of this problem in the following light; see the figure below.</p>
+<p><img src="images/image_P9_3.png" alt="cycle" width="500"></p>
 </details>
 
 
