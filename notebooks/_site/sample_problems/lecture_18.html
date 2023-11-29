@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="keywords" content="pranay seshadri, thermofluids, fluid mechanics, thermodynamics, compressible flows, incompressible flows">
+<meta name="description" content="Course website for AE2010/AE2011 that comprises fluid fundamentals and thermodynamics. It can be taken either as a 3-credit course (without thermodynamics) or as a 4-credit course (with thermodynamics). It is a mandatory course for all aerospace engineering students.">
+
+<title>AE2010/AE2011 | Georgia Institute of Technology</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../sample_problems/lecture_19.html" rel="next">
+<link href="../sample_problems/lecture_17.html" rel="prev">
+<link href="../images/logo.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<meta name="twitter:title" content="AE2010/AE2011 | Georgia Institute of Technology">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="images/fluids.png">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">AE2010/AE2011</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../notebooks.html" rel="" target="">
+ <span class="menu-text">Notebooks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://canvas.gatech.edu" rel="" target="">
+ <span class="menu-text">Canvas</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/psesh/ae2010-11" rel="" target=""><i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sample_problems/lecture_2.html">Examples</a></li><li class="breadcrumb-item"><a href="../sample_problems/lecture_18.html">L18 examples</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Practice Problems</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice_problems/incompressible_fluid_mechanics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Incompressible fluid mechanics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice_problems/thermodynamics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Thermodynamics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice_problems/compressible_fluid_mechanics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Compressible fluid mechanics</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Notebooks</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Jupyter introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../for_loops.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lists and For loops</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vector_fields.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vector fields</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../couette_flow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Couette flow</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../poiseuille_flow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Poiseuille flow</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../flow_around_bend.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Flow around a bend</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../normal_shocks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Normal shocks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../supersonic_flow_friction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Supersonic flow with friction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../dataframes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dataframes and plotly</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Coding assignment</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../coding_assignment/coding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coding assignment</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Examples</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L2 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L3 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L4 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L5 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L6 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L9 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L10 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L12 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L13 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L14 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_15.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L15 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_16.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L16 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_17.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L17 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_18.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">L18 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_19.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L19 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_21.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L21 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_22.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L22 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_23.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L23 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_24.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L24 examples</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#problem-1" id="toc-problem-1" class="nav-link active" data-scroll-target="#problem-1">Problem 1</a></li>
+  <li><a href="#problem-2" id="toc-problem-2" class="nav-link" data-scroll-target="#problem-2">Problem 2</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">L18 examples</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="problem-1" class="level2">
+<h2 class="anchored" data-anchor-id="problem-1">Problem 1</h2>
+<p>Air flows in a pipe with a high velocity at which friction forces are significant. Heat transfer occurs through the pipe wall such that the air temperature inside remains constant at <span class="math inline">\(\require{color}{\color[rgb]{0.164799,0.878862,0.723179}305\; K}\)</span>. At point A in the pipe the velocity is <span class="math inline">\(\require{color}{\color[rgb]{0.059472,0.501943,0.998465}300\; m/s}\)</span> and the pressure is <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}3.1 \; bar}\)</span>. At point B the pressure is <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}3.0 \; bar}\)</span>. Is B upstream or downstream of A?</p>
+<p><img src="images/image_L18_1.png" alt="cycle" width="500"></p>
+<details>
+<summary>
+Solution
+</summary>
+<p>We can apply the equation</p>
+<p><span class="math display">\[
+\large
+\require{color}{\color[rgb]{0.599997,0.600015,0.600005}s_e} - {\color[rgb]{0.599997,0.600015,0.600005}s_i} = \sum \frac{{\color[rgb]{0.334690,0.296180,0.998454}q_i}}{{\color[rgb]{0.164799,0.878862,0.723179}T_i}} + {\color[rgb]{0.599997,0.600015,0.600005}\Delta s}_{irrev}
+\]</span></p>
+<p>to work out <span class="math inline">\(\require{color}{\color[rgb]{0.599997,0.600015,0.600005}\Delta s}_{irrev}\)</span> assuming the flow is from A to B due to the pressure difference. If it turns out that <span class="math inline">\(\require{color}{\color[rgb]{0.599997,0.600015,0.600005}\Delta s}_{irrev}\)</span> is less than zero, then we know this assumption cannot be true, as the irreversibilities <em>must</em> result in a positive entropy contribution.</p>
+<p>To begin, consider that</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\dot{m} = {\color[rgb]{0.918231,0.469102,0.038229}\rho_A} {\color[rgb]{0.059472,0.501943,0.998465}v_A} A = {\color[rgb]{0.918231,0.469102,0.038229}\rho_B} {\color[rgb]{0.059472,0.501943,0.998465}v_B} A \Rightarrow \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_A}}{R {\color[rgb]{0.164799,0.878862,0.723179}T}} {\color[rgb]{0.059472,0.501943,0.998465}v_A} = \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_B}}{R {\color[rgb]{0.164799,0.878862,0.723179}T}} {\color[rgb]{0.059472,0.501943,0.998465}v_B} \Rightarrow {\color[rgb]{0.059472,0.501943,0.998465}v_{B}} = {\color[rgb]{0.059472,0.501943,0.998465}v_A} \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_A}}{{\color[rgb]{0.315209,0.728565,0.037706}p_B}}
+\]</span></p>
+<p>This leads to</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.059472,0.501943,0.998465}v_{B}} = \frac{{\color[rgb]{0.315209,0.728565,0.037706}3.1}}{{\color[rgb]{0.315209,0.728565,0.037706}3.0}} \times {\color[rgb]{0.059472,0.501943,0.998465}300} = {\color[rgb]{0.059472,0.501943,0.998465}310 \; m/s}
+\]</span></p>
+<p><em>Assuming the flow goes from A to B</em> we can apply the SFEE to arrive at</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.334690,0.296180,0.998454}q} - {\color[rgb]{0.562040,0.190215,0.568721}w_{x}} = \left({\color[rgb]{0.986252,0.007236,0.027423}h_B} + \frac{1}{2} {\color[rgb]{0.059472,0.501943,0.998465}v_B}^2 + g {\color[rgb]{0.986047,0.008333,0.501923}z_{B}} \right) - \left( {\color[rgb]{0.986252,0.007236,0.027423}h_A} + \frac{1}{2} {\color[rgb]{0.059472,0.501943,0.998465}v_A}^2 + g {\color[rgb]{0.986047,0.008333,0.501923}z_{A}} \right) \; \; \; \; \; {\color[rgb]{0.986252,0.007236,0.027423}\Delta h} = {\color[rgb]{0.986252,0.007236,0.027423}c}_{{\color[rgb]{0.315209,0.728565,0.037706}p}} {\color[rgb]{0.164799,0.878862,0.723179}\Delta T} = 0.
+\]</span></p>
+<p>Setting <span class="math inline">\(\require{color}{\color[rgb]{0.562040,0.190215,0.568721}w_{x}} = 0\)</span> and ignoring the potential energy terms, we have</p>
+<p><span class="math display">\[
+\large
+\require{color}
+q = \frac{1}{2} \left( {\color[rgb]{0.059472,0.501943,0.998465}v_B}^2 - {\color[rgb]{0.059472,0.501943,0.998465}v_A}^2 \right) = \frac{1}{2} \left( {\color[rgb]{0.059472,0.501943,0.998465}310}^2 - {\color[rgb]{0.059472,0.501943,0.998465}300}^2 \right) = {\color[rgb]{0.334690,0.296180,0.998454}3050 \frac{J}{kg}}
+\]</span></p>
+<p>We can also work out the entropy, i.e.,</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.599997,0.600015,0.600005}s_{B}} - {\color[rgb]{0.599997,0.600015,0.600005}s_{A}} = {\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} \; ln \left( \frac{{\color[rgb]{0.059472,0.501943,0.998465}T_B}}{{\color[rgb]{0.059472,0.501943,0.998465}T_A}} \right) - R \; ln \left( \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_B}}{{\color[rgb]{0.315209,0.728565,0.037706}p_A}} \right)
+\]</span></p>
+<p>where we recognize that the first term on the right-hand side must be zero because the system is isothermal. This leads to</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.599997,0.600015,0.600005}s_{B}} - {\color[rgb]{0.599997,0.600015,0.600005}s_{A}} =  - R ln \left( \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_B}}{{\color[rgb]{0.315209,0.728565,0.037706}p_A}} \right) = R \; ln \left(\frac{{\color[rgb]{0.315209,0.728565,0.037706}p_A}}{{\color[rgb]{0.315209,0.728565,0.037706}p_B}}   \right) = 287 \times ln \left( \frac{{\color[rgb]{0.315209,0.728565,0.037706}3.1}}{{\color[rgb]{0.315209,0.728565,0.037706}3}} \right) = {\color[rgb]{0.599997,0.600015,0.600005}9.41  \; \frac{J}{kg \cdot K}}
+\]</span></p>
+<p>Note that</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.599997,0.600015,0.600005}\Delta s_{irrev}} = \left({\color[rgb]{0.599997,0.600015,0.600005}s_B} - {\color[rgb]{0.599997,0.600015,0.600005}s_A} \right) - \frac{{\color[rgb]{0.334690,0.296180,0.998454}q}}{{\color[rgb]{0.164799,0.878862,0.723179}T}}
+\]</span></p>
+<p>because at constant temperature <span class="math inline">\(\require{color}\sum \frac{{\color[rgb]{0.334690,0.296180,0.998454}q_j}}{{\color[rgb]{0.164799,0.878862,0.723179}T_j}} = \frac{{\color[rgb]{0.334690,0.296180,0.998454}q}}{{\color[rgb]{0.164799,0.878862,0.723179}T}}\)</span>. Thus</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.599997,0.600015,0.600005}\Delta s_{irrev}} = {\color[rgb]{0.599997,0.600015,0.600005}9.41  \; \frac{J}{kg \cdot K}} - \frac{{\color[rgb]{0.334690,0.296180,0.998454}3050}}{{\color[rgb]{0.164799,0.878862,0.723179}305}} = {\color[rgb]{0.599997,0.600015,0.600005}-0.59 \; \frac{J}{kg \cdot K}}
+\]</span></p>
+<p>This is impossible and thus our original assumption must be wrong. Therefore, the flow must be from B to A.</p>
+<p><strong>Note</strong>: This rather unusual behavior of flow moving against the pressure gradient arises because the velocity is close to the speed of sound (as we will see in the compressible flow section of this course). At this speed it is unlikely that heat transfer could be fast enough to maintain isothermal flow. This problem could also have been solved using the SFME to work out the frictional force which must oppose the flow.</p>
+</details>
+</section>
+<section id="problem-2" class="level2">
+<h2 class="anchored" data-anchor-id="problem-2">Problem 2</h2>
+<p>A pump discharges 600 liters of water per minute. The inlet and delivery pipes are of the same diameter and at the same level. The pressure at the inlet is <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}1.0 \; bar}\)</span>, and that at the exit is <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}100.0 \; bar}\)</span>. Calculate the minimum shaft power required to drive the pump.</p>
+<p><img src="images/image_L18_2.png" alt="cycle" width="500"></p>
+<details>
+<summary>
+Solution
+</summary>
+<p>The flow is incompressible, i.e., <span class="math inline">\(\require{color}{\color[rgb]{0.918231,0.469102,0.038229}\nu} = 1 / {\color[rgb]{0.918231,0.469102,0.038229}\rho} = constant\)</span>, so the expression for shaft work can be integrated:</p>
+<p><span class="math display">\[
+\large
+\require{color}
+-{\color[rgb]{0.562040,0.190215,0.568721}w_{x}} = \int_{i}^{e} {\color[rgb]{0.918231,0.469102,0.038229}\nu} {\color[rgb]{0.315209,0.728565,0.037706}dp} + \left( \frac{1}{2} {\color[rgb]{0.059472,0.501943,0.998465}v_{e}}^2 + g{\color[rgb]{0.986047,0.008333,0.501923}z_{e}} \right) - \left( \frac{1}{2} {\color[rgb]{0.059472,0.501943,0.998465}v_i}^2 + g{\color[rgb]{0.986047,0.008333,0.501923}z_i} \right)
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+-{\color[rgb]{0.562040,0.190215,0.568721}w_{x}} = \frac{\left( {\color[rgb]{0.315209,0.728565,0.037706}p_e} - {\color[rgb]{0.315209,0.728565,0.037706}p_i} \right)}{\rho} + \left( \frac{1}{2} {\color[rgb]{0.059472,0.501943,0.998465}v_e}^2 + g{\color[rgb]{0.986047,0.008333,0.501923}z_{e}} \right) - \left( \frac{1}{2} {\color[rgb]{0.059472,0.501943,0.998465}v_i}^2 + g{\color[rgb]{0.986047,0.008333,0.501923}z_{i}}\right)
+\]</span></p>
+<p>Since the inlet and exit have the same diameter and density is constant, the velocities are the same and there is no change in the kinetic energy. Additionally, as the inlet and exit are on the same level, there is no reason why the potential energy should change. Thus, the specific shaft work is given by:</p>
+<p><span class="math display">\[
+\large
+\require{color}
+-{\color[rgb]{0.562040,0.190215,0.568721}w_{x}} = \frac{\left( {\color[rgb]{0.315209,0.728565,0.037706}p_e} - {\color[rgb]{0.315209,0.728565,0.037706}p_i} \right)}{{\color[rgb]{0.918231,0.469102,0.038229}\rho}}.
+\]</span></p>
+<p>The shaft power is obtained by multiplying the specific shaft work by the massflow rate, i.e.,</p>
+<p><span class="math display">\[
+\large
+\require{color}
+-{\color[rgb]{0.562040,0.190215,0.568721}W_{x}} = \dot{m} \times -{\color[rgb]{0.562040,0.190215,0.568721}w_{x}} = \frac{\rho \mathcal{Q} \left({\color[rgb]{0.315209,0.728565,0.037706}p_e} - {\color[rgb]{0.315209,0.728565,0.037706}p_i} \right) }{{\color[rgb]{0.918231,0.469102,0.038229}\rho}} = \mathcal{Q} {\color[rgb]{0.315209,0.728565,0.037706}\Delta p  }
+\]</span></p>
+<p>where <span class="math inline">\(\mathcal{Q}\)</span> is the volumetric flow rate. From the above, the minimum shaft power is</p>
+<p><span class="math display">\[
+\large
+\require{color}
+= \frac{600 \times 10^{-3} \; kg / minute}{60 \; sec / minute} \times \left( {\color[rgb]{0.315209,0.728565,0.037706}100 \times 10^5} - {\color[rgb]{0.315209,0.728565,0.037706}1 \times 10^5 }\right)  = {\color[rgb]{0.562040,0.190215,0.568721}99 \; kW}.
+\]</span></p>
+<p><strong>Notes:</strong> This is the minimum work input because the flow has been assumed reversible. Also note that if the shaft work is set to zero, this yields teh familiar Bernoulli’s equation for incompressible, steady and inviscid (and thus reversible) flow.</p>
+</details>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../sample_problems/lecture_17.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">L17 examples</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../sample_problems/lecture_19.html" class="pagination-link">
+        <span class="nav-page-text">L19 examples</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

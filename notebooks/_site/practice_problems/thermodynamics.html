@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="keywords" content="pranay seshadri, thermofluids, fluid mechanics, thermodynamics, compressible flows, incompressible flows">
+<meta name="description" content="Course website for AE2010/AE2011 that comprises fluid fundamentals and thermodynamics. It can be taken either as a 3-credit course (without thermodynamics) or as a 4-credit course (with thermodynamics). It is a mandatory course for all aerospace engineering students.">
+
+<title>AE2010/AE2011 | Georgia Institute of Technology</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../practice_problems/compressible_fluid_mechanics.html" rel="next">
+<link href="../practice_problems/incompressible_fluid_mechanics.html" rel="prev">
+<link href="../images/logo.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<meta name="twitter:title" content="AE2010/AE2011 | Georgia Institute of Technology">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="images/fluids.png">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">AE2010/AE2011</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../notebooks.html" rel="" target="">
+ <span class="menu-text">Notebooks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://canvas.gatech.edu" rel="" target="">
+ <span class="menu-text">Canvas</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/psesh/ae2010-11" rel="" target=""><i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../practice_problems/incompressible_fluid_mechanics.html">Practice Problems</a></li><li class="breadcrumb-item"><a href="../practice_problems/thermodynamics.html">Thermodynamics</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Practice Problems</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice_problems/incompressible_fluid_mechanics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Incompressible fluid mechanics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice_problems/thermodynamics.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Thermodynamics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practice_problems/compressible_fluid_mechanics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Compressible fluid mechanics</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Notebooks</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Jupyter introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../for_loops.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lists and For loops</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../vector_fields.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Vector fields</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../couette_flow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Couette flow</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../poiseuille_flow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Poiseuille flow</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../flow_around_bend.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Flow around a bend</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../normal_shocks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Normal shocks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../supersonic_flow_friction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Supersonic flow with friction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../dataframes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dataframes and plotly</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Coding assignment</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../coding_assignment/coding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Coding assignment</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Examples</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L2 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L3 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L4 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L5 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L6 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L9 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L10 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L12 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L13 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L14 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_15.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L15 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_16.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L16 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_17.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L17 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_18.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L18 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_19.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L19 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_21.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L21 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_22.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L22 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_23.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L23 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_24.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L24 examples</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#problem-1" id="toc-problem-1" class="nav-link active" data-scroll-target="#problem-1">Problem 1</a></li>
+  <li><a href="#problem-2" id="toc-problem-2" class="nav-link" data-scroll-target="#problem-2">Problem 2</a></li>
+  <li><a href="#problem-3" id="toc-problem-3" class="nav-link" data-scroll-target="#problem-3">Problem 3</a></li>
+  <li><a href="#problem-4" id="toc-problem-4" class="nav-link" data-scroll-target="#problem-4">Problem 4</a></li>
+  <li><a href="#problem-5" id="toc-problem-5" class="nav-link" data-scroll-target="#problem-5">Problem 5</a></li>
+  <li><a href="#problem-6" id="toc-problem-6" class="nav-link" data-scroll-target="#problem-6">Problem 6</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Thermodynamics</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="problem-1" class="level2">
+<h2 class="anchored" data-anchor-id="problem-1">Problem 1</h2>
+<p>Carbon dioxide (with a molar mass of <span class="math inline">\(44 \; g/mol\)</span>) behaves like a <strong>semi-perfect gas</strong> at moderate pressures and temperatures. Over the temperature range <span class="math inline">\(\require{color}{\color[rgb]{0.164799,0.878862,0.723179}500^{\circ} \; C}\)</span> to <span class="math inline">\(\require{color}{\color[rgb]{0.164799,0.878862,0.723179}1200^{\circ} \; C}\)</span>, its constant volume specific heat capacity is accurately represented by the linear relation:</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.878548,0.880173,0.060757}c}_{\color[rgb]{0.079785,0.618358,0.483717}V} = \alpha + \beta {\color[rgb]{0.164799,0.878862,0.723179}T}
+\]</span></p>
+<p>where <span class="math inline">\(\alpha=555.65 \; J / \left( kg \cdot K \right)\)</span> and <span class="math inline">\(\beta = 0.392 \; J / \left( kg \cdot K^2 \right)\)</span>. Please note that in the expression above <span class="math inline">\(\require{color}{\color[rgb]{0.164799,0.878862,0.723179}T}\)</span> is in units Kelvin. A quantity of carbon dioxide undergoes a fully resisted expansion in an insulated cylinder. The initial pressure, volume, and temperature are <span class="math inline">\({\color[rgb]{0.315209,0.728565,0.037706}0.3 \; MPa}\)</span>, <span class="math inline">\({\color[rgb]{0.079785,0.618358,0.483717}0.1 \; m^3}\)</span> and <span class="math inline">\({\color[rgb]{0.164799,0.878862,0.723179}950^{\circ} \; C}\)</span> respectively. At the end of the expansion the temperature has fallen to <span class="math inline">\({\color[rgb]{0.164799,0.878862,0.723179}600^{\circ} \; C}\)</span>. You will need the universal gas constant value of <span class="math inline">\(8.3145 \; J / \left( mol \cdot K \right)\)</span>.</p>
+<ol type="a">
+<li><p>Calculate the mass of carbon dioxide in the cylinder.</p></li>
+<li><p>Is the relationship <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p}{\color[rgb]{0.079785,0.618358,0.483717}V}^{\gamma} = constant\)</span> valid for this process?</p></li>
+<li><p>Calculate the final volume and pressure.</p></li>
+<li><p>Determine the work done during the expansion.</p></li>
+</ol>
+<details>
+<summary>
+Solution
+</summary>
+<ol type="a">
+<li>The mass is given by</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+m = \frac{{\color[rgb]{0.315209,0.728565,0.037706}p}V}{ R{\color[rgb]{0.164799,0.878862,0.723179}T}}
+\]</span></p>
+<p>where for carbon dioxide we have</p>
+<p><span class="math display">\[
+\large
+R = \frac{8.3145 \; \frac{J}{mol \cdot K}}{44 \; \frac{g}{mol}} = 0.18896 \frac{J}{g \cdot K} \times \frac{1000 \; g }{kg} = 189 \frac{J}{kg \cdot K}.
+\]</span></p>
+<p>Please note that for both perfect and semi-perfect gases, the ideal gas equation is valid. Thus the mass is given by</p>
+<p><span class="math display">\[
+\large
+\require{color}
+m = {\color[rgb]{0.315209,0.728565,0.037706}0.3 \times 10^6} \times \frac{{\color[rgb]{0.079785,0.618358,0.483717}0.1}}{189 \times \left({\color[rgb]{0.164799,0.878862,0.723179} 950 + 273.15}\right) }=0.130 \; kg
+\]</span></p>
+<ol start="2" type="a">
+<li><p>No the relationship is not constant because this is not a perfect gas (where <span class="math inline">\(\require{color}{\color[rgb]{0.878548,0.880173,0.060757}c}_{\color[rgb]{0.079785,0.618358,0.483717}V}\)</span> is a constant).</p></li>
+<li><p>The first law per unit mass (using specific quantities) is given by</p></li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.334690,0.296180,0.998454}dq} - {\color[rgb]{0.562040,0.190215,0.568721}dw} = {\color[rgb]{0.878548,0.880173,0.060757}du}
+\]</span></p>
+<p>As the cylinder is given to be fully insulated, we assume an adiabatic process, i.e., <span class="math inline">\(\require{color}{\color[rgb]{0.334690,0.296180,0.998454}dq} = 0\)</span>. Additionally as its fully resisted, we have</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.562040,0.190215,0.568721}dw} = {\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.918231,0.469102,0.038229}d \nu}
+\]</span></p>
+<p>where <span class="math inline">\(\require{color}{\color[rgb]{0.918231,0.469102,0.038229}\nu}\)</span> is the specific volume. From these relationships we arrive at</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.918231,0.469102,0.038229}d \nu} + {\color[rgb]{0.878548,0.880173,0.060757}du} = 0
+\]</span></p>
+<p>Recognizing that the internal energy is specific and using the definition of an ideal gas we have</p>
+<p><span class="math display">\[
+\large
+\require{color}
+R{\color[rgb]{0.164799,0.878862,0.723179}T}\frac{{\color[rgb]{0.918231,0.469102,0.038229}d\nu}}{{\color[rgb]{0.918231,0.469102,0.038229}\nu}} + {\color[rgb]{0.878548,0.880173,0.060757}c}_{{\color[rgb]{0.079785,0.618358,0.483717}V}} {\color[rgb]{0.164799,0.878862,0.723179}dT}  = 0
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+\Rightarrow R{\color[rgb]{0.164799,0.878862,0.723179}T}\frac{{\color[rgb]{0.918231,0.469102,0.038229}d\nu}}{{\color[rgb]{0.918231,0.469102,0.038229}\nu}} +  \left( \alpha + \beta {\color[rgb]{0.164799,0.878862,0.723179}T} \right) {\color[rgb]{0.164799,0.878862,0.723179}dT}  = 0
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+\Rightarrow R{\color[rgb]{0.164799,0.878862,0.723179}T}\frac{{\color[rgb]{0.918231,0.469102,0.038229}d\nu}}{{\color[rgb]{0.918231,0.469102,0.038229}\nu}} +   \alpha {\color[rgb]{0.164799,0.878862,0.723179}dT}+ \beta {\color[rgb]{0.164799,0.878862,0.723179}T}  {\color[rgb]{0.164799,0.878862,0.723179}dT}  = 0
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+\Rightarrow R \frac{{\color[rgb]{0.918231,0.469102,0.038229}d\nu}}{{\color[rgb]{0.918231,0.469102,0.038229}\nu}} +   \frac{\alpha}{{\color[rgb]{0.164799,0.878862,0.723179}T}} {\color[rgb]{0.164799,0.878862,0.723179}dT}+ \beta  {\color[rgb]{0.164799,0.878862,0.723179}dT}  = 0
+\]</span></p>
+<p>Now integrating between states 1 and 2 yields</p>
+<p><span class="math display">\[
+\large
+\require{color}
+R \; ln \left( \frac{{\color[rgb]{0.918231,0.469102,0.038229}\nu_2}}{{\color[rgb]{0.918231,0.469102,0.038229}\nu_1}} \right) = \alpha \; ln \left( \frac{{\color[rgb]{0.164799,0.878862,0.723179}T_1}}{{\color[rgb]{0.164799,0.878862,0.723179}T_2}} \right) + \beta \left({\color[rgb]{0.164799,0.878862,0.723179}T_1} - {\color[rgb]{0.164799,0.878862,0.723179}T_2} \right)
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+\Rightarrow ln \left( \frac{{\color[rgb]{0.079785,0.618358,0.483717}V_2}}{{\color[rgb]{0.079785,0.618358,0.483717}V_1}} \right) =  ln \left( \frac{{\color[rgb]{0.918231,0.469102,0.038229}\nu_2}}{{\color[rgb]{0.918231,0.469102,0.038229}\nu_1}} \right) = \frac{\alpha}{R} ln \left( \frac{{\color[rgb]{0.164799,0.878862,0.723179}T_1}}{{\color[rgb]{0.164799,0.878862,0.723179}T_2}} \right) + \frac{\beta}{R} \left({\color[rgb]{0.164799,0.878862,0.723179}T_1} - {\color[rgb]{0.164799,0.878862,0.723179}T_2} \right)
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+= \frac{555.65}{189} \; ln \left(\frac{{\color[rgb]{0.164799,0.878862,0.723179}1223.15}}{{\color[rgb]{0.164799,0.878862,0.723179}873.15}} \right)  + \frac{0.392}{189} \left({\color[rgb]{0.164799,0.878862,0.723179}1223.15} - {\color[rgb]{0.164799,0.878862,0.723179}873.15} \right)
+\]</span></p>
+<p>This leads to</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.079785,0.618358,0.483717}V_2} = 5.567 {\color[rgb]{0.079785,0.618358,0.483717}V_1} \Rightarrow {\color[rgb]{0.079785,0.618358,0.483717}V_2} = {\color[rgb]{0.079785,0.618358,0.483717}0.557 \; m^3}
+\]</span></p>
+<p>Now we can work out the final pressure, i.e.,</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.315209,0.728565,0.037706}p_2} = \frac{mR{\color[rgb]{0.164799,0.878862,0.723179}T_2}}{{\color[rgb]{0.079785,0.618358,0.483717}V_2}} = \frac{0.130 \times 189 \times {\color[rgb]{0.164799,0.878862,0.723179}873.15}}{{\color[rgb]{0.079785,0.618358,0.483717}0.557}} = {\color[rgb]{0.315209,0.728565,0.037706}38.50 \; kPa}
+\]</span></p>
+<ol start="4" type="a">
+<li>The work done during the expansion is given by</li>
+</ol>
+<p><span class="math display">\[
+\require{color}
+\large
+{\color[rgb]{0.562040,0.190215,0.568721}W }= -{\color[rgb]{0.878548,0.880173,0.060757}\Delta U} = - m \int_{1}^{2} {\color[rgb]{0.878548,0.880173,0.060757}c}_{\color[rgb]{0.079785,0.618358,0.483717}V} {\color[rgb]{0.164799,0.878862,0.723179}dT} = m \int_{2}^{1} {\color[rgb]{0.878548,0.880173,0.060757}c}_{\color[rgb]{0.079785,0.618358,0.483717}V} {\color[rgb]{0.164799,0.878862,0.723179}dT} = m \left[ \alpha \left( {\color[rgb]{0.164799,0.878862,0.723179}T_1} - {\color[rgb]{0.164799,0.878862,0.723179}T_2} \right) + \frac{1}{2} \beta \left( {\color[rgb]{0.164799,0.878862,0.723179}T_1}^2 - {\color[rgb]{0.164799,0.878862,0.723179}T_2}^2 \right) \right].
+\]</span></p>
+<p>The numerical solution is given below</p>
+</details>
+<div class="cell" data-execution_count="5">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="fl">0.130</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>T_2 <span class="op">=</span> <span class="dv">600</span> <span class="op">+</span> <span class="fl">273.15</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>T_1 <span class="op">=</span> <span class="dv">950</span> <span class="op">+</span> <span class="fl">273.15</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>alpha <span class="op">=</span> <span class="fl">555.65</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>beta <span class="op">=</span> <span class="fl">0.392</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>W <span class="op">=</span> m <span class="op">*</span> (alpha <span class="op">*</span> (T_1 <span class="op">-</span> T_2) <span class="op">+</span> <span class="fl">0.5</span> <span class="op">*</span> beta <span class="op">*</span> (T_1<span class="op">**</span><span class="dv">2</span> <span class="op">-</span> T_2<span class="op">**</span><span class="dv">2</span>))</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Work done is '</span><span class="op">+</span><span class="bu">str</span>(np.<span class="bu">round</span>(W<span class="op">/</span><span class="dv">1000</span>, <span class="dv">3</span>))<span class="op">+</span><span class="st">' kJ'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Work done is 43.977 kJ</code></pre>
+</div>
+</div>
+</section>
+<section id="problem-2" class="level2">
+<h2 class="anchored" data-anchor-id="problem-2">Problem 2</h2>
+<p>A quantity of argon gas with <span class="math inline">\(\gamma = 1.67\)</span>, initially at <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}1 \; bar}\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.164799,0.878862,0.723179}300 \; K}\)</span> is compressed adiabatically and reversibly (and hence isentropically) to half its initial volume. Calculate the final pressure and temperature.</p>
+<details>
+<summary>
+Solution
+</summary>
+<p>As the question states, the process is isentropic. We can make use of the isentropic relations presented in Lecture 14, i.e.,</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{{\color[rgb]{0.315209,0.728565,0.037706}p_2}}{{\color[rgb]{0.315209,0.728565,0.037706}p_1}} = \left( \frac{{\color[rgb]{0.164799,0.878862,0.723179}V_1}}{{\color[rgb]{0.164799,0.878862,0.723179}V_2}} \right)^{\gamma} \Rightarrow {\color[rgb]{0.315209,0.728565,0.037706}p_2} = {\color[rgb]{0.315209,0.728565,0.037706}p_1} \left( \frac{{\color[rgb]{0.164799,0.878862,0.723179}V_1}}{{\color[rgb]{0.164799,0.878862,0.723179}V_2}} \right)^{\gamma} = {\color[rgb]{0.315209,0.728565,0.037706}1} \times {\color[rgb]{0.079785,0.618358,0.483717}2}^{1.67} = {\color[rgb]{0.315209,0.728565,0.037706}3.18 \; bar}
+\]</span></p>
+<p>and for the temperature, we have</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.164799,0.878862,0.723179}T_2} = {\color[rgb]{0.164799,0.878862,0.723179}T_1} \left( \frac{{\color[rgb]{0.079785,0.618358,0.483717}V_1}}{{\color[rgb]{0.079785,0.618358,0.483717}V_2}} \right)^{\gamma - 1} = {\color[rgb]{0.164799,0.878862,0.723179}300} \times {\color[rgb]{0.079785,0.618358,0.483717}2}^{0.67} = {\color[rgb]{0.164799,0.878862,0.723179}477.3 \; K}
+\]</span></p>
+</details>
+</section>
+<section id="problem-3" class="level2">
+<h2 class="anchored" data-anchor-id="problem-3">Problem 3</h2>
+<p>A polytropic process is defined by the relation</p>
+<p><span class="math display">\[
+\large
+\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p}{\color[rgb]{0.079785,0.618358,0.483717}V}^{n} = k
+\]</span></p>
+<p>where <span class="math inline">\(n\)</span> and <span class="math inline">\(k\)</span> are constants.</p>
+<ol type="a">
+<li>Show that for a fully resisted (i.e.&nbsp;quasi-equilibrium) polytropic expansion or compression of a gas between states 1 and 2, the displacement work done by the gas is given by</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}{\color[rgb]{0.562040,0.190215,0.568721}W} = \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_1} {\color[rgb]{0.079785,0.618358,0.483717}V_1} - {\color[rgb]{0.315209,0.728565,0.037706}p_2} {\color[rgb]{0.079785,0.618358,0.483717}V_2}}{n-1}
+\]</span></p>
+<p>provided <span class="math inline">\(1 \neq n\)</span>.</p>
+<ol start="2" type="a">
+<li>Hence show that for a perfect gas undergoing a polytropic process, the ratio of heat to work transfer is:</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}\frac{{\color[rgb]{0.334690,0.296180,0.998454}Q}}{{\color[rgb]{0.562040,0.190215,0.568721}W}} = \frac{\gamma - n}{\gamma - 1}
+\]</span></p>
+<ol start="3" type="a">
+<li>Use the result of b. to suggest how the value of <span class="math inline">\(n\)</span> is likely to vary with the rate at which the process is undertaken. What happens to <span class="math inline">\(\require{color}{\color[rgb]{0.334690,0.296180,0.998454}Q}\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.562040,0.190215,0.568721}W}\)</span> in the case of an extremely rapid expansion?</li>
+</ol>
+<details>
+<summary>
+Solution
+</summary>
+<ol type="a">
+<li>The displacement work is given by</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.562040,0.190215,0.568721}W} =  \int {\color[rgb]{0.315209,0.728565,0.037706}p} \; {\color[rgb]{0.079785,0.618358,0.483717}dV} = \int_{1}^{2} \frac{k}{{\color[rgb]{0.079785,0.618358,0.483717}V}^n} {\color[rgb]{0.079785,0.618358,0.483717}dV} = k \left[ \frac{{\color[rgb]{0.079785,0.618358,0.483717}V}^{1-n}}{1-n} \right]_{1}^{2} = \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_1} {\color[rgb]{0.079785,0.618358,0.483717}V_1} - {\color[rgb]{0.315209,0.728565,0.037706}p_2} {\color[rgb]{0.079785,0.618358,0.483717}V_2}}{n-1}
+\]</span></p>
+<p>since <span class="math inline">\(\require{color}k = {\color[rgb]{0.315209,0.728565,0.037706}p_1} {\color[rgb]{0.079785,0.618358,0.483717}V_1}^{n} = {\color[rgb]{0.315209,0.728565,0.037706}p_2} {\color[rgb]{0.079785,0.618358,0.483717}V_2}^{n}\)</span>.</p>
+<ol start="2" type="a">
+<li>For a perfect gas <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p}V = mR{\color[rgb]{0.164799,0.878862,0.723179}T}\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.878548,0.880173,0.060757}\Delta U} = m {\color[rgb]{0.878548,0.880173,0.060757}c}_{\color[rgb]{0.079785,0.618358,0.483717}V} {\color[rgb]{0.164799,0.878862,0.723179}\Delta T}\)</span>, which results in</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.562040,0.190215,0.568721}W} = \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_1} {\color[rgb]{0.079785,0.618358,0.483717}V_1} - {\color[rgb]{0.315209,0.728565,0.037706}p_2} {\color[rgb]{0.079785,0.618358,0.483717}V_2}}{n-1} = mR \frac{\left({\color[rgb]{0.164799,0.878862,0.723179}T_1} - {\color[rgb]{0.164799,0.878862,0.723179}T_2}\right)}{n-1}
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.878548,0.880173,0.060757}\Delta U} = m {\color[rgb]{0.878548,0.880173,0.060757}c}_{\color[rgb]{0.079785,0.618358,0.483717}V} \left({\color[rgb]{0.164799,0.878862,0.723179}T_2} - {\color[rgb]{0.164799,0.878862,0.723179}T_1} \right) = m R \frac{\left( {\color[rgb]{0.164799,0.878862,0.723179}T_2} - {\color[rgb]{0.164799,0.878862,0.723179}T_1} \right) }{\left(\gamma - 1\right) }
+\]</span></p>
+<p>This yields</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.334690,0.296180,0.998454}Q} = {\color[rgb]{0.878548,0.880173,0.060757}\Delta U} + {\color[rgb]{0.562040,0.190215,0.568721}W} = m R \left({\color[rgb]{0.164799,0.878862,0.723179}T_1} - {\color[rgb]{0.164799,0.878862,0.723179}T_2} \right) \left[ \frac{1}{n-1} - \frac{1}{\gamma - 1} \right]
+\]</span></p>
+<p>Thus</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{{\color[rgb]{0.334690,0.296180,0.998454}Q}}{{\color[rgb]{0.562040,0.190215,0.568721}W}} = \left[ \frac{1}{n-1} - \frac{1}{\gamma-1} \right] \left(n - 1 \right) = \frac{\gamma - n}{\gamma - 1}
+\]</span></p>
+<ol start="3" type="a">
+<li>For rapid processes, there is no time for heat transfer so <span class="math inline">\(\require{color}{\color[rgb]{0.334690,0.296180,0.998454}Q} = 0\)</span> (adiabatic). Inspection of the above relation then shows <span class="math inline">\(n = γ\)</span>. For very slow processes the system remains in thermal equilibrium with the surroundings, so the process tends towards <em>isothermal</em>. Thus <span class="math display">\[
+\large
+\require{color}
+\frac{{\color[rgb]{0.334690,0.296180,0.998454}Q}}{{\color[rgb]{0.562040,0.190215,0.568721}W}} \rightarrow 1
+\]</span></li>
+</ol>
+and hence <span class="math inline">\(n \rightarrow 1\)</span>. In the case of an extremely rapid expansion, the process is unresisted so no work will be extracted and there will be no time for heat transfer.
+</details>
+</section>
+<section id="problem-4" class="level2">
+<h2 class="anchored" data-anchor-id="problem-4">Problem 4</h2>
+<p>Starting from the first law of Thermodynamics and the definition of entropy</p>
+<ol type="a">
+<li>show that for a reversible process</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.164799,0.878862,0.723179}T} {\color[rgb]{0.599997,0.600015,0.600005}ds} = {\color[rgb]{0.878548,0.880173,0.060757}du} + {\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.918231,0.469102,0.038229}d \nu}
+\]</span></p>
+<ol start="2" type="a">
+<li>Furthermore, using the definition of enthalpy show that</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.164799,0.878862,0.723179}T} {\color[rgb]{0.599997,0.600015,0.600005}ds} = {\color[rgb]{0.986252,0.007236,0.027423}dh} - {\color[rgb]{0.918231,0.469102,0.038229}\nu} {\color[rgb]{0.315209,0.728565,0.037706}dp}
+\]</span></p>
+<ol start="3" type="a">
+<li>Hence show that for a perfect gas moving from a thermodynamic state 1 to another thermodynamic state 2</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.599997,0.600015,0.600005}s_2} - {\color[rgb]{0.599997,0.600015,0.600005}s_1} = {\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} \; ln \left( \frac{{\color[rgb]{0.164799,0.878862,0.723179}T_2}}{{\color[rgb]{0.164799,0.878862,0.723179}T_1}} \right) - R ln \left( \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_2}}{{\color[rgb]{0.315209,0.728565,0.037706}p_1}}  \right)
+\]</span></p>
+<ol start="4" type="a">
+<li>Explain why the equation in (c) can be applied to an irreversible process.</li>
+</ol>
+<details>
+<summary>
+Solution
+</summary>
+<p>Students, carefully note the various assumptions that are made below. Simply providing the equations is not sufficient; reasoning is key.</p>
+<ol type="a">
+<li>From the first law of thermodynamics we have</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.334690,0.296180,0.998454}Q} - {\color[rgb]{0.562040,0.190215,0.568721}W} = {\color[rgb]{0.878548,0.880173,0.060757}\Delta E}
+\]</span></p>
+<p>where the contributions to energy are</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.878548,0.880173,0.060757}\Delta E} = {\color[rgb]{0.878548,0.880173,0.060757}\Delta PE} + {\color[rgb]{0.878548,0.880173,0.060757}\Delta KE} + {\color[rgb]{0.878548,0.880173,0.060757}\Delta U}
+\]</span></p>
+<p>Consider a simple compressible system undergoing an infinitesimal change of state by heat and work interactions with its surroundings. The first law then gives:</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.334690,0.296180,0.998454}\delta Q }- {\color[rgb]{0.562040,0.190215,0.568721}\delta W} = {\color[rgb]{0.878548,0.880173,0.060757}dU}
+\]</span></p>
+<p>From the definition of entropy,</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.334690,0.296180,0.998454}\delta Q }= {\color[rgb]{0.164799,0.878862,0.723179}T}{\color[rgb]{0.599997,0.600015,0.600005}dS}
+\]</span></p>
+<p>and for fully-resisted compression</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.562040,0.190215,0.568721}\delta W} = {\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.079785,0.618358,0.483717}dV}
+\]</span></p>
+<p>so for a reversible process we have:</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.164799,0.878862,0.723179}T}{\color[rgb]{0.599997,0.600015,0.600005}dS} - {\color[rgb]{0.315209,0.728565,0.037706}p}{\color[rgb]{0.079785,0.618358,0.483717}dV} = {\color[rgb]{0.878548,0.880173,0.060757}dU}
+\]</span></p>
+<p>Now, dividing by the mass of the system and re-arranging we arrive at:</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.164799,0.878862,0.723179}T}{\color[rgb]{0.599997,0.600015,0.600005}ds} = {\color[rgb]{0.878548,0.880173,0.060757}du} + {\color[rgb]{0.315209,0.728565,0.037706}p}{\color[rgb]{0.918231,0.469102,0.038229}d \nu}
+\]</span></p>
+<ol start="2" type="a">
+<li>From the definition of enthalpy we have</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.986252,0.007236,0.027423}h} = {\color[rgb]{0.878548,0.880173,0.060757}u} + {\color[rgb]{0.315209,0.728565,0.037706}p}{\color[rgb]{0.918231,0.469102,0.038229} \nu}.
+\]</span></p>
+<p>Computing derivatives, we arrive at</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.986252,0.007236,0.027423}dh} = {\color[rgb]{0.878548,0.880173,0.060757}du} + {\color[rgb]{0.315209,0.728565,0.037706}p}{\color[rgb]{0.918231,0.469102,0.038229}d\nu} {\color[rgb]{0.918231,0.469102,0.038229}\nu} {\color[rgb]{0.315209,0.728565,0.037706}dp}
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+\Rightarrow {\color[rgb]{0.878548,0.880173,0.060757}du} + {\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.918231,0.469102,0.038229}d \nu} = {\color[rgb]{0.986252,0.007236,0.027423}dh} - {\color[rgb]{0.918231,0.469102,0.038229}\nu} {\color[rgb]{0.315209,0.728565,0.037706}dp}
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+\Rightarrow {\color[rgb]{0.164799,0.878862,0.723179}T}{\color[rgb]{0.599997,0.600015,0.600005}ds} = {\color[rgb]{0.986252,0.007236,0.027423}dh} - {\color[rgb]{0.918231,0.469102,0.038229}\nu} {\color[rgb]{0.315209,0.728565,0.037706}dp}
+\]</span></p>
+<ol start="3" type="a">
+<li>For a perfect gas changing reversibly from state 1 to state 2, the above equations apply and also <span class="math inline">\(\require{color}{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p}\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.878548,0.880173,0.060757}c}_{\color[rgb]{0.079785,0.618358,0.483717}V}\)</span> are constant. This leads to</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+\int_{{\color[rgb]{0.599997,0.600015,0.600005}s_1}}^{{\color[rgb]{0.599997,0.600015,0.600005}s_2}} {\color[rgb]{0.599997,0.600015,0.600005}ds} = \int_{{\color[rgb]{0.986252,0.007236,0.027423}h_1}}^{{\color[rgb]{0.986252,0.007236,0.027423}h_2}} \frac{{\color[rgb]{0.986252,0.007236,0.027423}dh}}{{\color[rgb]{0.164799,0.878862,0.723179}T}} - \int_{{\color[rgb]{0.315209,0.728565,0.037706}p_1}}^{{\color[rgb]{0.315209,0.728565,0.037706}p_2}} \frac{{\color[rgb]{0.918231,0.469102,0.038229}\nu} {\color[rgb]{0.315209,0.728565,0.037706}dp}}{{\color[rgb]{0.164799,0.878862,0.723179}T}}
+\]</span></p>
+<p>but by definition <span class="math inline">\(\require{color}{\color[rgb]{0.986252,0.007236,0.027423}dh} = {\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}dT}\)</span>. Additionally, since the ideal gas relation holds for a perfect gas, we can re-write the above as</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\int_{{\color[rgb]{0.599997,0.600015,0.600005}s_1}}^{{\color[rgb]{0.599997,0.600015,0.600005}s_2}} {\color[rgb]{0.599997,0.600015,0.600005}ds} =  {\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} \int_{{\color[rgb]{0.164799,0.878862,0.723179}T_1}}^{{\color[rgb]{0.164799,0.878862,0.723179}T_2}} \frac{{\color[rgb]{0.164799,0.878862,0.723179}dT}}{{\color[rgb]{0.164799,0.878862,0.723179}T}} - R \int_{{\color[rgb]{0.315209,0.728565,0.037706}p_1}}^{{\color[rgb]{0.315209,0.728565,0.037706}p_2}} \frac{{\color[rgb]{0.315209,0.728565,0.037706}dp}}{{\color[rgb]{0.315209,0.728565,0.037706}p}}
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+\Rightarrow {\color[rgb]{0.599997,0.600015,0.600005}s_2} - {\color[rgb]{0.599997,0.600015,0.600005}s_1} = {\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} \; ln \left( \frac{{\color[rgb]{0.164799,0.878862,0.723179}T_2}}{{\color[rgb]{0.164799,0.878862,0.723179}T_1}} \right) - R ln \left( \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_2}}{{\color[rgb]{0.315209,0.728565,0.037706}p_1}}  \right)
+\]</span></p>
+<ol start="4" type="a">
+<li>Because <span class="math inline">\(\require{color}{\color[rgb]{0.599997,0.600015,0.600005}S}, {\color[rgb]{0.164799,0.878862,0.723179}T}\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p}\)</span> are thermodynamic properties, this relation also applies to irreversible processes.</li>
+</ol>
+</details>
+</section>
+<section id="problem-5" class="level2">
+<h2 class="anchored" data-anchor-id="problem-5">Problem 5</h2>
+<p>Consider a closed system containing <span class="math inline">\(1 \; m^3\)</span> of air at a pressure of <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}14.0 \; bar}\)</span> and a temperature of <span class="math inline">\({\color[rgb]{0.164799,0.878862,0.723179}200^{\circ} \; C}\)</span>. The specific heat at consatnt volume may be taken as <span class="math inline">\({\color[rgb]{0.878548,0.880173,0.060757}c}_{\color[rgb]{0.079785,0.618358,0.483717}V} = {\color[rgb]{0.878548,0.880173,0.060757}0.74 \; kJ / (Kg \cdot K )}\)</span>. Please answer the queries below.</p>
+<ol type="a">
+<li><p>What is the mass of the air in the system?</p></li>
+<li><p>If <span class="math inline">\(\require{color}{\color[rgb]{0.334690,0.296180,0.998454}1800 \; kJ}\)</span> of heat is added to the system while its volume remains constant, what is the final pressure and temperature?</p></li>
+<li><p>If <span class="math inline">\(\require{color}{\color[rgb]{0.334690,0.296180,0.998454}1800 \; kJ}\)</span> of heat is added to the system while its pressure remains constant, what is the final volume and temperature?</p></li>
+<li><p>Is there any process possible where the entropy of the system remains constant while receiving heat? Justify your answer.</p></li>
+</ol>
+<details>
+<summary>
+Solution
+</summary>
+<ol type="a">
+<li>The mass of the air can be worked out using the equation of state</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.315209,0.728565,0.037706}p}{\color[rgb]{0.079785,0.618358,0.483717}V} = m R{\color[rgb]{0.164799,0.878862,0.723179}T} \; \; \Rightarrow \; \; m = \frac{{\color[rgb]{0.315209,0.728565,0.037706}p}{\color[rgb]{0.079785,0.618358,0.483717}V}}{R{\color[rgb]{0.164799,0.878862,0.723179}T}}
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+m = \frac{14 \times 10^5 \times 1}{287 \times 473} = 10.313 \; kg
+\]</span></p>
+<ol start="2" type="a">
+<li>From the first law, we have</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.334690,0.296180,0.998454}Q} - {\color[rgb]{0.562040,0.190215,0.568721}W} = {\color[rgb]{0.878548,0.880173,0.060757}\Delta U} = m{\color[rgb]{0.878548,0.880173,0.060757}c}_{{\color[rgb]{0.079785,0.618358,0.483717}V}} {\color[rgb]{0.164799,0.878862,0.723179}\Delta T}
+\]</span></p>
+<p>where we note that <span class="math inline">\(\require{color}{\color[rgb]{0.562040,0.190215,0.568721}W} = 0\)</span>. This leads to</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\Delta T = \frac{{\color[rgb]{0.334690,0.296180,0.998454}1800}}{10.313 \times {\color[rgb]{0.878548,0.880173,0.060757}0.74}} = {\color[rgb]{0.164799,0.878862,0.723179}235.86\; K}
+\]</span></p>
+<p>This implies that</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.164799,0.878862,0.723179}T_2} = {\color[rgb]{0.164799,0.878862,0.723179}235.86} + \left({\color[rgb]{0.164799,0.878862,0.723179}200} + {\color[rgb]{0.164799,0.878862,0.723179}273}\right) = {\color[rgb]{0.164799,0.878862,0.723179}708.86 \; K}
+\]</span></p>
+<p>Now for an isochoric process we can write</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{{\color[rgb]{0.315209,0.728565,0.037706}p_2}}{{\color[rgb]{0.315209,0.728565,0.037706}p_1}} = \frac{{\color[rgb]{0.164799,0.878862,0.723179}T_2}}{{\color[rgb]{0.164799,0.878862,0.723179}T_1}} \Rightarrow \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_2}}{{\color[rgb]{0.315209,0.728565,0.037706}14}} = \frac{{\color[rgb]{0.164799,0.878862,0.723179}708.86}}{{\color[rgb]{0.164799,0.878862,0.723179}473}} \Rightarrow {\color[rgb]{0.315209,0.728565,0.037706}p_2} = {\color[rgb]{0.315209,0.728565,0.037706}20.98 \; bar}.
+\]</span></p>
+<ol start="3" type="a">
+<li>Here we have:</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.334690,0.296180,0.998454}Q} = m {\color[rgb]{0.315209,0.728565,0.037706}c}_{\color[rgb]{0.986252,0.007236,0.027423}p} {\color[rgb]{0.164799,0.878862,0.723179}\Delta T} \; \; \; \; \; {\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} = R + {\color[rgb]{0.878548,0.880173,0.060757}c}_{\color[rgb]{0.079785,0.618358,0.483717}V}
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} = 0.287 + {\color[rgb]{0.878548,0.880173,0.060757}0.74} = {\color[rgb]{0.986252,0.007236,0.027423}1.027 \; \frac{kJ}{kg \cdot K}}
+\]</span></p>
+<p>From this we can compute</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.164799,0.878862,0.723179}\Delta T} = \frac{{\color[rgb]{0.334690,0.296180,0.998454}1800}}{10.313 \times {\color[rgb]{0.986252,0.007236,0.027423}1.027}} \Rightarrow {\color[rgb]{0.164799,0.878862,0.723179}\Delta T} = {\color[rgb]{0.164799,0.878862,0.723179}169.95}
+\]</span></p>
+<p>This leads to</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.164799,0.878862,0.723179}T_2} = {\color[rgb]{0.164799,0.878862,0.723179}642.95 \; K}
+\]</span></p>
+<p>To work out the volume for an isobaric process we make use of the equation of state</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{{\color[rgb]{0.079785,0.618358,0.483717}V_2}}{{\color[rgb]{0.079785,0.618358,0.483717}V_1}} = \frac{{\color[rgb]{0.164799,0.878862,0.723179}T_2}}{{\color[rgb]{0.164799,0.878862,0.723179}T_1}} \Rightarrow {\color[rgb]{0.079785,0.618358,0.483717}V_2} = \frac{{\color[rgb]{0.079785,0.618358,0.483717}1} \times {\color[rgb]{0.164799,0.878862,0.723179}642.95}}{{\color[rgb]{0.164799,0.878862,0.723179}473}} = {\color[rgb]{0.079785,0.618358,0.483717}1.36} \;{\color[rgb]{0.079785,0.618358,0.483717} m^3}
+\]</span></p>
+<ol start="4" type="a">
+<li>From the Clausius inequality,</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.599997,0.600015,0.600005}dS} = \frac{{\color[rgb]{0.334690,0.296180,0.998454}dQ_{rev}}}{{\color[rgb]{0.164799,0.878862,0.723179}T}} + {\color[rgb]{0.599997,0.600015,0.600005}dS_{irrev}}
+\]</span></p>
+<p>it is clear that since heat is being added, $ &gt; 0 $ entropy cannot remain constant.</p>
+</details>
+</section>
+<section id="problem-6" class="level2">
+<h2 class="anchored" data-anchor-id="problem-6">Problem 6</h2>
+<p>On a T-s diagram, draw, clearly label, and justify the trends for the following involving a perfect gas</p>
+<ol type="i">
+<li><p>constant enthalpy</p></li>
+<li><p>constant pressure</p></li>
+<li><p>constant density</p></li>
+<li><p>reversible and adiabatic.</p></li>
+</ol>
+<details>
+<summary>
+Solution
+</summary>
+<p>Please see the diagram below.</p>
+<p><img src="images/image_P7_1.png" alt="cycle" width="500"></p>
+<ol type="i">
+<li><p>For a perfect gas, <span class="math inline">\(\require{color}{\color[rgb]{0.986252,0.007236,0.027423}h} = {\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T} + constant\)</span>. Hence, a constant <span class="math inline">\(\require{color}{\color[rgb]{0.986252,0.007236,0.027423}h}\)</span> line is a constant <span class="math inline">\(\require{color}{\color[rgb]{0.164799,0.878862,0.723179}T}\)</span> line.</p></li>
+<li><p>We know that for a constant pressure process</p></li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.164799,0.878862,0.723179}T}{\color[rgb]{0.599997,0.600015,0.600005}ds} = {\color[rgb]{0.986252,0.007236,0.027423}dh} - {\color[rgb]{0.918231,0.469102,0.038229}\nu} {\color[rgb]{0.315209,0.728565,0.037706}dp} = {\color[rgb]{0.986252,0.007236,0.027423}dh}
+\]</span></p>
+<p>So for a perfect gas</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.986252,0.007236,0.027423}dh} = {\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}dT} \Rightarrow \frac{{\color[rgb]{0.164799,0.878862,0.723179}dT}}{{\color[rgb]{0.599997,0.600015,0.600005}ds}} = \frac{{\color[rgb]{0.164799,0.878862,0.723179}T}}{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p}}
+\]</span></p>
+<p>we anticipate a curve with a positive slope with the gradient increasing with temperature.</p>
+<ol start="3" type="i">
+<li>For a constant volume process, using the same process as above we can derive (see Lecture 17 for more background)</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+\mathsf{\frac{{\color[rgb]{0.164799,0.878862,0.723179}dT}}{{\color[rgb]{0.599997,0.600015,0.600005}ds}} = \frac{{\color[rgb]{0.164799,0.878862,0.723179}T}}{{\color[rgb]{0.878548,0.880173,0.060757}c}_{\color[rgb]{0.079785,0.618358,0.483717}V}} }
+\]</span></p>
+<p>where <span class="math inline">\({\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} &gt; {\color[rgb]{0.878548,0.880173,0.060757}c}_{\color[rgb]{0.079785,0.618358,0.483717}V}\)</span>, and thus the trend for this is the same as in ii but with an increased gradient.</p>
+<ol start="4" type="i">
+<li>This is equivalent to an isentropic process, which is a vertical line.</li>
+</ol>
+</details>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../practice_problems/incompressible_fluid_mechanics.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Incompressible fluid mechanics</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../practice_problems/compressible_fluid_mechanics.html" class="pagination-link">
+        <span class="nav-page-text">Compressible fluid mechanics</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>
