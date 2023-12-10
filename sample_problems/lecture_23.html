@@ -397,6 +397,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#problem-1" id="toc-problem-1" class="nav-link active" data-scroll-target="#problem-1">Problem 1</a></li>
+  <li><a href="#problem-2" id="toc-problem-2" class="nav-link" data-scroll-target="#problem-2">Problem 2</a></li>
   </ul>
 </nav>
     </div>
@@ -462,6 +463,83 @@ tan \left( {\color[rgb]{0.131302,0.999697,0.023594}\beta} \right) = \frac{h}{l} 
 \require{color}
 \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{02}}}{{\color[rgb]{0.315209,0.728565,0.037706}p_{01}}} = \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{02}}}{{\color[rgb]{0.315209,0.728565,0.037706}p_{0b}}} \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{0b}}}{{\color[rgb]{0.315209,0.728565,0.037706}p_{0a}}} \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{0a}}}{{\color[rgb]{0.315209,0.728565,0.037706}p_{01}}}  = 0.97093 \times 0.9875 \times 0.98812 = 0.9473
 \]</span></p>
+</details>
+</section>
+<section id="problem-2" class="level2">
+<h2 class="anchored" data-anchor-id="problem-2">Problem 2</h2>
+<p>The figure below shows a Prandtl-Meyer expansion fan, with an upstream Mach number of <span class="math inline">\(\mathsf{1.86}\)</span> and a flow deflection angle of <span class="math inline">\(\mathsf{20^{\circ}}\)</span>. You may find the table useful, along with its corresponding identity</p>
+<p><img src="images/image_L23_6.png" alt="plane" width="800"></p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.986252,0.007236,0.027423}\nu} \left( {\color[rgb]{0.041732,0.352132,0.699576}M} \right) = \sqrt{\frac{\gamma + 1}{\gamma - 1}} tan^{-1}\left(\sqrt{\frac{\gamma - 1}{\gamma + 1} \left( {\color[rgb]{0.041732,0.352132,0.699576}M}^2 - 1\right) } \right) - tan^{-1}\left( \sqrt{{\color[rgb]{0.041732,0.352132,0.699576}M}^2 - 1} \right).
+\]</span></p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Mach number</th>
+<th><span class="math inline">\(\nu\)</span> (all in degrees)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2.25</td>
+<td>33.018</td>
+</tr>
+<tr class="even">
+<td>2.35</td>
+<td>35.525</td>
+</tr>
+<tr class="odd">
+<td>2.45</td>
+<td>37.945</td>
+</tr>
+<tr class="even">
+<td>2.55</td>
+<td>40.279</td>
+</tr>
+<tr class="odd">
+<td>2.65</td>
+<td>42.529</td>
+</tr>
+<tr class="even">
+<td>2.75</td>
+<td>44.694</td>
+</tr>
+<tr class="odd">
+<td>2.85</td>
+<td>46.778</td>
+</tr>
+</tbody>
+</table>
+<ol type="a">
+<li><p>Calculate the downstream Mach number, <span class="math inline">\({\color[rgb]{0.041732,0.352132,0.699576}M_2}\)</span></p></li>
+<li><p>How does the static density, static pressure and static enthalpy vary across the expansion fan?</p></li>
+<li><p>Is the stagnation pressure constant across an expansion fan?</p></li>
+</ol>
+<details>
+<summary>
+Solution
+</summary>
+<ol type="a">
+<li>Plugging in a value of <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}M_1} = {\color[rgb]{0.041732,0.352132,0.699576}1.86}\)</span> in the formula above, yields <span class="math inline">\(\require{color}{\color[rgb]{0.986252,0.007236,0.027423}\nu_1} = {\color[rgb]{0.986252,0.007236,0.027423}0.3918}\)</span>. Note that this value is in radians; to convert it to degrees, we have</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.986252,0.007236,0.027423}\nu_1} = {\color[rgb]{0.986252,0.007236,0.027423}0.3918} \; \; \Rightarrow \; \; {\color[rgb]{0.986252,0.007236,0.027423}\nu_1}= {\color[rgb]{0.986252,0.007236,0.027423}0.3918} \times \frac{180}{\pi} = 22.44^{\circ}
+\]</span></p>
+<p>Now, from the problem description, we know that <span class="math inline">\(\mathsf{\theta = 20^{\circ}}\)</span>. Thus,</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\theta = {\color[rgb]{0.986252,0.007236,0.027423}\nu_2} - {\color[rgb]{0.986252,0.007236,0.027423}\nu_1} \; \; \Rightarrow \; \; {\color[rgb]{0.986252,0.007236,0.027423}\nu_2} = \theta + {\color[rgb]{0.986252,0.007236,0.027423}\nu_1} = 42.44^{\circ}
+\]</span></p>
+<p>From the table above, we know that <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}M_2} \approx {\color[rgb]{0.041732,0.352132,0.699576}2.65}\)</span>.</p>
+<ol start="2" type="a">
+<li><p>The static density decreases, the static pressure decreases, and the static enthalpy also decreases</p></li>
+<li><p>Yes, the stagnation pressure stays constant.</p></li>
+</ol>
 </details>
 
 
