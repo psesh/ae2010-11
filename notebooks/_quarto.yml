@@ -58,9 +58,6 @@ website:
           - normal_shocks.ipynb
           - supersonic_flow_friction.ipynb
           - dataframes.ipynb
-      - section: "Coding assignment"
-        contents: 
-          - coding_assignment/coding.ipynb
       - section: "Examples"
         contents:
           - sample_problems/lecture_2.ipynb
