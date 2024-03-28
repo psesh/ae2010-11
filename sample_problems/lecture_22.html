@@ -22,40 +22,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -379,6 +345,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_20.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L20 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../sample_problems/lecture_21.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">L21 examples</span></a>
   </div>
@@ -393,12 +365,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../sample_problems/lecture_23.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">L23 examples</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../sample_problems/lecture_24.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">L24 examples</span></a>
   </div>
 </li>
       </ul>
@@ -423,7 +389,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">L22 examples</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
+<h1 class="title">L22 examples</h1>
 </div>
 
 
@@ -440,164 +406,124 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="problem-1" class="level2">
 <h2 class="anchored" data-anchor-id="problem-1">Problem 1</h2>
-<p>Calculate the flow conditions downstream of a shock with the following upstream properties:</p>
-<p><span class="math display">\[
-\require{color}
-{\color[rgb]{0.041732,0.352132,0.699576}M_1} = {\color[rgb]{0.041732,0.352132,0.699576}1.5}, \; \; \; {\color[rgb]{0.315209,0.728565,0.037706}p_1} = {\color[rgb]{0.315209,0.728565,0.037706}100 \; kPa}, \; \; \; {\color[rgb]{0.164799,0.878862,0.723179}T_1} = {\color[rgb]{0.164799,0.878862,0.723179}300 K}
-\]</span></p>
-<p>Assume the value of <span class="math inline">\(\gamma\)</span> is <span class="math inline">\(1.4\)</span>.</p>
-<p><img src="images/image_L22_1.png" alt="cycle" width="500"></p>
-<p>(image above from <em>An album of fluid motion</em> by Milton Van Dyke)</p>
+<p>Consider the engine of the supersonic aircraft, the concorde. A schematic of the engine is given below. For an intake in such an aircraft, the flow must be decelerated to subsonic speeds before it enters the compressor.</p>
+<p><img src="images/image_L23_1.png" alt="plane" width="200"></p>
+<p>(image above from Unsplash by Lynn Kintziger)</p>
+<p><img src="images/image_L23_2.png" alt="plane" width="500"></p>
+<ol type="a">
+<li><p>Calculate <span class="math inline">\(M_2\)</span>.</p></li>
+<li><p>Express the distance <span class="math inline">\(l\)</span> as a function of <span class="math inline">\(h\)</span>.</p></li>
+<li><p>Find the fractional loss in stagnation pressure.</p></li>
+</ol>
+<p>Assume <span class="math inline">\(\gamma=1.4\)</span>.</p>
 <details>
 <summary>
 Solution
 </summary>
-<p>We will approach this problem using two approaches. In the first approach we shall make use of the normal shock formulas. From Lecture, we know that</p>
+<ol type="a">
+<li>First, we amend the diagram with regions <span class="math inline">\((a)\)</span> and <span class="math inline">\((b)\)</span> as shown below.</li>
+</ol>
+<p><img src="images/image_L23_2b.png" alt="plane" width="400"></p>
+<p>Consider the oblique shock tables with an inlet Mach number of <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}M_1} = {\color[rgb]{0.041732,0.352132,0.699576}2.15}, \; \; \theta = 12^{\circ}\)</span>. As shown below, this leads to an exit Mach number of <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}M_a} = {\color[rgb]{0.041732,0.352132,0.699576}1.7011}\)</span> and a wave angle of <span class="math inline">\(\require{color}{\color[rgb]{0.131302,0.999697,0.023594}\beta} = {\color[rgb]{0.131302,0.999697,0.023594}38.72^{\circ}}\)</span>. This is just for the first shock.</p>
+<p><img src="images/image_L23_3.png" alt="plane" width="500"></p>
+<p>For the second shock we are given the wedge angle to be <span class="math inline">\(\theta = 10^{\circ}\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}M_2} = {\color[rgb]{0.041732,0.352132,0.699576}1.7011}\)</span>. Once again consulting the tables (see below) we arrive at <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}M_b} = {\color[rgb]{0.041732,0.352132,0.699576}1.347}\)</span>. Note that this corresponds to the supersonic solution and not the subsonic one.</p>
+<p><img src="images/image_L23_4.png" alt="plane" width="500"></p>
+<p>The third and final shock has a wedge angle given by <span class="math inline">\(\theta = 22^{\circ} - 14^{\circ} = 8^{\circ}\)</span>. At this wedge angle, we once again take the first (or the weaker) solution, which yields <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}M_2} = {\color[rgb]{0.041732,0.352132,0.699576}0.95}\)</span>.</p>
+<p><img src="images/image_L23_5.png" alt="plane" width="500"></p>
+<ol start="2" type="a">
+<li>Next, to work out the relationship between <span class="math inline">\(h\)</span> and <span class="math inline">\(l\)</span> we note that</li>
+</ol>
 <p><span class="math display">\[
-\require{color}
 \large
-{\color[rgb]{0.041732,0.352132,0.699576}M_2}^2 = \frac{1 + \frac{\gamma - 1}{2}{\color[rgb]{0.041732,0.352132,0.699576}M_1}^2}{\gamma {\color[rgb]{0.041732,0.352132,0.699576}M_1}^2 - \frac{\gamma-1}{2}}
+\require{color}
+tan \left( {\color[rgb]{0.131302,0.999697,0.023594}\beta} \right) = \frac{h}{l} \Rightarrow tan \left({\color[rgb]{0.131302,0.999697,0.023594}38.702^{\circ}}\right) = \frac{h}{l} \Rightarrow l = 1.25 h
 \]</span></p>
+<ol start="3" type="a">
+<li>To work out the pressure losses, we make use of the stagnation pressure ratios:</li>
+</ol>
 <p><span class="math display">\[
-\require{color}
 \large
-{\color[rgb]{0.041732,0.352132,0.699576}M_2}^2 = \frac{1 + \frac{1.4 - 1}{2}{\color[rgb]{0.041732,0.352132,0.699576}1.5}^2}{1.4 \times {\color[rgb]{0.041732,0.352132,0.699576}1.5}^2 - \frac{1.4-1}{2}}
-\]</span></p>
-<p>This leads to</p>
-<p><span class="math display">\[
 \require{color}
-\large
-{\color[rgb]{0.041732,0.352132,0.699576}M_2} = 0.7011.
+\frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{02}}}{{\color[rgb]{0.315209,0.728565,0.037706}p_{01}}} = \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{02}}}{{\color[rgb]{0.315209,0.728565,0.037706}p_{0b}}} \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{0b}}}{{\color[rgb]{0.315209,0.728565,0.037706}p_{0a}}} \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{0a}}}{{\color[rgb]{0.315209,0.728565,0.037706}p_{01}}}  = 0.97093 \times 0.9875 \times 0.98812 = 0.9473
 \]</span></p>
-<p>To work out the static pressure we have:</p>
-<p><span class="math display">\[
-\require{color}
-\large
-\frac{{\color[rgb]{0.315209,0.728565,0.037706}p_2}}{{\color[rgb]{0.315209,0.728565,0.037706}p_1}} = \frac{2 \gamma}{\gamma + 1} {\color[rgb]{0.041732,0.352132,0.699576}M_1}^2 - \frac{\gamma - 1}{\gamma + 1}
-\]</span></p>
-<p><span class="math display">\[
-\require{color}
-\large
-\Rightarrow \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_2}}{{\color[rgb]{0.315209,0.728565,0.037706}p_1}} = \frac{2 \times 1.4}{1.4 + 1} {\color[rgb]{0.041732,0.352132,0.699576}1.5}^2 - \frac{1.4 - 1}{1.4 + 1} = 2.4583
-\]</span></p>
-<p><span class="math display">\[
-\require{color}
-\large
-\Rightarrow {\color[rgb]{0.315209,0.728565,0.037706}p_2} = 2.4583 \times {\color[rgb]{0.315209,0.728565,0.037706}100 \; kPa} =  {\color[rgb]{0.315209,0.728565,0.037706}245.83 \; kPa}
-\]</span></p>
-<p>Finally, to work out the static temperature we use</p>
-<p><span class="math display">\[
-\require{color}
-\large
-\frac{{\color[rgb]{0.164799,0.878862,0.723179}T_2}}{{\color[rgb]{0.164799,0.878862,0.723179}T_1}} = \frac{\left( 1 + \frac{\gamma - 1}{2}{\color[rgb]{0.041732,0.352132,0.699576}M_1}^2\right) \left( \frac{2 \gamma}{\gamma - 1} {\color[rgb]{0.041732,0.352132,0.699576}M_1}^2 - 1 \right) }{\frac{\left(\gamma + 1 \right)^2}{2 \left(\gamma - 1 \right){\color[rgb]{0.041732,0.352132,0.699576}M_1}^2 }}
-\]</span></p>
-<p><span class="math display">\[
-\require{color}
-\large
-\Rightarrow \frac{{\color[rgb]{0.164799,0.878862,0.723179}T_2}}{{\color[rgb]{0.164799,0.878862,0.723179}T_1}} = \frac{\left( 1 + \frac{1.4 - 1}{2}{\color[rgb]{0.041732,0.352132,0.699576}1.5}^2\right) \left( \frac{2 \times 1.4}{1.4 - 1} {\color[rgb]{0.041732,0.352132,0.699576}1.5}^2 - 1 \right) }{\frac{\left(1.4 + 1 \right)^2}{2 \left(1.4 - 1 \right) \times {\color[rgb]{0.041732,0.352132,0.699576}1.5}^2 }}
-\]</span></p>
-<p><span class="math display">\[
-\require{color}
-\large
-\Rightarrow \frac{{\color[rgb]{0.164799,0.878862,0.723179}T_2}}{{\color[rgb]{0.164799,0.878862,0.723179}T_1}} = 1.3202
-\]</span></p>
-<p><span class="math display">\[
-\require{color}
-\large
-\Rightarrow {\color[rgb]{0.164799,0.878862,0.723179}T_2} = 1.3202 \times {\color[rgb]{0.164799,0.878862,0.723179}300 \; K} = {\color[rgb]{0.164799,0.878862,0.723179}396.06\; K}
-\]</span></p>
-<p>Alternatively, we can make use of the gas flow table; see below.</p>
-<p><img src="images/image_L22_2.png" alt="cycle" width="700"></p>
-<p>You will be provided these tables (or a relevant portion thereof) for solving such a problem. The one shown above is for supersonic flows, i.e., where the Mach number is greater than unity. A similar one exists for subsonic flows, however it has far fewer columns (see Problem 2) as it does not include any shock relations.</p>
-<p>There are a few points to note regarding the columns of such a table. The first column is the Mach number, but just because it is supersonic doesn’t imply that there will be a shock. When there is no shock, the flow is still considered isentropic, and thus one can use the isentropic flow relations to work out static-to-stagnation ratios. This corresponds to the columns 2 to 4 (inclusive). The column with <span class="math inline">\(M_s\)</span> and the four columns thereafter correspond to a scenario where there is a normal shock; the subscript <span class="math inline">\(s\)</span> denotes shock. To clarify, <span class="math inline">\(M_s\)</span> is the post-shock Mach number, <span class="math inline">\(P_{0s} / P_{0}\)</span> is the ratio of the stagnation pressure post-shock vs the stagnation pressure pre-shock, and so on. The values we have computed above using the normal shock relations are highlighted and shown within rectangles for clarity.</p>
 </details>
 </section>
 <section id="problem-2" class="level2">
 <h2 class="anchored" data-anchor-id="problem-2">Problem 2</h2>
-<p>Consider the converging diverging duct shown below. The ratio of the exit static pressure to the inlet stagnation pressure is <span class="math inline">\(0.7\)</span>. Assuming the throat is choked and that there is a shock in the diverging section, calculate</p>
-<ul>
-<li>the exit Mach number</li>
-<li>the strength of the shock.</li>
-</ul>
-<p><img src="images/image_L22_3.png" alt="cycle" width="700"></p>
+<p>The figure below shows a Prandtl-Meyer expansion fan, with an upstream Mach number of <span class="math inline">\(\mathsf{1.86}\)</span> and a flow deflection angle of <span class="math inline">\(\mathsf{20^{\circ}}\)</span>. You may find the table useful, along with its corresponding identity</p>
+<p><img src="images/image_L23_6.png" alt="plane" width="800"></p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.986252,0.007236,0.027423}\nu} \left( {\color[rgb]{0.041732,0.352132,0.699576}M} \right) = \sqrt{\frac{\gamma + 1}{\gamma - 1}} tan^{-1}\left(\sqrt{\frac{\gamma - 1}{\gamma + 1} \left( {\color[rgb]{0.041732,0.352132,0.699576}M}^2 - 1\right) } \right) - tan^{-1}\left( \sqrt{{\color[rgb]{0.041732,0.352132,0.699576}M}^2 - 1} \right).
+\]</span></p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Mach number</th>
+<th><span class="math inline">\(\nu\)</span> (all in degrees)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2.25</td>
+<td>33.018</td>
+</tr>
+<tr class="even">
+<td>2.35</td>
+<td>35.525</td>
+</tr>
+<tr class="odd">
+<td>2.45</td>
+<td>37.945</td>
+</tr>
+<tr class="even">
+<td>2.55</td>
+<td>40.279</td>
+</tr>
+<tr class="odd">
+<td>2.65</td>
+<td>42.529</td>
+</tr>
+<tr class="even">
+<td>2.75</td>
+<td>44.694</td>
+</tr>
+<tr class="odd">
+<td>2.85</td>
+<td>46.778</td>
+</tr>
+</tbody>
+</table>
+<ol type="a">
+<li><p>Calculate the downstream Mach number, <span class="math inline">\({\color[rgb]{0.041732,0.352132,0.699576}M_2}\)</span></p></li>
+<li><p>How does the static density, static pressure and static enthalpy vary across the expansion fan?</p></li>
+<li><p>Is the stagnation pressure constant across an expansion fan?</p></li>
+</ol>
 <details>
 <summary>
 Solution
 </summary>
-<p>To begin, consider the last row of the subsonic tables. These are shown below.</p>
-<p><img src="images/image_L22_4.png" alt="cycle" width="700"></p>
-<p>Consider the column for the non-dimensional flow function</p>
+<ol type="a">
+<li>Plugging in a value of <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}M_1} = {\color[rgb]{0.041732,0.352132,0.699576}1.86}\)</span> in the formula above, yields <span class="math inline">\(\require{color}{\color[rgb]{0.986252,0.007236,0.027423}\nu_1} = {\color[rgb]{0.986252,0.007236,0.027423}0.3918}\)</span>. Note that this value is in radians; to convert it to degrees, we have</li>
+</ol>
 <p><span class="math display">\[
 \large
 \require{color}
-\frac{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_0} }}{A {\color[rgb]{0.315209,0.728565,0.037706}p_0}}
+{\color[rgb]{0.986252,0.007236,0.027423}\nu_1} = {\color[rgb]{0.986252,0.007236,0.027423}0.3918} \; \; \Rightarrow \; \; {\color[rgb]{0.986252,0.007236,0.027423}\nu_1}= {\color[rgb]{0.986252,0.007236,0.027423}0.3918} \times \frac{180}{\pi} = 22.44^{\circ}
 \]</span></p>
-<p>One can imagine that as the area changes within a duct, the Mach number will also change. However, assuming there is no shock, the stagnation pressure will stay the same; the stagnation temperature will also stay the same (even if there is a shock). So will the massflow rate (conservation) and <span class="math inline">\(\require{color}{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p}\)</span>. Thus, this column is useful for understanding the relationship between the area and the Mach number. From the highlighted row in the table, we can write</p>
+<p>Now, from the problem description, we know that <span class="math inline">\(\mathsf{\theta = 20^{\circ}}\)</span>. Thus,</p>
 <p><span class="math display">\[
 \large
 \require{color}
-\frac{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_0} }}{A_{\star} {\color[rgb]{0.315209,0.728565,0.037706}p_0}} = 1.281
+\theta = {\color[rgb]{0.986252,0.007236,0.027423}\nu_2} - {\color[rgb]{0.986252,0.007236,0.027423}\nu_1} \; \; \Rightarrow \; \; {\color[rgb]{0.986252,0.007236,0.027423}\nu_2} = \theta + {\color[rgb]{0.986252,0.007236,0.027423}\nu_1} = 42.44^{\circ}
 \]</span></p>
-<p>where <span class="math inline">\(A_{\star}\)</span> denotes the area where the flow chokes. Given that the area at the exit is twice of the area at the throat, and given the pressure ratio we have</p>
-<p><span class="math display">\[
-\large
-\require{color}
-\frac{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_0} }}{A_{exit} {\color[rgb]{0.315209,0.728565,0.037706}p_{exit}}} = \frac{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_0} }}{A_{\star} {\color[rgb]{0.315209,0.728565,0.037706}p_0}} \times \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_0}}{{\color[rgb]{0.315209,0.728565,0.037706}p_{exit}}} \times \frac{A_{\star}}{A_{exit}}
-\]</span></p>
-<p><span class="math display">\[
-\large
-\require{color}
-\Rightarrow \frac{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_0} }}{A_{exit} {\color[rgb]{0.315209,0.728565,0.037706}p_{exit}}} = 1.281 \times \frac{1}{0.7} \times
-\frac{1}{2} = 0.915
-\]</span></p>
-<p>where note that the denominator has <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p_{exit}}\)</span> which is a static pressure.</p>
-<p><img src="images/image_L22_5.png" alt="cycle" width="700"></p>
-<p>Using the tables again, we find that this value of <span class="math inline">\(0.915\)</span> lies between <span class="math inline">\(0.8995\)</span> and <span class="math inline">\(0.9227\)</span>, implying that the <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}M_{exit}}\)</span> has values between <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}0.40}\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}0.41}\)</span>. To work out exactly what this value is, we must interpolate; from the block of code below the corresponding exit Mach number is found to be <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}0.407}\)</span>.</p>
-<p>Next, to work out the strength of the shock, i.e., its Mach number, we recognize that across the shock there will be a drop in the stagnation pressure. The stagnation pressure downstream of the shock will be the same stagnation pressure at the exit.</p>
-<p><span class="math display">\[
-\large
-\require{color}
-\frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{0,exit} }}{{\color[rgb]{0.315209,0.728565,0.037706}p_{0} }} = \frac{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_0} }}{A_{\star} {\color[rgb]{0.315209,0.728565,0.037706}p_{0}}} \times \frac{A_{\star}}{A_{exit}} \times \frac{A_{exit} {\color[rgb]{0.315209,0.728565,0.037706}p_{0,exit}}}{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_0} }} = 1.281 \times \frac{1}{2} \times \frac{1}{0.817} = 0.784
-\]</span></p>
-<p>Note that the stagnation pressure at the throat is the same as the stagnation pressure at the inlet. The value of <span class="math inline">\(0.817\)</span> arises by interpolating between the two highlighted flow capacities (stagnation pressure in the denominator).</p>
-<p>Finally, we can use this value of the stagnation pressure ratio to work out the Mach number of the shock, using the table below.</p>
-<p><img src="images/image_L22_6.png" alt="cycle" width="700"></p>
-<p>Studying the last column, we note that the Mach number of the shock has to lie between <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}1.86}\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}1.87}\)</span>. With a spot of interpolation the value calculated is <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}M_{shock}} = {\color[rgb]{0.041732,0.352132,0.699576}1.867}\)</span>.</p>
+<p>From the table above, we know that <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}M_2} \approx {\color[rgb]{0.041732,0.352132,0.699576}2.65}\)</span>.</p>
+<ol start="2" type="a">
+<li><p>The static density decreases, the static pressure decreases, and the static enthalpy also decreases</p></li>
+<li><p>Yes, the stagnation pressure stays constant.</p></li>
+</ol>
 </details>
-<div class="cell" data-execution_count="3">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Block of code for linear interpolation</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>Mach_exit_A <span class="op">=</span> <span class="fl">0.40</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>Mach_exit_B <span class="op">=</span> <span class="fl">0.410</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>capacity_A <span class="op">=</span> <span class="fl">0.8995</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>capacity_B <span class="op">=</span> <span class="fl">0.9227</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>capacity_C <span class="op">=</span> <span class="fl">0.915</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>slope <span class="op">=</span> (Mach_exit_A <span class="op">-</span> Mach_exit_B) <span class="op">/</span> (capacity_A <span class="op">-</span> capacity_B)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>shift <span class="op">=</span> Mach_exit_A <span class="op">-</span> slope <span class="op">*</span> capacity_A</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>capacities <span class="op">=</span> np.linspace(capacity_A, capacity_B, <span class="dv">100</span>)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>Mach_exit <span class="op">=</span> slope <span class="op">*</span> capacities <span class="op">+</span> shift</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>plt.plot(capacities, Mach_exit, <span class="st">'-'</span>)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Flow capacities'</span>)</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Exit Mach number'</span>)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>Mach_exit_C <span class="op">=</span> slope <span class="op">*</span> capacity_C <span class="op">+</span> shift</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Mach_exit_C)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<p><img src="lecture_22_files/figure-html/cell-2-output-1.png" class="img-fluid"></p>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>0.4066810344827586</code></pre>
-</div>
-</div>
 
 
 </section>

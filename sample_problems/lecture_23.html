@@ -32,7 +32,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../sample_problems/lecture_24.html" rel="next">
 <link href="../sample_problems/lecture_22.html" rel="prev">
 <link href="../images/logo.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js"></script>
@@ -345,6 +344,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../sample_problems/lecture_20.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">L20 examples</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../sample_problems/lecture_21.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">L21 examples</span></a>
   </div>
@@ -361,12 +366,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">L23 examples</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../sample_problems/lecture_24.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">L24 examples</span></a>
-  </div>
-</li>
       </ul>
   </li>
     </ul>
@@ -381,6 +380,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#problem-1" id="toc-problem-1" class="nav-link active" data-scroll-target="#problem-1">Problem 1</a></li>
   <li><a href="#problem-2" id="toc-problem-2" class="nav-link" data-scroll-target="#problem-2">Problem 2</a></li>
+  <li><a href="#problem-3" id="toc-problem-3" class="nav-link" data-scroll-target="#problem-3">Problem 3</a></li>
   </ul>
 </nav>
     </div>
@@ -406,123 +406,198 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="problem-1" class="level2">
 <h2 class="anchored" data-anchor-id="problem-1">Problem 1</h2>
-<p>Consider the engine of the supersonic aircraft, the concorde. A schematic of the engine is given below. For an intake in such an aircraft, the flow must be decelerated to subsonic speeds before it enters the compressor.</p>
-<p><img src="images/image_L23_1.png" alt="plane" width="200"></p>
-<p>(image above from Unsplash by Lynn Kintziger)</p>
-<p><img src="images/image_L23_2.png" alt="plane" width="500"></p>
-<ol type="a">
-<li><p>Calculate <span class="math inline">\(M_2\)</span>.</p></li>
-<li><p>Express the distance <span class="math inline">\(l\)</span> as a function of <span class="math inline">\(h\)</span>.</p></li>
-<li><p>Find the fractional loss in stagnation pressure.</p></li>
-</ol>
-<p>Assume <span class="math inline">\(\gamma=1.4\)</span>.</p>
+<p>A stationary jet engine is run on a test bed at sea level. The stagnation temperature and stagnation pressure in the tail pipe are <span class="math inline">\(\require{color}{\color[rgb]{0.164799,0.878862,0.723179}700^{\circ}\; C}\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}200 \; kPa}\)</span> and the tail pipe ends with a convergent nozzle having exit diameter 0.5 m, i.e., the area is the minimum at the exit. Determine the thrust produced by the engine. Treat the combustion products as a perfect gas with the same properties as air. Assume an ambient pressure of <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}101.325 \; kPa}\)</span> and ambient temperature of <span class="math inline">\(\require{color}{\color[rgb]{0.164799,0.878862,0.723179}288.15 \; K}\)</span> and neglect the mass of fuel burnt in the engine.</p>
+<p><img src="images/image_L24_3.png" alt="plane" width="600"></p>
 <details>
 <summary>
 Solution
 </summary>
-<ol type="a">
-<li>First, we amend the diagram with regions <span class="math inline">\((a)\)</span> and <span class="math inline">\((b)\)</span> as shown below.</li>
-</ol>
-<p><img src="images/image_L23_2b.png" alt="plane" width="400"></p>
-<p>Consider the oblique shock tables with an inlet Mach number of <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}M_1} = {\color[rgb]{0.041732,0.352132,0.699576}2.15}, \; \; \theta = 12^{\circ}\)</span>. As shown below, this leads to an exit Mach number of <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}M_a} = {\color[rgb]{0.041732,0.352132,0.699576}1.7011}\)</span> and a wave angle of <span class="math inline">\(\require{color}{\color[rgb]{0.131302,0.999697,0.023594}\beta} = {\color[rgb]{0.131302,0.999697,0.023594}38.72^{\circ}}\)</span>. This is just for the first shock.</p>
-<p><img src="images/image_L23_3.png" alt="plane" width="500"></p>
-<p>For the second shock we are given the wedge angle to be <span class="math inline">\(\theta = 10^{\circ}\)</span> and <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}M_2} = {\color[rgb]{0.041732,0.352132,0.699576}1.7011}\)</span>. Once again consulting the tables (see below) we arrive at <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}M_b} = {\color[rgb]{0.041732,0.352132,0.699576}1.347}\)</span>. Note that this corresponds to the supersonic solution and not the subsonic one.</p>
-<p><img src="images/image_L23_4.png" alt="plane" width="500"></p>
-<p>The third and final shock has a wedge angle given by <span class="math inline">\(\theta = 22^{\circ} - 14^{\circ} = 8^{\circ}\)</span>. At this wedge angle, we once again take the first (or the weaker) solution, which yields <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}M_2} = {\color[rgb]{0.041732,0.352132,0.699576}0.95}\)</span>.</p>
-<p><img src="images/image_L23_5.png" alt="plane" width="500"></p>
-<ol start="2" type="a">
-<li>Next, to work out the relationship between <span class="math inline">\(h\)</span> and <span class="math inline">\(l\)</span> we note that</li>
-</ol>
+<p>In the nozzle, we know the inlet stagnation pressure, <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p_{01}}\)</span> and the exit static pressure <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p_a}\)</span>. Thus, we have the ratio</p>
 <p><span class="math display">\[
 \large
 \require{color}
-tan \left( {\color[rgb]{0.131302,0.999697,0.023594}\beta} \right) = \frac{h}{l} \Rightarrow tan \left({\color[rgb]{0.131302,0.999697,0.023594}38.702^{\circ}}\right) = \frac{h}{l} \Rightarrow l = 1.25 h
+\frac{{\color[rgb]{0.315209,0.728565,0.037706}p_a}}{{\color[rgb]{0.315209,0.728565,0.037706}p_{01}}} = \frac{101.325}{200} = 0.5066 &lt; 0.5283
 \]</span></p>
-<ol start="3" type="a">
-<li>To work out the pressure losses, we make use of the stagnation pressure ratios:</li>
-</ol>
+<p>where <span class="math inline">\(0.5283\)</span> value arises when the Mach number is 1 (see last row of the subsonic tables). As the nozzle exit (where the area is minimum and also corresponds to the throat) cannot exceed Mach 1, we assume that the exit Mach number is unity.</p>
+<p>From the steady flow momentum equation we can write</p>
 <p><span class="math display">\[
 \large
 \require{color}
-\frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{02}}}{{\color[rgb]{0.315209,0.728565,0.037706}p_{01}}} = \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{02}}}{{\color[rgb]{0.315209,0.728565,0.037706}p_{0b}}} \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{0b}}}{{\color[rgb]{0.315209,0.728565,0.037706}p_{0a}}} \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{0a}}}{{\color[rgb]{0.315209,0.728565,0.037706}p_{01}}}  = 0.97093 \times 0.9875 \times 0.98812 = 0.9473
+{\color[rgb]{0.986252,0.007236,0.027423}Thrust} + \left({\color[rgb]{0.315209,0.728565,0.037706}p_a} - {\color[rgb]{0.315209,0.728565,0.037706}p_a} \right)A_{in} - \left( {\color[rgb]{0.315209,0.728565,0.037706}p_{x}} - {\color[rgb]{0.315209,0.728565,0.037706}p_{a}} \right)A_{x} = \dot{m}_{x} {\color[rgb]{0.059472,0.501943,0.998465}v_{x}} - \dot{m}_{in} {\color[rgb]{0.059472,0.501943,0.998465}v_{in} }
+\]</span></p>
+<p>where we recognize that the <span class="math inline">\(-\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p_a}\)</span> term arises because we are dealing with gaguge pressures.</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\Rightarrow {\color[rgb]{0.986252,0.007236,0.027423}Thrust}  - \left( {\color[rgb]{0.315209,0.728565,0.037706}p_{x}} - {\color[rgb]{0.315209,0.728565,0.037706}p_{a}} \right) A_{x} = {\color[rgb]{0.918231,0.469102,0.038229}\rho_{x}} A_{x} {\color[rgb]{0.059472,0.501943,0.998465}v_{x}} {\color[rgb]{0.059472,0.501943,0.998465}v_{x}} - {\color[rgb]{0.990448,0.502245,0.032881}\rho_{in}} A_{in} {\color[rgb]{0.059472,0.501943,0.998465}v_{in}} {\color[rgb]{0.059472,0.501943,0.998465}v_{in} }
+\]</span></p>
+<p>because we assume that the <span class="math inline">\(\require{color}{\color[rgb]{0.059472,0.501943,0.998465}v_{in}} \approx 0\)</span>. Next, we write</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.986252,0.007236,0.027423}Thrust} + {\color[rgb]{0.315209,0.728565,0.037706}p_{a}} A_x - {\color[rgb]{0.315209,0.728565,0.037706}p_{x}} A_{x} = {\color[rgb]{0.918231,0.469102,0.038229}\rho_{x}} A_{x} {\color[rgb]{0.059472,0.501943,0.998465}v_{x}}^2
+\]</span></p>
+<p>which leads to</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\Rightarrow {\color[rgb]{0.986252,0.007236,0.027423}Thrust} = {\color[rgb]{1.000000,0.869732,0.000000}F_{x}} - {\color[rgb]{0.315209,0.728565,0.037706}p_{a}} A_{x}
+\]</span></p>
+<p>This may be re-written as</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\Rightarrow A_{x} \left( \frac{{\color[rgb]{1.000000,0.869732,0.000000}F_{x}}}{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_{01}}}} \times \frac{ \dot{m} \sqrt{ {\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_{01}}}}{A_{x} {\color[rgb]{0.315209,0.728565,0.037706}p_{01}} }  {\color[rgb]{0.315209,0.728565,0.037706}p_{01}} - {\color[rgb]{0.315209,0.728565,0.037706}p_{a}} \right)
+\]</span></p>
+<p>Plugging in the values…</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\Rightarrow \frac{\pi}{4} 0.5^2 \left( 0.9897 \times 1.2810 \times {\color[rgb]{0.315209,0.728565,0.037706}200} - {\color[rgb]{0.315209,0.728565,0.037706}101.325} \right) = {\color[rgb]{0.986252,0.007236,0.027423}29.91 \; kN}
 \]</span></p>
 </details>
 </section>
 <section id="problem-2" class="level2">
 <h2 class="anchored" data-anchor-id="problem-2">Problem 2</h2>
-<p>The figure below shows a Prandtl-Meyer expansion fan, with an upstream Mach number of <span class="math inline">\(\mathsf{1.86}\)</span> and a flow deflection angle of <span class="math inline">\(\mathsf{20^{\circ}}\)</span>. You may find the table useful, along with its corresponding identity</p>
-<p><img src="images/image_L23_6.png" alt="plane" width="800"></p>
+<p>In flight at a height of <span class="math inline">\(15,000 \; m\)</span> and an airspeed of <span class="math inline">\(\require{color}{\color[rgb]{0.059472,0.501943,0.998465}265 \; m/s}\)</span>, the same engine is operated with the same stagnation pressure and temperature ratios across it as in the sea level test. Determine the thrust produced at this flight condition. Assume standard atmospheric conditions, i.e., at <span class="math inline">\(15,000 \; m\)</span> ambient pressure and temperature are given by <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p_{a} = 12.058 \; kPa} \; \; {\color[rgb]{0.164799,0.878862,0.723179}T_{a} = 216.69 \; K }\)</span>. Neglect the mass of fuel burnt in the engine. The ratio of the stagnation pressure in the tail pipe to the ambient pressure must be the same as in the sea level test. The stagnation temperature to ambient temperature must also be the same across the two tests. You can assume <span class="math inline">\(\require{color}{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} = {\color[rgb]{0.986252,0.007236,0.027423}1006} \; \frac{J}{kg \cdot K}\)</span></p>
+<details>
+<summary>
+Solution
+</summary>
+<p>At a height of <span class="math inline">\(15,000 \; m\)</span>, at a speed of <span class="math inline">\(\require{color}{\color[rgb]{0.059472,0.501943,0.998465}265 \; m/s}\)</span>, the Mach number is given by</p>
 <p><span class="math display">\[
 \large
 \require{color}
-{\color[rgb]{0.986252,0.007236,0.027423}\nu} \left( {\color[rgb]{0.041732,0.352132,0.699576}M} \right) = \sqrt{\frac{\gamma + 1}{\gamma - 1}} tan^{-1}\left(\sqrt{\frac{\gamma - 1}{\gamma + 1} \left( {\color[rgb]{0.041732,0.352132,0.699576}M}^2 - 1\right) } \right) - tan^{-1}\left( \sqrt{{\color[rgb]{0.041732,0.352132,0.699576}M}^2 - 1} \right).
+{\color[rgb]{0.041732,0.352132,0.699576}M} = \frac{{\color[rgb]{0.059472,0.501943,0.998465}v}}{{\color[rgb]{0.985542,0.009453,0.999181}a}} = \frac{{\color[rgb]{0.059472,0.501943,0.998465}265}}{\sqrt{\gamma \times R \times {\color[rgb]{0.164799,0.878862,0.723179}216.69}}} = \frac{{\color[rgb]{0.059472,0.501943,0.998465}265}}{\sqrt{1.4 \times 287 \times {\color[rgb]{0.164799,0.878862,0.723179}216.69}} = {\color[rgb]{0.041732,0.352132,0.699576}0.8981}}
 \]</span></p>
-<table class="table">
-<thead>
-<tr class="header">
-<th>Mach number</th>
-<th><span class="math inline">\(\nu\)</span> (all in degrees)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2.25</td>
-<td>33.018</td>
-</tr>
-<tr class="even">
-<td>2.35</td>
-<td>35.525</td>
-</tr>
-<tr class="odd">
-<td>2.45</td>
-<td>37.945</td>
-</tr>
-<tr class="even">
-<td>2.55</td>
-<td>40.279</td>
-</tr>
-<tr class="odd">
-<td>2.65</td>
-<td>42.529</td>
-</tr>
-<tr class="even">
-<td>2.75</td>
-<td>44.694</td>
-</tr>
-<tr class="odd">
-<td>2.85</td>
-<td>46.778</td>
-</tr>
-</tbody>
-</table>
+<p>From the subsonic Mach number tables, and the ambient pressure value of <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p_{a} = 12.058 \; kPa}\)</span>, we can work out the stagnation pressure at the engine intake by interpolating between two rows of subsonic tables on page 8 of 38 in the gas properties tables; see below.</p>
+<p><img src="images/image_L24_4.png" alt="plane" width="600"></p>
+<p>Thus the stagnation pressure at the engine intake is</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{0}}}{ {\color[rgb]{0.315209,0.728565,0.037706}p} / {\color[rgb]{0.315209,0.728565,0.037706}p_{0}} } = \frac{{\color[rgb]{0.315209,0.728565,0.037706}12.058}}{0.5922} = {\color[rgb]{0.315209,0.728565,0.037706}20.36 \; kPa}
+\]</span></p>
+<p>and the stagnation temperature at the engine intake is</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{{\color[rgb]{0.164799,0.878862,0.723179}T_0}}{{\color[rgb]{0.164799,0.878862,0.723179}T/T_0}} = \frac{{\color[rgb]{0.164799,0.878862,0.723179}216.69}}{0.8615} = {\color[rgb]{0.164799,0.878862,0.723179}251.5 \; K}
+\]</span></p>
+<p>To maintain the same ratios as in the sea-level test, the stagnation conditions in the tail pipe must be</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.315209,0.728565,0.037706}p_{01}} = {\color[rgb]{0.315209,0.728565,0.037706}200} \times \frac{{\color[rgb]{0.315209,0.728565,0.037706}20.36}}{{\color[rgb]{0.315209,0.728565,0.037706}101.35}} = {\color[rgb]{0.315209,0.728565,0.037706}49.19 \; kPa}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.164799,0.878862,0.723179}T_0} = \left({\color[rgb]{0.164799,0.878862,0.723179}700^{\circ} C} + {\color[rgb]{0.164799,0.878862,0.723179}273.15} \right) \times \frac{{\color[rgb]{0.164799,0.878862,0.723179}251.5}}{{\color[rgb]{0.164799,0.878862,0.723179}288.15}} = {\color[rgb]{0.164799,0.878862,0.723179}849.37 \; K}
+\]</span></p>
+<p>Now using the steady flow momentum equation yields</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.986252,0.007236,0.027423}Thrust} + {\color[rgb]{0.315209,0.728565,0.037706}p_{a}} A_{x} - {\color[rgb]{0.315209,0.728565,0.037706}p_{x}} A_{x} = {\color[rgb]{0.918231,0.469102,0.038229}\rho_{x}} A_{x} {\color[rgb]{0.059472,0.501943,0.998465}v_{x}} \left( {\color[rgb]{0.059472,0.501943,0.998465}v_{x}} - {\color[rgb]{0.059472,0.501943,0.998465}265} \right)
+\]</span></p>
+<p>where we have made use of continuity as well. Now unlike at sea level, there is now a difference between the stagnation pressure at the inlet and the static pressure at the exit.</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.986252,0.007236,0.027423}Thrust} = {\color[rgb]{1.000000,0.869732,0.000000}F_{x}} - {\color[rgb]{0.315209,0.728565,0.037706}p_{a}} A_{x} - \dot{m} \times {\color[rgb]{0.059472,0.501943,0.998465}265}
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+\Rightarrow A_{x} \left( \frac{{\color[rgb]{1.000000,0.869732,0.000000}F_{x}}}{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_{0}}}} \times \frac{ \dot{m} \sqrt{ {\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_{0}}}}{A_{x} {\color[rgb]{0.315209,0.728565,0.037706}p_{0}} }  {\color[rgb]{0.315209,0.728565,0.037706}p_{0}} - {\color[rgb]{0.315209,0.728565,0.037706}p_{a}} - \frac{ \dot{m} \sqrt{ {\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_{0}}}}{A_{x} {\color[rgb]{0.315209,0.728565,0.037706}p_{0}} } \times \frac{{\color[rgb]{0.059472,0.501943,0.998465}265}}{\sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_{0}}} } {\color[rgb]{0.315209,0.728565,0.037706}p_{0}}\right)
+\]</span></p>
+<p><span class="math display">\[
+\large
+\require{color}
+= \frac{\pi}{4} \times 0.5^2 \left( 0.99 \times 1.281 \times {\color[rgb]{0.315209,0.728565,0.037706}40.19} - {\color[rgb]{0.315209,0.728565,0.037706}12.06} - 1.281 \times \frac{{\color[rgb]{0.059472,0.501943,0.998465}265}}{\sqrt{{\color[rgb]{0.986252,0.007236,0.027423}1006} \times {\color[rgb]{0.164799,0.878862,0.723179}849.4}}} \times {\color[rgb]{0.315209,0.728565,0.037706}40.19} \right) = {\color[rgb]{0.986252,0.007236,0.027423}4.74 \; kN}
+\]</span></p>
+</details>
+</section>
+<section id="problem-3" class="level2">
+<h2 class="anchored" data-anchor-id="problem-3">Problem 3</h2>
+<p>A pipe of constant inside diameter of <span class="math inline">\(\mathsf{0.1 \; m}\)</span> is supplied with air <span class="math inline">\(\mathsf{\left( \gamma = 1.4 \right)}\)</span> at a stagnation pressure of <span class="math inline">\(\mathsf{5 \; bar}\)</span>. Just inside the entrance of the pipe, the static pressure is <span class="math inline">\(\mathsf{4 \; bar}\)</span>, and at a distance of <span class="math inline">\(\mathsf{8 \; m}\)</span> downstream the static pressure is <span class="math inline">\(\mathsf{2.5 \; bar}\)</span>. The flow is adiabatic.</p>
 <ol type="a">
-<li><p>Calculate the downstream Mach number, <span class="math inline">\({\color[rgb]{0.041732,0.352132,0.699576}M_2}\)</span></p></li>
-<li><p>How does the static density, static pressure and static enthalpy vary across the expansion fan?</p></li>
-<li><p>Is the stagnation pressure constant across an expansion fan?</p></li>
+<li><p>Please draw a diagram of the pipe, clearly labeling the stagnation pressure; the two static pressures, and the relevant lengths.</p></li>
+<li><p>Calculate the static-to-stagnation pressure ratio at the inlet</p></li>
+<li><p>Use your solution in (b) and the table to quantify the values of the non-dimensional parameters <span class="math display">\[
+\large
+\require{color}
+\frac{4 {\color[rgb]{0.501967,0.001556,0.998511}c_f} L_{max}}{D}\; \; \; and \;  \; \; \frac{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_0}} }{A {\color[rgb]{0.315209,0.728565,0.037706}p_0}}
+\]</span></p></li>
 </ol>
+<p>at the inlet.</p>
+<ol start="4" type="a">
+<li><p>Please calculate the inlet-stagnation to static pressure ratio at the location <span class="math inline">\(8 \; m\)</span> downstream in the pipe.</p></li>
+<li><p>Using your solutions above, please calculate the skin friction coefficient <span class="math inline">\(\require{color}{\color[rgb]{0.501967,0.001556,0.998511}c_f}\)</span> in the pipe.</p></li>
+</ol>
+<p>You may find the snippet of the gas properties in figure below useful. Linear interpolation is not required and you may opt for the closest relevant value(s).</p>
+<p><img src="images/image_L24_1.png" alt="plane" width="600"></p>
 <details>
 <summary>
 Solution
 </summary>
 <ol type="a">
-<li>Plugging in a value of <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}M_1} = {\color[rgb]{0.041732,0.352132,0.699576}1.86}\)</span> in the formula above, yields <span class="math inline">\(\require{color}{\color[rgb]{0.986252,0.007236,0.027423}\nu_1} = {\color[rgb]{0.986252,0.007236,0.027423}0.3918}\)</span>. Note that this value is in radians; to convert it to degrees, we have</li>
+<li>Please see the figure below.</li>
 </ol>
-<p><span class="math display">\[
-\large
-\require{color}
-{\color[rgb]{0.986252,0.007236,0.027423}\nu_1} = {\color[rgb]{0.986252,0.007236,0.027423}0.3918} \; \; \Rightarrow \; \; {\color[rgb]{0.986252,0.007236,0.027423}\nu_1}= {\color[rgb]{0.986252,0.007236,0.027423}0.3918} \times \frac{180}{\pi} = 22.44^{\circ}
-\]</span></p>
-<p>Now, from the problem description, we know that <span class="math inline">\(\mathsf{\theta = 20^{\circ}}\)</span>. Thus,</p>
-<p><span class="math display">\[
-\large
-\require{color}
-\theta = {\color[rgb]{0.986252,0.007236,0.027423}\nu_2} - {\color[rgb]{0.986252,0.007236,0.027423}\nu_1} \; \; \Rightarrow \; \; {\color[rgb]{0.986252,0.007236,0.027423}\nu_2} = \theta + {\color[rgb]{0.986252,0.007236,0.027423}\nu_1} = 42.44^{\circ}
-\]</span></p>
-<p>From the table above, we know that <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}M_2} \approx {\color[rgb]{0.041732,0.352132,0.699576}2.65}\)</span>.</p>
+<p><img src="images/image_L24_2.png" alt="plane" width="600"></p>
 <ol start="2" type="a">
-<li><p>The static density decreases, the static pressure decreases, and the static enthalpy also decreases</p></li>
-<li><p>Yes, the stagnation pressure stays constant.</p></li>
+<li>Note that</li>
 </ol>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{{\color[rgb]{0.315209,0.728565,0.037706}p_1}}{{\color[rgb]{0.315209,0.728565,0.037706}p_{01}}} = \frac{{\color[rgb]{0.315209,0.728565,0.037706}4 \; bar}}{{\color[rgb]{0.315209,0.728565,0.037706}5 \; bar}} = 0.8  
+\]</span></p>
+<p>This corresponds to a Mach number of <span class="math inline">\(\mathsf{M_1 = 0.57}\)</span>.</p>
+<ol start="3" type="a">
+<li>At this Mach number the ratio</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{4 {\color[rgb]{0.501967,0.001556,0.998511}c_f} L_{max}}{D} = 0.6229, \; \; \; \; \; \frac{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_0}} }{A {\color[rgb]{0.315209,0.728565,0.037706}p_0}} = 1.0446
+\]</span></p>
+<ol start="4" type="a">
+<li>Let us call this station 2. Here the ratio of the static-to-stagnation pressure is given by</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{0,1}}}{{\color[rgb]{0.315209,0.728565,0.037706}p_{2}}} = \frac{{\color[rgb]{0.315209,0.728565,0.037706}5\; bar}}{{\color[rgb]{0.315209,0.728565,0.037706}2.5 \; bar}} = 2
+\]</span></p>
+<ol start="5" type="a">
+<li>Consider that</li>
+</ol>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_0}} }{A {\color[rgb]{0.315209,0.728565,0.037706}p_2}} = \frac{\dot{m} \sqrt{{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} {\color[rgb]{0.164799,0.878862,0.723179}T_0}} }{A {\color[rgb]{0.315209,0.728565,0.037706}p_01}} \times \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{01}}}{{\color[rgb]{0.315209,0.728565,0.037706}p_2}} = 1.04 \times 2 = 2.0892.
+\]</span></p>
+<p>Note that this non-dimensional flow capacity, with a static pressure value in the denominator, corresponds to a Mach number of approximately <span class="math inline">\(\require{color}{\color[rgb]{0.041732,0.352132,0.699576}M_2 = 0.88}\)</span>. At this Mach number the non-dimensional friction value is</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{4 {\color[rgb]{0.501967,0.001556,0.998511}c_f} L_{2, max}}{D} = 0.0218.
+\]</span></p>
+<p>From this we have:</p>
+<p><span class="math display">\[
+\large
+\require{color}
+\frac{4 {\color[rgb]{0.501967,0.001556,0.998511}c_f} L_{1-2}}{D}  = \frac{4{\color[rgb]{0.501967,0.001556,0.998511}c_f} L_{1, max}}{D} - \frac{4{\color[rgb]{0.501967,0.001556,0.998511}c_f} L_{2, max}}{D} = 0.6229 - 0.0218 = 0.6011
+\]</span></p>
+<p>From which we can calculate:</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.501967,0.001556,0.998511}c_f} = \frac{0.6011 \times D}{4 \times L_{1-2}} = \frac{0.6011 \times 0.1 \; m}{4 \times 8 \; m} = 1.88 \times 10^{-3}.
+\]</span></p>
 </details>
 
 
@@ -935,9 +1010,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../sample_problems/lecture_24.html" class="pagination-link">
-        <span class="nav-page-text">L24 examples</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
