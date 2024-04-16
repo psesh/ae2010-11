@@ -476,16 +476,17 @@ Solution
 </section>
 <section id="problem-2" class="level2">
 <h2 class="anchored" data-anchor-id="problem-2">Problem 2</h2>
-<p>In flight at a height of <span class="math inline">\(15,000 \; m\)</span> and an airspeed of <span class="math inline">\(\require{color}{\color[rgb]{0.059472,0.501943,0.998465}265 \; m/s}\)</span>, the same engine is operated with the same stagnation pressure and temperature ratios across it as in the sea level test. Determine the thrust produced at this flight condition. Assume standard atmospheric conditions, i.e., at <span class="math inline">\(15,000 \; m\)</span> ambient pressure and temperature are given by <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p_{a} = 12.058 \; kPa} \; \; {\color[rgb]{0.164799,0.878862,0.723179}T_{a} = 216.69 \; K }\)</span>. Neglect the mass of fuel burnt in the engine. The ratio of the stagnation pressure in the tail pipe to the ambient pressure must be the same as in the sea level test. The stagnation temperature to ambient temperature must also be the same across the two tests. You can assume <span class="math inline">\(\require{color}{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} = {\color[rgb]{0.986252,0.007236,0.027423}1006} \; \frac{J}{kg \cdot K}\)</span></p>
+<p>In flight at a height of <span class="math inline">\(15,000 \; m\)</span> and an airspeed of <span class="math inline">\(\require{color}{\color[rgb]{0.059472,0.501943,0.998465}265 \; m/s}\)</span>, the same engine is operated with the same stagnation pressure and temperature ratios across it as in the sea level test. Determine the thrust produced at this flight condition. Assume standard atmospheric conditions, i.e., at <span class="math inline">\(15,000 \; m\)</span> ambient pressure and temperature are given by <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p_{a} = 12.058 \; kPa} \; \; {\color[rgb]{0.164799,0.878862,0.723179}T_{a} = 216.69 \; K }\)</span>. Neglect the mass of fuel burnt in the engine. You can assume <span class="math inline">\(\require{color}{\color[rgb]{0.986252,0.007236,0.027423}c}_{\color[rgb]{0.315209,0.728565,0.037706}p} = {\color[rgb]{0.986252,0.007236,0.027423}1006} \; \frac{J}{kg \cdot K}\)</span></p>
 <details>
 <summary>
 Solution
 </summary>
+<p><mark>Edited April 15th</mark></p>
 <p>At a height of <span class="math inline">\(15,000 \; m\)</span>, at a speed of <span class="math inline">\(\require{color}{\color[rgb]{0.059472,0.501943,0.998465}265 \; m/s}\)</span>, the Mach number is given by</p>
 <p><span class="math display">\[
 \large
 \require{color}
-{\color[rgb]{0.041732,0.352132,0.699576}M} = \frac{{\color[rgb]{0.059472,0.501943,0.998465}v}}{{\color[rgb]{0.985542,0.009453,0.999181}a}} = \frac{{\color[rgb]{0.059472,0.501943,0.998465}265}}{\sqrt{\gamma \times R \times {\color[rgb]{0.164799,0.878862,0.723179}216.69}}} = \frac{{\color[rgb]{0.059472,0.501943,0.998465}265}}{\sqrt{1.4 \times 287 \times {\color[rgb]{0.164799,0.878862,0.723179}216.69}} = {\color[rgb]{0.041732,0.352132,0.699576}0.8981}}
+{\color[rgb]{0.041732,0.352132,0.699576}M} = \frac{{\color[rgb]{0.059472,0.501943,0.998465}v}}{{\color[rgb]{0.985542,0.009453,0.999181}a}} = \frac{{\color[rgb]{0.059472,0.501943,0.998465}265}}{\sqrt{\gamma \times R \times {\color[rgb]{0.164799,0.878862,0.723179}216.69}}} = \frac{{\color[rgb]{0.059472,0.501943,0.998465}265}}{\sqrt{1.4 \times 287 \times {\color[rgb]{0.164799,0.878862,0.723179}216.69}}} = {\color[rgb]{0.041732,0.352132,0.699576}0.8981}
 \]</span></p>
 <p>From the subsonic Mach number tables, and the ambient pressure value of <span class="math inline">\(\require{color}{\color[rgb]{0.315209,0.728565,0.037706}p_{a} = 12.058 \; kPa}\)</span>, we can work out the stagnation pressure at the engine intake by interpolating between two rows of subsonic tables on page 8 of 38 in the gas properties tables; see below.</p>
 <p><img src="images/image_L24_4.png" alt="plane" width="600"></p>
@@ -493,27 +494,32 @@ Solution
 <p><span class="math display">\[
 \large
 \require{color}
-\frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{0}}}{ {\color[rgb]{0.315209,0.728565,0.037706}p} / {\color[rgb]{0.315209,0.728565,0.037706}p_{0}} } = \frac{{\color[rgb]{0.315209,0.728565,0.037706}12.058}}{0.5922} = {\color[rgb]{0.315209,0.728565,0.037706}20.36 \; kPa}
+\frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{a}}}{ {\color[rgb]{0.315209,0.728565,0.037706}p_{a}} / {\color[rgb]{0.315209,0.728565,0.037706}p_{0}} } = \frac{{\color[rgb]{0.315209,0.728565,0.037706}12.058}}{0.5922} \Rightarrow  {\color[rgb]{0.315209,0.728565,0.037706}p_{0} = 20.36 \; kPa}
 \]</span></p>
-<p>and the stagnation temperature at the engine intake is</p>
+<p>Note that unlike the sea level static (SLS) condition, at 15,000 meters the ambient pressure is not the inlet stagnation pressure. This is because the engine is no longer stationary. The stagnation temperature at the engine intake is</p>
 <p><span class="math display">\[
 \large
 \require{color}
 \frac{{\color[rgb]{0.164799,0.878862,0.723179}T_0}}{{\color[rgb]{0.164799,0.878862,0.723179}T/T_0}} = \frac{{\color[rgb]{0.164799,0.878862,0.723179}216.69}}{0.8615} = {\color[rgb]{0.164799,0.878862,0.723179}251.5 \; K}
 \]</span></p>
-<p>To maintain the same ratios as in the sea-level test, the stagnation conditions in the tail pipe must be</p>
+<p>Contrast these values with the sea level ones of <span class="math inline">\({\color[rgb]{0.315209,0.728565,0.037706}p_{0} = 101.325 \; kPa}\)</span> and <span class="math inline">\({\color[rgb]{0.164799,0.878862,0.723179}288.15 \; K}\)</span>. Now, we want to preserve the inlet-to-tail-pipe stagnation pressure ratios for both pressure and temperature. To clarify the differences, I incorporate the subscript <span class="math inline">\(SLS\)</span> for sea-level static, and <span class="math inline">\(15000\)</span> for <span class="math inline">\(15,000\)</span> meters. For the pressures we have:</p>
 <p><span class="math display">\[
 \large
 \require{color}
-{\color[rgb]{0.315209,0.728565,0.037706}p_{01}} = {\color[rgb]{0.315209,0.728565,0.037706}200} \times \frac{{\color[rgb]{0.315209,0.728565,0.037706}20.36}}{{\color[rgb]{0.315209,0.728565,0.037706}101.35}} = {\color[rgb]{0.315209,0.728565,0.037706}49.19 \; kPa}
+\frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{0,SLS}}}{{\color[rgb]{0.315209,0.728565,0.037706}p_{01,SLS}}} = \frac{{\color[rgb]{0.315209,0.728565,0.037706}p_{0,15000}}}{{\color[rgb]{0.315209,0.728565,0.037706}p_{01,15000}}} \Rightarrow \frac{{\color[rgb]{0.315209,0.728565,0.037706}101.325}}{{\color[rgb]{0.315209,0.728565,0.037706}200}} = \frac{{\color[rgb]{0.315209,0.728565,0.037706}20.36}}{{\color[rgb]{0.315209,0.728565,0.037706}p_{01,15000}}} \Rightarrow {\color[rgb]{0.315209,0.728565,0.037706}p_{01,15000}} = {\color[rgb]{0.315209,0.728565,0.037706}200} \times \frac{{\color[rgb]{0.315209,0.728565,0.037706}20.36}}{{\color[rgb]{0.315209,0.728565,0.037706}101.325}} = {\color[rgb]{0.315209,0.728565,0.037706}40.19 \; kPa}
 \]</span></p>
-<p>and</p>
+<p>and for the temperatures</p>
 <p><span class="math display">\[
 \large
 \require{color}
-{\color[rgb]{0.164799,0.878862,0.723179}T_0} = \left({\color[rgb]{0.164799,0.878862,0.723179}700^{\circ} C} + {\color[rgb]{0.164799,0.878862,0.723179}273.15} \right) \times \frac{{\color[rgb]{0.164799,0.878862,0.723179}251.5}}{{\color[rgb]{0.164799,0.878862,0.723179}288.15}} = {\color[rgb]{0.164799,0.878862,0.723179}849.37 \; K}
+\frac{{\color[rgb]{0.164799,0.878862,0.723179}T_{0,SLS}}}{{\color[rgb]{0.164799,0.878862,0.723179}T_{01,SLS}}} = \frac{{\color[rgb]{0.164799,0.878862,0.723179}T_{0,15000}}}{{\color[rgb]{0.164799,0.878862,0.723179}T_{01,15000}}} \Rightarrow \frac{{\color[rgb]{0.164799,0.878862,0.723179}288.15}}{{\color[rgb]{0.164799,0.878862,0.723179}973.15}} = \frac{{\color[rgb]{0.164799,0.878862,0.723179}251.5}}{{\color[rgb]{0.164799,0.878862,0.723179}T_{01,15000}}} \Rightarrow {\color[rgb]{0.164799,0.878862,0.723179}T_{01,15000}} = {\color[rgb]{0.164799,0.878862,0.723179}973.15} \times \frac{{\color[rgb]{0.164799,0.878862,0.723179}251.5}}{{\color[rgb]{0.164799,0.878862,0.723179}288.15}} = {\color[rgb]{0.164799,0.878862,0.723179}849.37 \; K}
 \]</span></p>
-<p>Now using the steady flow momentum equation yields</p>
+<p>Let <span class="math inline">\({\color[rgb]{0.059472,0.501943,0.998465}v_{x}}\)</span> be the jet exit velocity at <span class="math inline">\(15,000\)</span> meters. The jet inlet velocity is <span class="math inline">\({\color[rgb]{0.059472,0.501943,0.998465}v_{i}} = {\color[rgb]{0.059472,0.501943,0.998465}265 \; m/s}\)</span>. Now using the steady flow momentum equation yields</p>
+<p><span class="math display">\[
+\large
+\require{color}
+{\color[rgb]{0.986252,0.007236,0.027423}Thrust} + {\color[rgb]{0.315209,0.728565,0.037706}p_{a}} A_{x} - {\color[rgb]{0.315209,0.728565,0.037706}p_{x}} A_{x} = {\color[rgb]{0.918231,0.469102,0.038229}\rho_{x}} A_{x} {\color[rgb]{0.059472,0.501943,0.998465}v_{x}} \left( {\color[rgb]{0.059472,0.501943,0.998465}v_{x}} - {\color[rgb]{0.059472,0.501943,0.998465}v_{i}} \right)
+\]</span></p>
 <p><span class="math display">\[
 \large
 \require{color}
